@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>الفعاليات — سيشنز مجانية و Workshops | Codiz كوديز</title>
+<meta name="description" content="فعاليات Codiz: سيشنز لايف تعليمية مجانية وWorkshops عملية قادمة. سجّل في السيشنز المجانية أو انضم لقائمة اهتمام الـ Workshops.">
+<link rel="icon" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#2b1636;--mut:#6d5a77;--bg:#fbf7fc;--tint:#f3eaf6;--plum:#4b1d5e;--plum2:#7a3d86;--orc:#b784c7;--blush:#f6d9e7;--sand:#f7ebdd;--mint:#cdeee1;--lav:#ddd2f5;--line:#e4d5ea}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Tajawal',sans-serif;background:var(--bg);color:var(--ink);line-height:1.8;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.w{max-width:1120px;margin:0 auto;padding:0 22px}
+.btn{display:inline-block;border:0;cursor:pointer;font:800 16px Tajawal,sans-serif;padding:14px 28px;border-radius:999px;background:linear-gradient(90deg,var(--plum),var(--plum2));color:#fff;transition:.2s;box-shadow:0 10px 26px rgba(75,29,94,.22)}
+.btn:hover{transform:translateY(-3px)}
+.btn.l{background:#fff;color:var(--plum);box-shadow:none}
+.btn.g{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5);box-shadow:none}
+.pill{display:inline-block;font-size:13.5px;font-weight:700;color:var(--plum2);background:var(--blush);padding:6px 16px;border-radius:999px;margin-bottom:14px}
+h2{font-size:38px;font-weight:900;line-height:1.35;margin-bottom:12px;color:var(--plum)}
+.lead{color:var(--mut);font-size:18px;max-width:62ch;margin-bottom:34px}
+section{padding:84px 0}
+.tint{background:var(--tint)}
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.js .rv.in{opacity:1;transform:none}
+
+/* hero */
+.hero{background:radial-gradient(700px 500px at 85% 10%,rgba(183,132,199,.45),transparent 60%),radial-gradient(600px 500px at 5% 95%,rgba(246,217,231,.2),transparent 60%),linear-gradient(150deg,#2e0d3b,#512165 62%,#7a3d86);color:#fff;position:relative;overflow:hidden;padding-bottom:90px}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;border:1.5px dashed rgba(255,255,255,.18)}
+.hero:before{width:520px;height:520px;left:-160px;top:120px}.hero:after{width:300px;height:300px;right:-80px;bottom:-90px}
+nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0;position:relative;z-index:2}
+nav img{height:46px}
+nav .lk{display:flex;gap:26px;font-weight:500;font-size:15px;opacity:.9}
+nav .btn{padding:9px 22px;font-size:14px}
+.hg{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;padding-top:42px;position:relative;z-index:2}
+.hero .pill{background:rgba(255,255,255,.14);color:#f6e6fb}
+h1{font-size:54px;font-weight:900;line-height:1.28;margin-bottom:18px}
+h1 em{font-style:normal;color:var(--blush)}
+.hs{font-size:21px;font-weight:700;color:#efdcf5;margin-bottom:30px;max-width:44ch}
+.hb{display:flex;gap:14px;flex-wrap:wrap}
+.bd{position:relative}
+.board{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.28);border-radius:26px;padding:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;backdrop-filter:blur(6px);transform:rotate(-2deg)}
+.col h4{color:#eedcf5;font-size:13px;margin-bottom:10px}
+.tk{background:#fff;color:var(--ink);border-radius:14px;padding:10px 11px;font-size:13px;line-height:1.5;margin-bottom:10px;box-shadow:0 8px 18px rgba(20,0,30,.22);animation:fl 5s ease-in-out infinite}
+.tk:nth-child(3){animation-delay:-2s}.col:nth-child(2) .tk{animation-delay:-1s}.col:nth-child(3) .tk{animation-delay:-3s}
+.tk b{display:inline-block;font-size:11px;padding:1px 9px;border-radius:99px;margin-bottom:3px;color:var(--ink)}
+.u{background:var(--blush)}.f{background:var(--lav)}.b{background:var(--sand)}.q{background:var(--mint)}
+.stk{position:absolute;bottom:-20px;left:-8px;background:var(--mint);color:#0f4a3a;font-weight:800;font-size:14px;padding:10px 18px;border-radius:14px;transform:rotate(6deg);box-shadow:0 10px 24px rgba(0,0,0,.2)}
+@keyframes fl{50%{transform:translateY(-7px)}}
+
+/* marquee */
+.mq{direction:ltr;overflow:hidden;background:var(--plum);color:#f1e2f7;padding:15px 0;font-weight:700;font-size:17px;transform:rotate(-1deg);margin:-26px -10px 0;position:relative;z-index:3}
+.mt{display:flex;gap:44px;width:max-content;animation:mq 28s linear infinite}
+.mt span:after{content:"✦";margin-left:44px;color:var(--orc)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* story */
+.st{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
+.q1{background:#fff;border:1.5px solid var(--line);border-radius:28px 28px 28px 6px;padding:30px;font-size:24px;font-weight:800;color:var(--plum);line-height:1.6;box-shadow:0 18px 40px rgba(75,29,94,.1);transform:rotate(-1.5deg)}
+.q1 small{display:block;font-size:14px;color:var(--mut);font-weight:500;margin-bottom:10px}
+.st p{font-size:18px;color:#4a3a55;margin-bottom:16px}
+.st p b{color:var(--plum)}
+
+/* cards */
+.c4{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.card{background:#fff;border:1.5px solid var(--line);border-radius:26px;padding:30px;transition:.25s;position:relative}
+.card:hover{transform:translateY(-6px) rotate(-.6deg);box-shadow:0 20px 44px rgba(75,29,94,.12)}
+.ic{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;font-size:26px;margin-bottom:16px}
+.card h3{font-size:21px;color:var(--plum);margin-bottom:2px}
+.card .en{font-size:13px;color:var(--orc);font-weight:700;margin-bottom:10px;direction:ltr;text-align:right}
+.card p{color:var(--mut);font-size:16px}
+.fl{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.fl span{background:var(--tint);border-radius:99px;padding:3px 12px;font-size:13px;color:var(--plum);font-weight:700}
+
+/* numbers */
+.nums{background:linear-gradient(135deg,#3a1049,#6a2f78);border-radius:32px;padding:44px 30px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;color:#fff;margin-top:50px}
+.nums strong{display:block;font-size:48px;font-weight:900;color:var(--blush);line-height:1.2}
+.nums span{font-size:15px;color:#e8d6ef}
+
+/* audience */
+.au{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.au div{background:#fff;border-radius:22px;padding:24px;border:1.5px solid var(--line);font-size:16px;color:#4a3a55}
+.au div:nth-child(odd){transform:translateY(14px)}
+.au i{font-style:normal;font-size:30px;display:block;margin-bottom:8px}
+
+/* forms */
+.box{background:#fff;border:1.5px solid var(--line);border-radius:30px;padding:40px;display:grid;grid-template-columns:.85fr 1.15fr;gap:42px;box-shadow:0 24px 60px rgba(75,29,94,.1)}
+.box h2{font-size:34px}
+.perks{list-style:none;margin-top:18px}
+.perks li{padding:6px 0;color:#4a3a55}.perks li:before{content:"✓";display:inline-block;width:24px;height:24px;border-radius:50%;background:var(--mint);color:#0f4a3a;text-align:center;line-height:24px;font-size:13px;font-weight:900;margin-left:10px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form .f2{grid-column:1/-1}
+label{display:block;font-size:13.5px;color:var(--mut);margin-bottom:5px;font-weight:700}
+input,select,textarea{width:100%;background:var(--bg);border:1.5px solid var(--line);color:var(--ink);font:16px Tajawal,sans-serif;padding:12px 14px;border-radius:14px;outline:none;transition:.15s}
+input:focus,select:focus,textarea:focus{border-color:var(--plum2);box-shadow:0 0 0 4px rgba(122,61,134,.12)}
+textarea{min-height:84px;resize:vertical}
+.note{grid-column:1/-1;font-size:13px;color:var(--mut);text-align:center}
+.ok{display:none;text-align:center;padding:40px 10px;font-size:20px;font-weight:800;color:var(--plum)}
+.ok span{display:block;font-size:46px}
+
+/* vision */
+.vm{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.vm>div{border-radius:30px;padding:38px}
+.v1{background:linear-gradient(150deg,#3a1049,#6a2f78);color:#fff}
+.v2{background:var(--sand);color:var(--ink)}
+.vm h3{font-size:15px;font-weight:700;margin-bottom:12px;opacity:.8}
+.vm q{display:block;font-size:24px;font-weight:900;line-height:1.55;margin-bottom:14px;quotes:none}
+.vm p{font-size:16px;opacity:.9}
+
+/* services */
+.sv{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.sv .card{padding:26px}
+.sv .card h3{font-size:19px}
+
+/* why */
+.why{display:grid;grid-template-columns:1fr 1fr;gap:16px 34px}
+.wy{display:flex;gap:16px;align-items:flex-start;background:#fff;border-radius:22px;padding:22px;border:1.5px solid var(--line)}
+.wy b{flex:none;width:46px;height:46px;border-radius:14px;background:var(--blush);color:var(--plum);display:grid;place-items:center;font-size:18px}
+.wy p{color:#4a3a55;font-size:16px}
+.wy p strong{color:var(--plum)}
+
+/* values */
+.vl{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.vl .card:nth-child(4),.vl .card:nth-child(5){grid-column:span 1}
+.vl .card{padding:26px}
+.vl .card h3{font-size:19px}
+
+/* contact + footer */
+.soc{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.soc a{padding:11px 22px;border-radius:999px;background:#fff;border:1.5px solid var(--line);font-weight:700;color:var(--plum);transition:.2s}
+.soc a:hover{background:var(--plum);color:#fff}
+footer{background:linear-gradient(150deg,#2e0d3b,#512165);color:#e8d6ef;text-align:center;padding:46px 0 34px}
+footer img{height:56px;margin-bottom:10px}
+footer .s{font-size:18px;font-weight:800;color:#fff;margin-bottom:6px}
+footer p{font-size:14px}
+
+@media(max-width:900px){
+.hg,.st,.box,.vm,.c4,.why,.sv,.vl{grid-template-columns:1fr}
+.nums,.au{grid-template-columns:1fr 1fr}
+h1{font-size:38px}h2{font-size:29px}.hs{font-size:18px}
+nav .lk{display:none}.box{padding:26px 20px}form{grid-template-columns:1fr}section{padding:60px 0}.au div:nth-child(odd){transform:none}
+.nums strong{font-size:36px}
+}
+</style>
+<link rel="stylesheet" href="events.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header class="hero ev-hero">
+<div class="w">
+<nav><a href="index.html"><img src="logo.png" alt="Codiz كوديز"></a><div class="lk"><a class="ev-link" href="index.html">الرئيسية</a><a href="#free-sessions">السيشنز المجانية</a><a href="#workshops">الـ Workshops</a></div><a class="btn l" href="#register">سجّل مجانًا</a></nav>
+<div class="ev" style="padding-top:34px;position:relative;z-index:2">
+<span class="pill">الفعاليات | Events</span>
+<h1>اتعلم مع Codiz: <em>سيشنز مجانية</em> و Workshops</h1>
+<p class="hs">طريقتين تتعلم بيهم معانا: سيشنز لايف مجانية للجميع، وWorkshops عملية منظمة لو عايز تتعمق أكتر.</p>
+</div>
+</div>
+</header>
+
+<div class="ev-tabs ev" role="navigation" aria-label="أقسام الفعاليات"><div class="w"><a href="#free-sessions">🎟️ السيشنز المجانية</a><a href="#workshops">🛠️ الـ Workshops القادمة</a></div></div>
+
+<main class="ev">
+<section id="free-sessions" class="ev-anchor">
+<div class="w">
+<div class="ev-sec-head rv">
+<span class="pill">Free Sessions</span>
+<h2>السيشنز المجانية</h2>
+<p class="lead" style="margin-bottom:0">سيشنز لايف تعليمية مجانية بتعرّفك على موضوعات تقنية مهمة. سجّل وهيوصلك التفاصيل أول ما تتأكد.</p>
+</div>
+<div class="ev-grid s" data-ev-mount="sessions"></div>
+
+<div class="ev-panel ev-anchor" id="register">
+<div class="box rv">
+<div>
+<span class="pill">تسجيل مجاني</span>
+<h2>سجّل في سيشن مجانية</h2>
+<p class="lead" style="margin-bottom:8px">اختار السيشن اللي عايز تحضرها، وتسجيلك هيتربط بالسيشن اللي اخترتها.</p>
+<ul class="perks"><li>مجانية بالكامل</li><li>تفاصيل السيشن هتوصلك على الواتساب أول ما تتأكد</li></ul>
+</div>
+<div>
+<div class="ev-banner" id="register-banner" aria-live="polite"></div>
+<div class="ev-empty" id="register-empty" style="display:none">مفيش سيشنز مفتوحة للتسجيل حاليًا. تابعنا قريبًا.</div>
+<form class="ev-form" id="register-form" novalidate style="margin-top:14px">
+<div class="f2 fld"><label for="rs-session">السيشن <span class="req">*</span></label><select id="rs-session" name="session" required><option value="" disabled selected>اختار السيشن</option></select><div class="fe" role="alert"></div></div>
+<div class="f2 fld"><label for="rs-name">الاسم الكامل <span class="req">*</span></label><input id="rs-name" name="name" autocomplete="name" required><div class="fe" role="alert"></div></div>
+<div class="fld"><label for="rs-wa">رقم الواتساب <span class="req">*</span></label><input id="rs-wa" name="whatsapp" type="tel" autocomplete="tel" placeholder="+20 10 1234 5678" required><div class="fe" role="alert"></div></div>
+<div class="fld"><label for="rs-mail">الإيميل <span class="opt">(اختياري)</span></label><input id="rs-mail" name="email" type="email" autocomplete="email"><div class="fe" role="alert"></div></div>
+<div class="ev-err" role="alert"></div>
+<div class="f2"><button type="submit" class="btn" style="width:100%">سجّل مجانًا</button></div>
+<p class="note">بياناتك بنستخدمها بس عشان نتواصل معاك بخصوص سيشنز Codiz.</p>
+</form>
+<div class="ev-ok" id="register-ok" aria-live="polite"><span>🎉</span><strong>تم تسجيلك!</strong><p class="ev-ok-msg"></p><button type="button" class="btn o sm" data-reset>سجّل في سيشن تانية</button></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="workshops" class="tint ev-anchor">
+<div class="w">
+<div class="ev-sec-head rv">
+<span class="pill">Workshops</span>
+<h2>الـ Workshops القادمة</h2>
+<p class="lead" style="margin-bottom:0">برامج تدريب عملية ومنظمة (مدفوعة). المواعيد والتفاصيل لسه ما اتحددتش — انضم لقائمة الاهتمام وهنتواصل معاك الأول.</p>
+</div>
+<div class="ev-grid w" data-ev-mount="workshops"></div>
+<p class="ev-note">الـ Workshops لسه ما فتحش التسجيل فيها. الانضمام لقائمة الاهتمام مش بيحجزلك مكان.</p>
+
+<div class="ev-panel ev-anchor" id="interest">
+<div class="box rv">
+<div>
+<span class="pill">قائمة الاهتمام</span>
+<h2>انضم لقائمة الاهتمام</h2>
+<p class="lead" style="margin-bottom:8px">قولنا مهتم بأنهي Workshop وهنتواصل معاك أول ما التفاصيل تتأكد.</p>
+<ul class="perks"><li>من غير أي التزام — ده مش حجز</li><li>تكون أول واحد يعرف المواعيد والتفاصيل</li></ul>
+</div>
+<div>
+<form class="ev-form" id="interest-form" novalidate>
+<div class="f2 fld"><label for="wi-name">الاسم الكامل <span class="req">*</span></label><input id="wi-name" name="name" autocomplete="name" required><div class="fe" role="alert"></div></div>
+<div class="fld"><label for="wi-wa">رقم الواتساب <span class="req">*</span></label><input id="wi-wa" name="whatsapp" type="tel" autocomplete="tel" placeholder="+20 10 1234 5678" required><div class="fe" role="alert"></div></div>
+<div class="fld"><label for="wi-mail">الإيميل <span class="opt">(اختياري)</span></label><input id="wi-mail" name="email" type="email" autocomplete="email"><div class="fe" role="alert"></div></div>
+<div class="fld"><label for="wi-ws">الـ Workshop المهتم بيها <span class="req">*</span></label><select id="wi-ws" name="workshop" required><option value="" disabled selected>اختار الـ Workshop</option></select><div class="fe" role="alert"></div></div>
+<div class="fld"><label for="wi-lvl">مستوى الخبرة <span class="opt">(اختياري)</span></label><select id="wi-lvl" name="level"><option value="">اختار مستواك</option></select></div>
+<div class="ev-err" role="alert"></div>
+<div class="f2"><button type="submit" class="btn" style="width:100%">انضم لقائمة الاهتمام</button></div>
+<p class="note">بياناتك بنستخدمها بس عشان نتواصل معاك بخصوص Workshops Codiz.</p>
+</form>
+<div class="ev-ok" id="interest-ok" aria-live="polite"><span>✅</span><strong>اتضفت للقائمة!</strong><p class="ev-ok-msg"></p><button type="button" class="btn o sm" data-reset>أضف Workshop تانية</button></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer><div class="w">
+<img src="logo.png" alt="Codiz">
+<div class="s">مش مجرد كود.. تجربة شركة حقيقية.</div>
+<p><a href="index.html">الرجوع للصفحة الرئيسية</a> · &copy; 2026 Codiz. All rights reserved.</p>
+</div></footer>
+
+<script src="events-data.js"></script>
+<script src="events.js"></script>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

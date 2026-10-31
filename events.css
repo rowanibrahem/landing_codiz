@@ -1,0 +1,115 @@
+/* Codiz — Events, Free Sessions & Workshops components.
+   Uses the design tokens (:root vars), .btn, .pill, .card, .box, form, .ok defined by the base site styles. */
+
+.ev{direction:rtl;text-align:right}
+/* English session/workshop titles & technical terms stay readable inside Arabic text */
+.ev-card h3,.ev-feature h3,.ev .sub{unicode-bidi:plaintext;text-align:right}
+.ev-form input[type=tel],.ev-form input[type=email]{direction:ltr;text-align:right}
+.ev .lead{max-width:60ch}
+.ev h2,.ev h3{letter-spacing:-.2px}
+.ev-anchor{scroll-margin-top:84px}
+
+/* extra button variants (existing .btn untouched) */
+.btn.o{background:transparent;color:var(--plum);border:1.5px solid var(--plum);box-shadow:none}
+.btn.o:hover{background:var(--plum);color:#fff}
+.btn[disabled],.btn.is-disabled{opacity:.55;cursor:not-allowed;transform:none;pointer-events:none}
+.btn.sm{padding:10px 20px;font-size:14.5px}
+.ev a:focus-visible,.ev button:focus-visible,.ev input:focus-visible,.ev select:focus-visible,.evnav a:focus-visible{outline:3px solid rgba(122,61,134,.45);outline-offset:3px}
+
+/* badges */
+.ev-tag{display:inline-block;font-size:12.5px;font-weight:800;padding:4px 12px;border-radius:999px;background:var(--tint);color:var(--plum)}
+.ev-tag.free{background:var(--mint);color:#0f4a3a}
+.ev-tag.paid{background:var(--lav);color:var(--plum)}
+.ev-status{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:800;color:var(--plum)}
+.ev-status:before{content:"";width:9px;height:9px;border-radius:50%;background:var(--orc)}
+.ev-status.up:before{background:#2fae85}
+.ev-status.done:before{background:#9b8aa5}
+
+/* cards */
+.ev-grid{display:grid;gap:22px}
+.ev-grid.s{grid-template-columns:repeat(2,1fr)}
+.ev-grid.w{grid-template-columns:repeat(3,1fr)}
+.ev-grid.c{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.ev-card{display:flex;flex-direction:column;padding:28px}
+.ev-card.free{border-top:5px solid #7fd4b6}
+.ev-card.paid{border-top:5px solid var(--orc)}
+.ev-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px}
+.ev-card .ic{margin-bottom:0}
+.ev-card h3{font-size:21px;line-height:1.4;margin-bottom:4px}
+.ev-card .sub{font-size:14.5px;font-weight:700;color:var(--plum2);margin-bottom:10px}
+.ev-card p.d{color:var(--mut);font-size:15.5px;margin-bottom:16px}
+.ev-meta{list-style:none;margin:0 0 14px;font-size:14px;color:#4a3a55}
+.ev-meta li{padding:2px 0}
+.ev-meta .tba{color:var(--mut)}
+.ev-agenda{margin:0 18px 14px 0;font-size:14px;color:#4a3a55}
+.ev-foot{margin-top:auto;display:flex;flex-direction:column;gap:14px;align-items:flex-start;padding-top:6px}
+.ev-card.compact{padding:22px}
+.ev-card.compact h3{font-size:17.5px}
+.ev-card.compact .ic{width:46px;height:46px;font-size:22px}
+
+/* featured session (homepage) */
+.ev-feature{background:linear-gradient(150deg,#3a1049,#6a2f78);color:#fff;border-radius:32px;padding:44px;display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center;box-shadow:0 24px 60px rgba(75,29,94,.22)}
+.ev-feature .ev-tag.free{background:var(--mint);color:#0f4a3a}
+.ev-feature h3{font-size:36px;font-weight:900;line-height:1.3;margin:14px 0 6px;color:#fff}
+.ev-feature .sub{font-size:18px;font-weight:700;color:var(--blush);margin-bottom:14px}
+.ev-feature p.d{color:#eadbf1;font-size:16.5px;margin-bottom:22px;max-width:56ch}
+.ev-feature .ev-status{color:#fff}
+.ev-feature .ev-meta{color:#eadbf1}
+.ev-feature .ev-agenda{color:#eadbf1}
+.ev-feature-art{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:26px;padding:30px;text-align:center}
+.ev-feature-art i{display:block;font-style:normal;font-size:64px;line-height:1.2;margin-bottom:10px}
+.ev-feature-art b{display:block;font-size:22px;color:var(--blush)}
+.ev-feature-art span{font-size:14px;color:#eadbf1}
+.ev-feature .btn.l{box-shadow:0 10px 26px rgba(0,0,0,.2)}
+.ev-feature .btn.g:hover{background:rgba(255,255,255,.12)}
+.ev-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ev-cta-row{margin-top:30px;text-align:center}
+
+/* events page */
+.ev-hero{padding-bottom:70px}
+.ev-hero .hs{max-width:56ch;margin-bottom:0}
+.evnav a{opacity:.9;transition:opacity .2s}.evnav a:hover{opacity:1}
+.ev-tabs{position:sticky;top:0;z-index:20;background:rgba(251,247,252,.92);backdrop-filter:blur(8px);border-bottom:1.5px solid var(--line)}
+.ev-tabs .w{display:flex;gap:10px;padding-top:12px;padding-bottom:12px;overflow-x:auto}
+.ev-tabs a{flex:none;padding:9px 20px;border-radius:999px;font-weight:800;font-size:15px;color:var(--plum);background:#fff;border:1.5px solid var(--line);transition:.2s}
+.ev-tabs a:hover,.ev-tabs a.on{background:var(--plum);color:#fff;border-color:var(--plum)}
+.ev-sec-head{margin-bottom:30px}
+.ev-sec-head h2{margin-bottom:8px}
+.ev-note{margin-top:22px;font-size:14.5px;color:var(--mut)}
+
+/* forms */
+.ev-panel{margin-top:44px}
+.ev-panel .box{align-items:start}
+.ev-banner{display:flex;gap:10px;align-items:center;background:var(--tint);border:1.5px solid var(--line);border-radius:14px;padding:10px 14px;font-size:14.5px;color:var(--plum);font-weight:700;margin-bottom:4px}
+.ev-form .req{color:#b3265a}
+.ev-form .opt{font-weight:500;color:var(--mut)}
+.ev-form .fe{display:none;color:#b3265a;font-size:13px;font-weight:700;margin-top:4px}
+.ev-form .bad input,.ev-form .bad select{border-color:#c4376b}
+.ev-form .bad .fe{display:block}
+.ev-form .ev-err{grid-column:1/-1;display:none;background:#fdebf1;border:1.5px solid #f2b6cc;color:#8d1d44;border-radius:14px;padding:12px 14px;font-size:14.5px;font-weight:700}
+.ev-form .ev-err.show{display:block}
+.ev-ok{display:none;text-align:center;padding:30px 10px;color:var(--plum)}
+.ev-ok.show{display:block}
+.ev-ok span{display:block;font-size:46px}
+.ev-ok strong{display:block;font-size:21px;margin:6px 0}
+.ev-ok p{color:var(--mut);font-size:15.5px;margin-bottom:16px}
+.ev-empty{padding:16px;border:1.5px dashed var(--line);border-radius:16px;color:var(--mut);font-size:15px}
+
+@media(max-width:900px){
+ .ev-grid.s,.ev-grid.w{grid-template-columns:1fr 1fr}
+ .ev-feature{grid-template-columns:1fr;padding:30px 22px;gap:26px}
+ .ev-feature h3{font-size:28px}
+ .ev-form{grid-template-columns:1fr}
+ .ev-anchor{scroll-margin-top:70px}
+ nav .lk{display:flex;gap:16px}nav .lk a:not(.ev-link){display:none}
+}
+@media(max-width:620px){
+ .ev-grid.s,.ev-grid.w{grid-template-columns:1fr}
+ .ev-card{padding:22px}
+ .evnav{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+ .ev-card:hover,.btn:hover{transform:none}
+ html{scroll-behavior:auto}
+}
+
