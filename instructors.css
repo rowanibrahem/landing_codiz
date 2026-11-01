@@ -1,0 +1,24 @@
+/* Codiz — "Meet Our Instructors" section (homepage). Uses base tokens (:root vars). */
+
+.inst-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,380px));justify-content:center;gap:26px}
+.inst-card{background:#fff;border:1.5px solid var(--line);border-radius:26px;padding:34px 28px 30px;text-align:center;display:flex;flex-direction:column;align-items:center;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.inst-card:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(75,29,94,.12);border-color:var(--orc)}
+.inst-photo{width:136px;height:136px;border-radius:50%;padding:4px;background:linear-gradient(135deg,var(--plum2),var(--blush));box-shadow:0 10px 24px rgba(75,29,94,.16);margin-bottom:18px;transition:transform .3s ease}
+.inst-card:hover .inst-photo{transform:scale(1.04)}
+.inst-photo img,.inst-photo span{width:100%;height:100%;border-radius:50%;display:block;object-fit:cover;object-position:50% 22%;background:var(--tint)}
+.inst-photo span{display:grid;place-items:center;font-size:40px;font-weight:900;color:var(--plum)}
+.inst-name{font-size:22px;font-weight:900;color:var(--plum);line-height:1.35;margin-bottom:8px;unicode-bidi:plaintext}
+.inst-role{display:inline-block;font-size:13.5px;font-weight:700;color:var(--plum2);background:var(--blush);padding:4px 16px;border-radius:999px;margin-bottom:14px;direction:ltr}
+.inst-name:after{content:"";display:none}
+.inst-bio{color:#4a3a55;font-size:15.5px;line-height:1.85;unicode-bidi:plaintext;text-align:center}
+
+/* nav: same plain look as the other links (no background); short label on small screens */
+nav .lk a.inst-link{background:none;padding:0;border:0;box-shadow:none;color:inherit}
+.inst-link .il-short{display:none}
+@media(max-width:900px){
+ nav .lk a.inst-link{display:inline}
+ .inst-link .il-full{display:none}.inst-link .il-short{display:inline}
+ .inst-card{padding:28px 22px 26px}
+}
+@media(prefers-reduced-motion:reduce){.inst-card:hover,.inst-card:hover .inst-photo{transform:none}}
+
