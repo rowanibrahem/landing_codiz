@@ -95,13 +95,24 @@
 .ev-ok p{color:var(--mut);font-size:15.5px;margin-bottom:16px}
 .ev-empty{padding:16px;border:1.5px dashed var(--line);border-radius:16px;color:var(--mut);font-size:15px}
 
+/* mobile nav toggle (hidden on desktop) */
+.nav-tg{display:none;place-items:center;width:42px;height:42px;border-radius:50%;border:1.5px solid rgba(255,255,255,.45);background:transparent;color:#fff;font-size:20px;line-height:1;cursor:pointer;transition:background .2s}
+.nav-tg:hover{background:rgba(255,255,255,.14)}
+nav .lk a:focus-visible,.nav-tg:focus-visible{outline:3px solid rgba(255,255,255,.6);outline-offset:2px}
+
 @media(max-width:900px){
  .ev-grid.s,.ev-grid.w{grid-template-columns:1fr 1fr}
  .ev-feature{grid-template-columns:1fr;padding:30px 22px;gap:26px}
  .ev-feature h3{font-size:28px}
  .ev-form{grid-template-columns:1fr}
  .ev-anchor{scroll-margin-top:70px}
- nav .lk{display:flex;gap:16px}nav .lk a:not(.ev-link){display:none}
+ nav{justify-content:flex-start;gap:10px;z-index:30}
+ nav .btn{margin-inline-start:auto;padding:8px 18px;font-size:13.5px}
+ .nav-tg{display:grid}
+ nav .lk{display:none;position:absolute;top:100%;right:0;left:0;flex-direction:column;gap:2px;background:#3a1049;border:1.5px solid rgba(255,255,255,.28);border-radius:20px;padding:8px;font-size:16px;opacity:1;box-shadow:0 24px 48px rgba(0,0,0,.45)}
+ nav.open .lk{display:flex}
+ nav .lk a{display:block;padding:12px 16px;border-radius:12px}
+ nav .lk a:hover,nav .lk a:focus-visible{background:rgba(255,255,255,.1)}
 }
 @media(max-width:620px){
  .ev-grid.s,.ev-grid.w{grid-template-columns:1fr}

@@ -314,8 +314,24 @@
     $$("#free-sessions,#workshops").forEach(function (s) { io.observe(s); });
   }
 
+  /* Mobile nav: hamburger toggles the links panel */
+  function initNav() {
+    var tg = $(".nav-tg"), nav = tg && tg.closest("nav"); if (!tg || !nav) return;
+    function set(open) {
+      nav.classList.toggle("open", open);
+      tg.setAttribute("aria-expanded", open ? "true" : "false");
+      tg.innerHTML = open ? "&#10005;" : "&#9776;";
+    }
+    tg.addEventListener("click", function () { set(!nav.classList.contains("open")); });
+    $$(".lk a", nav).forEach(function (a) { a.addEventListener("click", function () { set(false); }); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") set(false); });
+    document.addEventListener("click", function (e) { if (!nav.contains(e.target)) set(false); });
+    window.addEventListener("resize", function () { if (window.innerWidth > 900) set(false); });
+  }
+
   mount();
   initForms();
   initTabs();
+  initNav();
 })();
 

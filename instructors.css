@@ -13,11 +13,9 @@
 .inst-bio{color:#4a3a55;font-size:15.5px;line-height:1.85;unicode-bidi:plaintext;text-align:center}
 
 /* nav: same plain look as the other links (no background); short label on small screens */
-nav .lk a.inst-link{background:none;padding:0;border:0;box-shadow:none;color:inherit}
+nav .lk a.inst-link{background:none;border:0;box-shadow:none;color:inherit}
 .inst-link .il-short{display:none}
 @media(max-width:900px){
- nav .lk a.inst-link{display:inline}
- .inst-link .il-full{display:none}.inst-link .il-short{display:inline}
  .inst-card{padding:28px 22px 26px}
 }
 @media(prefers-reduced-motion:reduce){.inst-card:hover,.inst-card:hover .inst-photo{transform:none}}
