@@ -35,5 +35,13 @@ window.CODIZ_INSTRUCTORS = [
     photo: "assets/instructors/momen-tarek.jpeg",
     bio:
 "مهندس Full-Stack وباحث ماجستير في الذكاء الاصطناعي. يمتلك خبرة واسعة في بناء تطبيقات الويب والـ Backend، مع تخصص دقيق في دمج أنظمة الـ AI (مثل الـ LLMs والـ RAG). معتمد من ITIDA و Route IT"
-     }
+     },
+      {
+    id: "ghada-mahmoud",
+    name: "Ghada Mahmoud",
+    title: "UI/UX Designer",
+    photo: "assets/instructors/ghada-mahmoud.jpeg",
+    bio: 
+"مصممة UI/UX بخبرة أكتر من 3 سنين، تمتلك خبرة في تصميم تطبيقات الويب والموبايل والـ SaaS، وتصميم تجارب مستخدم فعّالة وبناء Design Systems، مع اهتمام بتأهيل المصممين لسوق العمل من خلال التدريب العملي."
+  }
 ]
