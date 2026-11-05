@@ -17,7 +17,7 @@ window.CODIZ_EVENTS = {
   formEndpoint: "https://script.google.com/macros/s/AKfycby4t4PPWwvWOpfIb93uoEArFiC0uewfl0lpC5eZv-Kjige_vW0sr-Lmoms0twpLNWiz/exec",
 
   // Session shown in the homepage "featured" block.
-  featuredSessionId: "build-smarter-with-ai",
+  featuredSessionId: "ai-explore-whats-possible",
 
   experienceLevels: ["مبتدئ", "متوسط", "متقدم"],
 
@@ -31,13 +31,13 @@ window.CODIZ_EVENTS = {
       icon: "🤖",
       tone: "mint",
       format: "سيشن لايف مجانية",
-      status: "upcoming",                 // "upcoming" | "completed"
-      statusLabel: "قادمة – سيشن لايف مجانية",
-      registrationOpen: true,
-      date: "2026-11-05",                 // 5 Nov 2026 — time still unpublished (add time: "...")
+      status: "completed",                // "upcoming" | "completed"
+      statusLabel: "انتهت",
+      registrationOpen: false,
+      date: "2026-11-05",                 // 5 Nov 2026
       time: null,                         // e.g. "7:00 م (بتوقيت القاهرة)"
       agenda: [],                         // hidden until set
-      recordingUrl: null                  // set after the session to enable "شاهد التسجيل"
+      recordingUrl: "https://www.facebook.com/share/v/18U6uebB2h/" // رابط تسجيل السيشن
     },
     {
       id: "ai-explore-whats-possible",
@@ -51,7 +51,7 @@ window.CODIZ_EVENTS = {
       status: "upcoming",
       statusLabel: "قادمة – سيشن مجانية",
       registrationOpen: true,
-      date: null,                         // unpublished until confirmed
+      date: "2026-11-19",                 // 19 Nov 2026
       time: null,                         // unpublished until confirmed
       agenda: [],                         // unpublished until confirmed
       recordingUrl: null

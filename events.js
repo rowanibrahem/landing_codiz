@@ -30,7 +30,7 @@
     var rec = safeUrl(s.recordingUrl);
     if (s.status === "completed") {
       return rec
-        ? { label: "شاهد التسجيل", href: rec, external: true, primary: true }
+        ? { label: s.recordingLabel || "شاهد التسجيل", href: rec, external: true, primary: true }
         : { label: "السيشن انتهت", disabled: true };
     }
     if (s.registrationOpen === false) return { label: "التسجيل مغلق", disabled: true };
