@@ -1,0 +1,1328 @@
+[
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "المقدمة"
+  },
+  {
+    "type": "paragraph",
+    "text": "احيانا ممكن يقابلنا مشاكل او bugs و احنا بنعدل او بنضيف Feature جديدة للكود علي عكس المتوقع و دا لأن معظمنا ك software engineers بنركز دايما اننا عايزين نطلع منتج كويس و شغال عند العميل ، بس هل فكرنا قبل كدا في quality بتاعته ك code ؟ "
+  },
+  {
+    "type": "paragraph",
+    "text": "تخيل انك بتبني عمارة علي اساس ضعيف و حبيت تضيف دور جديد للمبني هتلاقي ان المبني كله بدأ ينهار و دا بسبب الاساس الضعيف من الاول ، ف زي ما بنقول الاهم من الشغل تظبيط الشغل ، هنتعرف النهاردة عن ازاي نخلي السوفتوير بتاعنا الكواليتي بتاعته كويسة و ايه هو Code Quality و ازاي بنقيسه."
+  },
+  {
+    "type": "image",
+    "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-4.png",
+    "alt": "",
+    "width": 750,
+    "height": 516,
+    "srcset": [
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-4-w600.png",
+        "width": 600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-4.png",
+        "width": 750
+      }
+    ]
+  },
+  {
+    "type": "divider"
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "ايه هو الـ Code Quality؟"
+  },
+  {
+    "type": "paragraph",
+    "text": "\nفي قاعدة Lehaman’s بتقول:"
+  },
+  {
+    "type": "callout",
+    "emoji": "💡",
+    "text": "Any system that’s used will need to change"
+  },
+  {
+    "type": "paragraph",
+    "text": "**يعني ايه الكلام دا بقي؟**"
+  },
+  {
+    "type": "paragraph",
+    "text": "معناه ان اي سيستم او برودكت بنعمله هنحتاج نعدل فيه سواء اننا نضيف Feature جديدة او نعدل عليها. تخيل كدا لو انت مهتمتش بجودة الكود بتاعك مش هتعرف تغير اي حاجة في السيستم من غير ما تقابل مشاكل فيه و bugs جديدة هتزود من وقت تحسينك ليه."
+  },
+  {
+    "type": "paragraph",
+    "text": "**يبقي الCode Quality ببساطة هو انك تعمل كود يكون سهل القراءة و الفهم لما ترجعله في اي وقت.**"
+  },
+  {
+    "type": "paragraph",
+    "text": "نقدر نقول انها طريقة علشان تقيس كفاءة و مدي سهولة فهم و التعديل علي كود موجود. ونقدر نقيسه عن طريق قد ايه هو قابل للقراءة و ممكن نعيد استخدامه في اي بروجكت تاني و مدي سهولته لاي developer تاني انه يقدر يقرأه و يعدل عليه في وقت قصير."
+  },
+  {
+    "type": "divider"
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "أهمية الـ Code Quality "
+  },
+  {
+    "type": "paragraph",
+    "text": "\nطيب بعد ما عرفنا يعني ايه ، ليه هو ممكن يكون مهم او ايه مدي تأثيره ؟ خلينا نشوف ..\nخليك عارف ان فيه حاجتين مينفعش تثق فيهم : "
+  },
+  {
+    "type": "list",
+    "ordered": false,
+    "items": [
+      "انك تكون متاح في المستقبل",
+      "الذاكرة المستقبلية بتاعتك."
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "خلينا نفهم اكتر عن طريق السيناريو دا: انت بدات بروجكت كان الكود مش احسن حاجة و قلت انك هتعدله بعدين جالك Offer شغل تاني او انشغلت في بروجكت تاني معرفتش ترجع تعدل عليه و كان في تيم تاني هيشتغل فيه ممكن تسأل نفسك وقتها ، هل التيم هيكون قادر انه يعدل عليه او يفهمه بسهولة ؟ "
+  },
+  {
+    "type": "paragraph",
+    "text": "ايه اللي هيحصل اما يضيفوا تعديل جديد ؟ و ازاي هيأثر علي ال performance and bugs ؟ من هنا نقدر نستنج اهمية الـ Code Quality."
+  },
+  {
+    "type": "list",
+    "ordered": false,
+    "items": [
+      "أول حاجة بيساعد الdeveloper انه يعيد قراءة الكود ببساطة و بسهولة.",
+      "بنقدر نتاكد ان العميل هياخد experience جيدة ومش هيشتكي من وجود اخطاء غير متوقعة.",
+      "بيقلل الاخطاء المستقبلية و بيحسن الاداء و بيكون سهل التعديل عليه و اكتشاف الاخطاء بدري و كمان بيكون فيه security عالية.",
+      "طول ما السوفتوير بتاعك مبيطلعش اخطاء لمدة طويلة دا هيوفر فلوس للشركة و هيوفر وقت لما يحتاج تعديل او اضافة اي Feature جديدة."
+    ]
+  },
+  {
+    "type": "image",
+    "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/Screenshot-2024-08-31-at-16.23.29.png",
+    "alt": "",
+    "width": 932,
+    "height": 858,
+    "srcset": [
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/Screenshot-2024-08-31-at-16.23.29-w600.png",
+        "width": 600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/Screenshot-2024-08-31-at-16.23.29.png",
+        "width": 932
+      }
+    ]
+  },
+  {
+    "type": "divider"
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "ايه هي الـ Code Quality Standards"
+  },
+  {
+    "type": "paragraph",
+    "text": "في عوامل كتير بتأثر علي جودة الكود ف عملوا معاير من خلالها بنقدر نشوف الكود بتاعنا كويس قد ايه و ايه الجوانب اللي محتاجة تتحسن فيه. ومن ضمن المعايير دي: readability, clarity, reliability, security, modularity, etc..."
+  },
+  {
+    "type": "paragraph",
+    "text": "انك تقدم كود جودته عالية دا شىء اساسي لكل developer وعلشان تقدر تعمل دا في قواعد او معايير بنمشي عليها علشان نقدر نحقق اعلي جودة والمعايير دي بتخلي الكود أكثر سهولة ويكون قابل للتعديل واكتشاف الاخطاء بدري فخلونا نكتشف ايه هما:"
+  },
+  {
+    "type": "paragraph",
+    "text": "**العوامل اللي بتأثر علي Code Quality:**"
+  },
+  {
+    "type": "heading",
+    "level": 3,
+    "text": "الـ Complexity"
+  },
+  {
+    "type": "paragraph",
+    "text": "من اسمها كدا اني بقيس مدي صعوبة الكود بتاعي من حيث هو سهل قد ايه في انه يتفهم اويتعدل عليه بعدين زي ما بنمسميه في الالجورزم Big O. "
+  },
+  {
+    "type": "paragraph",
+    "text": "من العوامل اللي بتأثر علي قراية الكود : عدد السطور ، استخدام nested IF Conditions ، Loops .\nفي مثال مشهور عندنا و هو Recurrsion function الدالة اللي بتكرر نفسها او بتسدعي نفسها كذا مرة دا ابسط مثال علي انه ازاي الكود بيكون صعب انه يتفهم او يتقري بسهولة . "
+  },
+  {
+    "type": "paragraph",
+    "text": "**طيب ليه مفروض برضو اننا نحسنه ؟**"
+  },
+  {
+    "type": "paragraph",
+    "text": "لأن كل ما الكود كان بسيط و سهل بيخلي اداء البرنامج عالي و يستهلك موارد اقل من Memory , CPU و و بيكون صعب في انه نضيف تعديل جديد من غير ما يكلف الشركة فلوس اكتر."
+  },
+  {
+    "type": "paragraph",
+    "text": "عندنا انواع من الـ Complexity:"
+  },
+  {
+    "type": "list",
+    "ordered": false,
+    "items": [
+      "Cyclomatic Complexity",
+      "Structural Complexity",
+      "Algorithmic Complexity",
+      "Cognitive Complexity"
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "**خلونا نوضح بمثال الـ Cyclomatic Complexity:**"
+  },
+  {
+    "type": "paragraph",
+    "text": "دا معناه زي انه اقدر اعد عدد الطرق المختلفة اللي ممكن اروح ليها في مدينة من نقطة للتانية\nزيه في الكود انه بيعد عدد الطرق اللي ممكن اروح بيها من قرار للتاني اما بستخدم if - for و هكذا."
+  },
+  {
+    "type": "image",
+    "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-8.png",
+    "alt": "",
+    "width": 1023,
+    "height": 894,
+    "srcset": [
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-8-w600.png",
+        "width": 600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-8-w1000.png",
+        "width": 1000
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-8.png",
+        "width": 1023
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "لو بصينا هنا هنلاقي الComplexity ب 3 يعني عندي 3 قرارات او 3 حالات  :  "
+  },
+  {
+    "type": "list",
+    "ordered": false,
+    "items": [
+      "الاوردر اتدفع ",
+      "الاوردر في المخزن ",
+      "الاوردر مدفعش"
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "**الـ Cognitive Complexity: **ودا ببساطة انه الشخص يقدر يقرأ الكود بسهولة."
+  },
+  {
+    "type": "image",
+    "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-9.png",
+    "alt": "",
+    "width": 1480,
+    "height": 1002,
+    "srcset": [
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-9-w600.png",
+        "width": 600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-9-w1000.png",
+        "width": 1000
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-9.png",
+        "width": 1480
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "لو بصينا هنا هنلاقي انه الكود صعب انه يتقرأ من اول مرة و ممكن يتعدل كدا : "
+  },
+  {
+    "type": "image",
+    "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-10.png",
+    "alt": "",
+    "width": 1409,
+    "height": 596,
+    "srcset": [
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-10-w600.png",
+        "width": 600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-10-w1000.png",
+        "width": 1000
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-10.png",
+        "width": 1409
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "طبعا الفرق واضح ، لسة فيه طرق تانية علشان نقدر نقيس الComplexity تقدر تبص عليها من هنا:"
+  },
+  {
+    "type": "bookmark",
+    "url": "https://blog.codacy.com/code-complexity?ref=eqraatech.com",
+    "title": "Code Complexity: An In-Depth Explanation and Metrics",
+    "description": "Learn more about code complexity; what increases code complexity, what the main metrics are that need to be measured, and how to reduce it.",
+    "author": "Qamine Portugal S.A.",
+    "publisher": "Codacy"
+  },
+  {
+    "type": "divider"
+  },
+  {
+    "type": "heading",
+    "level": 3,
+    "text": "Hotspots and Churns"
+  },
+  {
+    "type": "paragraph",
+    "text": "يا تري الكود بتاعك مخبي ايه ؟\n**الـ Hotspots:** دي بتكون اجزاء من الكود بتتغير بشكل مستمر علشان فيه تعديل او اضافة ميزة جديدة للبرنامج . دي ممكن يكون فيه اجزاء Complex او اجزاء محتاجة انها تتصلح و دا طبعا بيستهلك من الـ Memory وعلشان كدا دايما بنحاول نشوف الاجزاء اللي محتاجة تتصلح علشان نحسن من الاداء بتاعها."
+  },
+  {
+    "type": "paragraph",
+    "text": "**الـ Churns:** بنعد هنا كام عدد من المرات اللي اتغير فيها فايل معين سواء اضافة جزء او تعديل او تحديث في وقت معين. **طيب ازاي نقدر نعرف الفايلات دي ؟**"
+  },
+  {
+    "type": "paragraph",
+    "text": "عندنا اداة زي Git& Github تقدر تعمل تتبع لكل فايل موجود في الريبو و تدي تاريخ لكل تغير حصل و من مين و امتي و اتغير كام مرة . كل ما الكود بيتغير كتير كل ما كان ال churn عالي و هيبقي فيه hotspots محتاجة تتحسن."
+  },
+  {
+    "type": "paragraph",
+    "text": "فمهم اننا نكون مهتمين اننا نتابع تغير الفايل اللي بيتغير كتير بيبقي محتاج تحسين علشان ميسببش مشاكل بعد كدا، و دا شكل التغيرات للفايل اللي بيتعرض علي Github:"
+  },
+  {
+    "type": "image",
+    "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-11.png",
+    "alt": "",
+    "width": 1438,
+    "height": 802,
+    "srcset": [
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-11-w600.png",
+        "width": 600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-11-w1000.png",
+        "width": 1000
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-11.png",
+        "width": 1438
+      }
+    ]
+  },
+  {
+    "type": "divider"
+  },
+  {
+    "type": "heading",
+    "level": 3,
+    "text": "Reliability "
+  },
+  {
+    "type": "paragraph",
+    "text": "هنا بنتأكد ان كل function في الكود شغاله صح و انه لو حصل اي اخطاء غير متوقعة السيستم هيتعامل معاها من غير مشاكل و من غير ما يقف و علشان كدا بنعمل Error Handling علشان نتاكد ان كل حالة هيظهرله فيها رسالة خطأ من غير ما السيستم يقف."
+  },
+  {
+    "type": "paragraph",
+    "text": "علشان نتاكد من دا بنعمل علي كل فانكشن unit test من الاول علشان نتجنب حدوث اخطاء بعد كدا و ان كل حاجة شغاله بشكل سليم وممكن كمان نستخدم Debugging و Profiling هيطلعلنا الاخطاء من الاول\nو في نهاية البروجكت طبعا التيستر بيعمل test كامل للمشروع علشان يتأكد انه مش هيحصل اخطاء مفاجئى علي قدر الامكان."
+  },
+  {
+    "type": "paragraph",
+    "text": "لو قدرنا نعرف السيستم بيصحله failure كام مرة في وقت معين هنقدر نشوف هو قد Reliable."
+  },
+  {
+    "type": "divider"
+  },
+  {
+    "type": "heading",
+    "level": 3,
+    "text": "Code Coverage"
+  },
+  {
+    "type": "paragraph",
+    "text": "يا تري الكود معمولة تيست بنسبة قد ايه ؟ "
+  },
+  {
+    "type": "paragraph",
+    "text": "هو عبارة عن نسبة بيطلعها التيستر بعد ما بيخلص test خالص علشان يقول المنتج دا هينفع نسلمه للعميل و لا  لا بناءا علي test cases اللي كتبها و بيقول اي اجزاء من الكود يقدر يحسنها."
+  },
+  {
+    "type": "paragraph",
+    "text": "النتيجة النهائية بتطلع بناءا علي كذا نوع من الـ Test : "
+  },
+  {
+    "type": "list",
+    "ordered": false,
+    "items": [
+      "Unit Test",
+      "Integration Test",
+      "Acceptance Test"
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "**تقدر تشوف تفاصيل اكتر عنه هنا : **"
+  },
+  {
+    "type": "bookmark",
+    "url": "https://www.browserstack.com/guide/code-coverage-vs-test-coverage?ref=eqraatech.com",
+    "title": "Code Coverage vs Test Coverage | BrowserStack",
+    "description": "Learn the difference between Code Coverage vs Test Coverage and how to perform them to measure the effectiveness of application code.",
+    "author": "BrowserStack",
+    "publisher": "Shreya Bose"
+  },
+  {
+    "type": "divider"
+  },
+  {
+    "type": "heading",
+    "level": 3,
+    "text": "Maintainability"
+  },
+  {
+    "type": "paragraph",
+    "text": "ساعات بنحتاج نعدل او نضيف او نحدث فيتشر موجودة في البرنامج طول الوقت علشان تتناسب مع طلبات العميل علشان كدا السيستم لازم يكون سهل انه يتعدل و يتغير من غير ما يعمل اي مشاكل او اخطاء."
+  },
+  {
+    "type": "paragraph",
+    "text": "**نقدر نعمل دا عن طريق كذا حاجة :**"
+  },
+  {
+    "type": "list",
+    "ordered": false,
+    "items": [
+      "نعمل تعديل للكود كل شوية علشان تمنع التكرار و نخليه واضح .",
+      "**التوثيق \\(Documentation\\):** لازم تكون موثق كل حاجة في الكود عندك بشكل مظبوط الstructure , api و هكذا علشان بيساعد و يوفر وقت علي المطورين انهم يقرؤه و يفهموه بشكل سليم .",
+      "**الـ Encapsulation & Abstraction:** و دا بيساعد اخفاء تفاصيل التنفيذ و التركيز علي العمليات نفسها و دا بيقلل من المخاطر الغير مقصودة عند التعديل ."
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "**خلينا ناخد مثال:**"
+  },
+  {
+    "type": "image",
+    "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-12.png",
+    "alt": "",
+    "width": 1698,
+    "height": 1038,
+    "srcset": [
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-12-w600.png",
+        "width": 600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-12-w1000.png",
+        "width": 1000
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-12-w1600.png",
+        "width": 1600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-12.png",
+        "width": 1698
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "هنا الـ Function بتعمل اكثر من وظيفة لو حبيت اني اضيف او اعدل حاجة البرنامج ممكن يبوظ او ميشتغشل بشكل سليم ، بينام هنا بقي: "
+  },
+  {
+    "type": "image",
+    "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-13.png",
+    "alt": "",
+    "width": 1697,
+    "height": 1414,
+    "srcset": [
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-13-w600.png",
+        "width": 600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-13-w1000.png",
+        "width": 1000
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-13-w1600.png",
+        "width": 1600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-13.png",
+        "width": 1697
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "قسمناها لاجزاء اكثر لو عايزة اعدل او اضيف حاجة هيكون الموضوع سهل و بيخلي قرايته احسن و سهل التعديل و الـ Developers يقدروا يشتغلوا عليه اسرع ."
+  },
+  {
+    "type": "divider"
+  },
+  {
+    "type": "heading",
+    "level": 3,
+    "text": "Testability"
+  },
+  {
+    "type": "paragraph",
+    "text": "زي ما قلنا انه في 3 انواع من التيست: \\(unit test - integration test - Acceptance test\\) يبقي ال Testability معناه مدي سهولة انه نتيست جزء من الكود و يستغل بشكل صحيح من غير ما يطلع اي مشاكل او اخطاء."
+  },
+  {
+    "type": "paragraph",
+    "text": "لازم نتاكد ان البرنامج شغال بكفاءة و بشكل كويس بدون ما يكون فيه اي اخطاء دلوقت و نحاول نحط في حساباتنا كل السيناريوهات اللي ممكن تتحصل في المستقبل علشان نحاول نتجنبها و نكسب ثقة العميل و نحسن من تجربته ."
+  },
+  {
+    "type": "divider"
+  },
+  {
+    "type": "heading",
+    "level": 3,
+    "text": "Readability"
+  },
+  {
+    "type": "paragraph",
+    "text": "زي ما خطنا مفروض يكون انه واضح علشان اي حد يقرأه ويفهمه بسهولة ، الكود برضو لازم كتابته تكون واضحة و قابلة للقراءة من اي ديفيلوبر تاني. طب ازاي نقدر نعمل دا ؟"
+  },
+  {
+    "type": "list",
+    "ordered": false,
+    "items": [
+      "**التسمية الواضحة \\(Clear Naming Conventions\\):** لازم التسمية تكون واضحة و معبرة عن اللي مكتوب سواء class او متغير او فانكشن علشان تعبر عن وظيفتها و متبقاش محتاجة شرح.",
+      "**الـ Modularity:** الكود لازم يكون متقسم لاجزاء صغيرية كل جزء بيعمل وظيفة معينة علشان نقدر نعمله تيست و اصلاح بعدين.",
+      "**نمط الكود \\(Coding Style\\):** خلي بالك من تنسيق الكود المسافات و متنساش تحط تعليقات لو فيه حاجة مش واضحة و محتاجة شرح .",
+      "**هيكلة وبنية الكود \\(Code Structure\\):** لازم نمشي علي structure واضح للكود علشان اللي هيشتغل معاك يعرف يكمل عليه .",
+      "تجنب انك تكتب اي Hard code و متنساش تعمل Error Handling ."
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "**خلينا ناخد مثال :**"
+  },
+  {
+    "type": "image",
+    "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-14.png",
+    "alt": "",
+    "width": 1042,
+    "height": 744,
+    "srcset": [
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-14-w600.png",
+        "width": 600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-14-w1000.png",
+        "width": 1000
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-14.png",
+        "width": 1042
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "**بص كدا تخيل انك بتقرأ فانكشن بسيطة زي دي يعني ايه \" a \" و \"s\" دا ؟ ايه هدف الفانكشن دي ؟ **"
+  },
+  {
+    "type": "image",
+    "alt": "",
+    "width": 1496,
+    "height": 1266,
+    "originalUrl": "https://lh7-rt.googleusercontent.com/docsz/AD_4nXc5bivKOY_bV8OeDfCDXqUckmINpFhUTW8LonyonkcQMOzYn3Nx-liKRieIBiOCWYbWtkpj63LLBsQC7sQgeCZ3d9wwVWPLoZ2401Jn1WvZpLLWVeL4-TwUFbr4XLYEcAXbf61-WZa2VopP596bctigp1NP?key=IHGoI-EsjpadCLslqCVTvA",
+    "missing": true
+  },
+  {
+    "type": "paragraph",
+    "text": "**طيب هنا نفس الكود كبر بس بقي معبر اكتر و لا لا  ؟ **"
+  },
+  {
+    "type": "paragraph",
+    "text": "الاسماء هتلاقيها معبرة و الـ Functions اتقسمت لاجزاء اصغر علشان كل جزء يعمل وظيفة معينة و ضفنا Comments علشان تشرح وظيفة كل فانكشن. "
+  },
+  {
+    "type": "paragraph",
+    "text": "مهم جدا انك تخلي الكوج بتاعك Self Documented بيعبر عن نفسه من غير شرح و تحسنه طبعا كل شوية."
+  },
+  {
+    "type": "divider"
+  },
+  {
+    "type": "heading",
+    "level": 3,
+    "text": "Reusability"
+  },
+  {
+    "type": "paragraph",
+    "text": "زي ما عندنا الملح في الاكل نقدر نحطه علي كذا اكله ، الكود بتاعنا لازم يكون سهل انه يتعاد استخدامه في كذا مكان تاني في الكود او في بروجكت تاني اصلا من غير ما يحصل اي اخطاء. "
+  },
+  {
+    "type": "paragraph",
+    "text": "**طيب ازاي نقدر نتاكد من دا ؟ **"
+  },
+  {
+    "type": "list",
+    "ordered": false,
+    "items": [
+      "نخلي الكود متقسم لاجزاء صغيرة علشان نقدر نستعدي الجزء دا في اي مكان تاني وميكنش معتمد علي جزء تاني. ",
+      "تجنب التكرار: لو لقيت انك مكرر الكود اكتر من مرة يبقي كدا فيه مشكلة و لازم تعيد كتابته تاني و تخليه يتكتب مرة واحدة بس .",
+      "اتبع مبادىء SOLID هيساعدك بشكل كبير .",
+      "**الـ Encapsualtion and Abstraction:** بيخلي قراءة الكود سهلة و المودلز مش معتمدة علي بعض ."
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "**خلونا نشوف مثال برضو: لو انا عايزة اعمل 3 ازرار مختلفة في مشروع واحد بس في صفح مختلفة هنكتبه كدا مثلا: **"
+  },
+  {
+    "type": "image",
+    "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-15.png",
+    "alt": "",
+    "width": 1882,
+    "height": 708,
+    "srcset": [
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-15-w600.png",
+        "width": 600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-15-w1000.png",
+        "width": 1000
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-15-w1600.png",
+        "width": 1600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-15.png",
+        "width": 1882
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "هنا انا كررته 3 مرات باختلاف النص و اللون لو انا عايزة بعد كدا اغير padding هضطر اغيره في واحد واحد و دا مش صح طبعا. الصح بقي هنعمل الزرار دا ك component اقدر استخدمه في كذا مكان مختلف و مش هحتاج اعمل ابديت فيه كل شوية."
+  },
+  {
+    "type": "image",
+    "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-16.png",
+    "alt": "",
+    "width": 1716,
+    "height": 484,
+    "srcset": [
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-16-w600.png",
+        "width": 600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-16-w1000.png",
+        "width": 1000
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-16-w1600.png",
+        "width": 1600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-16.png",
+        "width": 1716
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "هستخدمه في اي مكان بقي:"
+  },
+  {
+    "type": "image",
+    "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-17.png",
+    "alt": "",
+    "width": 1682,
+    "height": 708,
+    "srcset": [
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-17-w600.png",
+        "width": 600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-17-w1000.png",
+        "width": 1000
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-17-w1600.png",
+        "width": 1600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-17.png",
+        "width": 1682
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": " كدا انا وفرت وقت و مجهود و تجنبت انه يحصل اي اخطاء بعد كدا لو حبيت اعدل."
+  },
+  {
+    "type": "divider"
+  },
+  {
+    "type": "heading",
+    "level": 3,
+    "text": "Portability"
+  },
+  {
+    "type": "paragraph",
+    "text": "دي بقي معناها ان السيستم يقدر يشتغل علي اكثر من Platform او Operating System مختلف من غير ما يعمل مشاكل او يكون شكله مختلف. وانه يشتغل مثلا علي Browsers مختلفين من غير اي bugs او انه يشتغل علي Android & IOS من غير ما يكون فيه فرق كبير في الشكل النهائي للبرنامج."
+  },
+  {
+    "type": "paragraph",
+    "text": "لو مقدرتش انك تخليه يشتغل علي اجهزة مختلفة بشكل مناسب هتضطر انك تعمل كود مخصص لكل Platform و دا طبعا هيزود وقت و تكلفة و مجهود بدون داعي ."
+  },
+  {
+    "type": "divider"
+  },
+  {
+    "type": "heading",
+    "level": 3,
+    "text": "Performance"
+  },
+  {
+    "type": "paragraph",
+    "text": "اهم عامل لنجاح المنتج هو الاداء بتاعه عامل ازاي ، كل التعديلات اللي بنعملها و بنحسن الكود بتاعنا علشان نخليه يشتغل باداء عالي و بالتالي هنقدر نقدم Product كويس. "
+  },
+  {
+    "type": "paragraph",
+    "text": "الـ performance هو قياس مدي جودة و كفاءة تنظيم الكود و تحسينه ، ونقدر نقيسه عن طريق الـ Responsive و سرعته و الموارد اللي بيستهلكها من CPU و Memory. وكل ما كان الاداء عالي كل ما كان بيستهلك موارد اقل و بيقدم الخدمة بشكل احسن."
+  },
+  {
+    "type": "paragraph",
+    "text": "**و دي بعض الامثلة اللي ممكن تقلل من اداء البرنامج:**"
+  },
+  {
+    "type": "list",
+    "ordered": false,
+    "items": [
+      "الصور الغير مضغوطة و اللي مساحتها بتكون كبيرة لازم نتاكد ان حجم الصورة صغير.",
+      "ممكن يكون فيه مكتبات تعمل مشاكل وقت الانتاج او بتقلل من الاداء.",
+      "مبنستخدمش Cache في الـ Browser",
+      "الصور و المكتبات الغير مستخدمة"
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "كل لغة برمجة ليها طريق معينة في تحسين ال performance كل اللي عليك انك تبحث عن \"How to Improve Performance in ...\""
+  },
+  {
+    "type": "divider"
+  },
+  {
+    "type": "heading",
+    "level": 3,
+    "text": "Duplication"
+  },
+  {
+    "type": "paragraph",
+    "text": "كام مرة بتكرر نفسك ؟ "
+  },
+  {
+    "type": "paragraph",
+    "text": "في قاعدة في السوفتوير اسمها DRY بتقول Don't repeat yourself متكررش نفسك معظم الديفيلوبرز بياخدوا الكود كوبي بيست لو لقوا ان فيه جزء في الكود محتاج انه يتكرر مرتين و لكن دا طبعا بيعمل مشاكل كتير منها : "
+  },
+  {
+    "type": "list",
+    "ordered": false,
+    "items": [
+      "بيقلل اداء المنتج  ",
+      "بيعمل مجهود تعديل كبير ",
+      "هحتاج اعدل في كل الاجزاء المرتبطة بالفيتشر دي و دا هياخد وقت و مجهود و ممكن يعمل اخطاء و يأثر علي فانكشز تانية شغاله بشكل سليم علشان كدا محتاجين نخلي الحاجات المتكررة shared نستخدمها مرة واحدة علشان نتجنب الاخطاء اللي هتحصل."
+    ]
+  },
+  {
+    "type": "divider"
+  },
+  {
+    "type": "heading",
+    "level": 3,
+    "text": "Security and Dependencies"
+  },
+  {
+    "type": "paragraph",
+    "text": "اهم جزء و انت بتطلع المنتج بتاعك انك تتأكد انه محمي من الثغرات و الهجوم الامني ،  الـ Security هو انك تتتبع مبادىء و ارشادات علشان تحمي الكود بتاعك من اي هجومات او ثغرات امنية."
+  },
+  {
+    "type": "paragraph",
+    "text": "**Dependencies Management Security: **"
+  },
+  {
+    "type": "paragraph",
+    "text": "لازم تحدث ال dependencies بتاعتك علشان تتاكد من منع الهجمات اللي ممكن تحصل من خلالها. فلو مستخدمتش مكتبة موثوق فيها ممكن البرنامج بتاعك يحصل فيه مشاكل ."
+  },
+  {
+    "type": "paragraph",
+    "text": "**علشان نتاكد من امان التطبيقات ممكن ناخد بالنا من شوية حاجات: **"
+  },
+  {
+    "type": "list",
+    "ordered": false,
+    "items": [
+      "**الـ Input Validation:** لازم تتأكد ان اي input field محمي من الSql injection او cross-site scripting ",
+      "**الـ Authentication and authorization:** لازم تتبع خطة كويسة علشان تقدر تتحكم في الصلاحيات ، ممكن تسخدم key cloak دا بيوفر سيكيوريتي عالي في عملية تسجيل الدخول .",
+      "**الـ Data Protection:** لازم تتأكد انك بتحمي الداتا بتاعتك عن طريق انك بتشفرها او التخزين الامن . ",
+      "**الـ Security Testing:** بعمل اختبارات امنية بشكل منتظم ، بحلل الكود و penetration testing, and vulnerability scanning علشان اقدر اشوف هيحصل فين اختراق و احله "
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "الـ Security مهم جدا علشا لو حصل اي اختراق ممكن يخلي الداتا المهمة تضيع و هتخسر ثقة العميل و ممكن يسبب خساير مالية للشركة طبعا."
+  },
+  {
+    "type": "divider"
+  },
+  {
+    "type": "heading",
+    "level": 3,
+    "text": "Code Style"
+  },
+  {
+    "type": "paragraph",
+    "text": "بشكل بسيط ، الكود بتاعك نضيف قد ايه ؟ فهو مجموعة من الارشادات عن ازاي تنظم الكود بتاعك ، مثلا ازاي تسمي المتغيرات ؟ امتي تستخدم المسافات ؟ ازاي تحط تعليقات ؟ بيدي الكود بتاعك شكل ثابت و منظم بيخليه ممتع للقراءة خصوصا لو وقت الشغل مع تيم."
+  },
+  {
+    "type": "paragraph",
+    "text": "في ارشادات خاصة طبعا في كل لغة و لكن معظمه بيستخدم formating اللي بتكون مدعومة في الIDES ."
+  },
+  {
+    "type": "paragraph",
+    "text": "[تقدر تطلع اكثر من هنا](https://guide.esciencecenter.nl/?ref=eqraatech.com#/best_practices/language_guides/languages_overview) "
+  },
+  {
+    "type": "paragraph",
+    "text": "هو بيتكون من قرارات صغيرة بناءا علي اللغة: "
+  },
+  {
+    "type": "list",
+    "ordered": false,
+    "items": [
+      "ازاي و امتي نستخدم التعليق ",
+      "المسافات بتكون قد ايه ",
+      "الاسماء تكون واضحة و بتوصف ",
+      "تمشي ب pattern محدد"
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "خلينا نشوف مثال بسيط:"
+  },
+  {
+    "type": "image",
+    "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-18.png",
+    "alt": "",
+    "width": 1513,
+    "height": 818,
+    "srcset": [
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-18-w600.png",
+        "width": 600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-18-w1000.png",
+        "width": 1000
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-18.png",
+        "width": 1513
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "خلينا نشوف النسخة الاحسن منه  "
+  },
+  {
+    "type": "image",
+    "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-19.png",
+    "alt": "",
+    "width": 1160,
+    "height": 1115,
+    "srcset": [
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-19-w600.png",
+        "width": 600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-19-w1000.png",
+        "width": 1000
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-19.png",
+        "width": 1160
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "فرق المسافات و التسمية و التعلقيات مدية الكود شكل منظم وواضح تخليك تحب انك تقرأه ، شايف الفرق مذهل ازاي ؟"
+  },
+  {
+    "type": "divider"
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "ادوات لقياس الـ Code Quality"
+  },
+  {
+    "type": "paragraph",
+    "text": "في العالم بتاعنا الملئ بالداتا الارقام بتتكلم اكتر من الكلمات ، علشان كدا فيه ادوات تقدر تحلل الكود عن طريق techniques خاصة بيها وبتقدم تقرير مفصل و رسم بياني عن مدي جودة الكود بتاعي."
+  },
+  {
+    "type": "paragraph",
+    "text": "كمان يقدروا يعملوا integration مع اي version control زي جت هاب او تقدر تشتغل لوكال علي الجهاز عندك عادي خلونا نتعرف عليهم بالتفصيل:"
+  },
+  {
+    "type": "heading",
+    "level": 3,
+    "text": "SonarQube"
+  },
+  {
+    "type": "paragraph",
+    "text": "هي open source tool بتقيس مدي جودة الكود عن طريق انها بتكشتف bugs ,vulnerabilities, code smells, and security hotspots وبيبقي فيها quality profile مخصصة لكل لغة برمجة."
+  },
+  {
+    "type": "paragraph",
+    "text": "بيكون فيها فيتشر اسمها Sonar Lint اقدر اضيفها ك Extension لل IDE بتاعي و اشتغل Local علشان تحسن من الكود و انا بكتبه."
+  },
+  {
+    "type": "paragraph",
+    "text": "**ازاي بقي بتشتغل ؟**\nبيكون فيها شوية rules بناءا علي Quality code standards و clean code standards اول ما بعمل Configurations للبروجكت بتاعي مع سيرفر sonarqube."
+  },
+  {
+    "type": "paragraph",
+    "text": "بنزل بعدها sonar scanner و بسطبه عندي علي الجهاز بعدين بيبدأ يعمل analyze للكود و ياخد roles من server و يطبقها علي الكود عندي و بيطلعلي احصائية في الاخر علي الـ Dashboard."
+  },
+  {
+    "type": "divider"
+  },
+  {
+    "type": "image",
+    "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-20.png",
+    "alt": "",
+    "width": 1896,
+    "height": 721,
+    "srcset": [
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-20-w600.png",
+        "width": 600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-20-w1000.png",
+        "width": 1000
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-20-w1600.png",
+        "width": 1600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-20.png",
+        "width": 1896
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "ordered": false,
+    "items": [
+      "هنا بيقول انه الكود نجح بس لسة فيه isuues محتاجة تتصلح .",
+      "كمان بيطلع كل issue مفصلة موجودة فين و بسبب ايه و ممكن تتحل ازاي. "
+    ]
+  },
+  {
+    "type": "image",
+    "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-21.png",
+    "alt": "",
+    "width": 1893,
+    "height": 647,
+    "srcset": [
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-21-w600.png",
+        "width": 600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-21-w1000.png",
+        "width": 1000
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-21-w1600.png",
+        "width": 1600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-21.png",
+        "width": 1893
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "تقدر كمان تضيفه في CI/CD Pipeline لو انت مش عارف دا ايه مش مهم دلوقت عادي تقدر تستخدمه لوحده. وخلي بالك مش كل issues مع كل اللغات هتكون دايما مظبوطة انت بتبص عليهم و تشوف ايه اللي محتاج يتعدل و تعدله."
+  },
+  {
+    "type": "paragraph",
+    "text": "تقدر تنزله علي winodws , linux , docker , macos الdocumentation كاملة هنا :"
+  },
+  {
+    "type": "bookmark",
+    "url": "https://docs.sonarsource.com/sonarqube/latest/?ref=eqraatech.com",
+    "title": "SonarQube 10.6",
+    "description": "SonarQube is a self-managed, automatic code review tool that systematically helps you deliver clean code.",
+    "author": "Sonar Docs",
+    "publisher": ""
+  },
+  {
+    "type": "paragraph",
+    "text": "**دا مصدر كويس ممكن تفهم اكتر منه:**"
+  },
+  {
+    "type": "bookmark",
+    "url": "https://youtube.com/playlist?list=PLDhScTEBdP8ym3PaMkkTVuaaVHV2ktI0j&si=6Sg8nAukTWyXWbk2&ref=eqraatech.com",
+    "title": "Sonarqube Tutorials",
+    "description": "Video’s delen met vrienden, familie en de rest van de wereld",
+    "author": "YouTube",
+    "publisher": ""
+  },
+  {
+    "type": "divider"
+  },
+  {
+    "type": "heading",
+    "level": 3,
+    "text": "Code Climate"
+  },
+  {
+    "type": "paragraph",
+    "text": "هو شبه sonarqube بس اقل دقه منه و مش بيدعم كل اللغات بس ممكن تبص عليه برضو و تجربه :"
+  },
+  {
+    "type": "bookmark",
+    "url": "https://codeclimate.com/?ref=eqraatech.com",
+    "title": "Software Engineering Intelligence",
+    "description": "Code Climate’s industry-leading Software Engineering Intelligence platform helps unlock the full potential of your organization to ship better code,…",
+    "author": "Code Climate",
+    "publisher": ""
+  },
+  {
+    "type": "heading",
+    "level": 3,
+    "text": "Code Scene"
+  },
+  {
+    "type": "paragraph",
+    "text": "هي Open Source Tool برضو بتعمل Analyze لكل Commit و فايل موجود علي Repo in GitHub و بتقدر تطلع hotspots and churns. وبتطلع metrics بتخلي الموضوع اسهل علشن نعرف انهي جزء محتاج انه يتحسن في الكود."
+  },
+  {
+    "type": "paragraph",
+    "text": "وتقدر تنزلها ك extension في IDE ، في الـ Dashboard تقدر تطلع تقرير عن code health و ايه الاجزاء اللي محتاجة تتحسن في الكود."
+  },
+  {
+    "type": "image",
+    "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-22.png",
+    "alt": "",
+    "width": 1128,
+    "height": 755,
+    "srcset": [
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-22-w600.png",
+        "width": 600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-22-w1000.png",
+        "width": 1000
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-22.png",
+        "width": 1128
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "بيعمل تحليل لل Repo بتاعتك ويطلعلك عدد ال commits و authors و غيره"
+  },
+  {
+    "type": "image",
+    "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-23.png",
+    "alt": "",
+    "width": 1914,
+    "height": 867,
+    "srcset": [
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-23-w600.png",
+        "width": 600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-23-w1000.png",
+        "width": 1000
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-23-w1600.png",
+        "width": 1600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-23.png",
+        "width": 1914
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": " وهتلاقي تفاصيل اكتر اما تفتح تشوفه مش كل المميزات فيه فري و لكن تقدر تجرب اهم الحاجات."
+  },
+  {
+    "type": "bookmark",
+    "url": "https://codescene.com/?ref=eqraatech.com",
+    "title": "Next generation code analysis | CodeScene",
+    "description": "CodeScene is a code analysis and visualization tool. Measure and improve code quality, team dynamics, and delivery. Effectively reduce technical debt, deliver clean code.",
+    "author": "CS_logo_navy",
+    "publisher": ""
+  },
+  {
+    "type": "divider"
+  },
+  {
+    "type": "heading",
+    "level": 3,
+    "text": "SNYK"
+  },
+  {
+    "type": "paragraph",
+    "text": "دي بقي Security Platform بتساعد الديفيلوبر انه يلاقي الاجزاء الضعيفة في الكود اللي ممكن تخليه معرض للاختراق. فهي بتحلل الكود و بتقدر تطلع الاماكن الضعيفة و ازاي تقدر تحلها: "
+  },
+  {
+    "type": "image",
+    "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-24.png",
+    "alt": "",
+    "width": 1041,
+    "height": 727,
+    "srcset": [
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-24-w600.png",
+        "width": 600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-24-w1000.png",
+        "width": 1000
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-24.png",
+        "width": 1041
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "وتقدر تدخل علي لوحة التحكم من هنا:"
+  },
+  {
+    "type": "bookmark",
+    "url": "https://snyk.io/?ref=eqraatech.com",
+    "title": "Developer security | Snyk",
+    "description": "Enable developers to build securely from the start while giving security teams complete visibility and comprehensive controls.",
+    "author": "Snyk",
+    "publisher": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-25.png",
+    "alt": "",
+    "width": 1580,
+    "height": 790,
+    "srcset": [
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-25-w600.png",
+        "width": 600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-25-w1000.png",
+        "width": 1000
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-25.png",
+        "width": 1580
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "لو عملتها run في terminal البروجكت عندك هتطلعلك كدا:"
+  },
+  {
+    "type": "image",
+    "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-26.png",
+    "alt": "",
+    "width": 1329,
+    "height": 344,
+    "srcset": [
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-26-w600.png",
+        "width": 600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-26-w1000.png",
+        "width": 1000
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-26.png",
+        "width": 1329
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "هي بتطلعلك عن dependencies و containers اللي ممكن تعرض الكود للاختراق و لكن مش بتعمل فحص للـ Security عموما فلازم نتأكد منه بنفسنا وتقدر تشوف documentation و ازاي تنزلها من هنا:"
+  },
+  {
+    "type": "bookmark",
+    "url": "https://docs.snyk.io/?ref=eqraatech.com",
+    "title": "Snyk Documentation | Snyk User Docs",
+    "description": "",
+    "author": "Logo",
+    "publisher": ""
+  },
+  {
+    "type": "paragraph",
+    "text": "طبعا منقدرش نعتمد علي الادوات دي بنسبة 100% هي حاجة بتساعدنا بس لازم نعمل code review كل فترة و نقرأ الكود نشوف ازاي تقدر نحسنه كل شوية."
+  },
+  {
+    "type": "divider"
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "نصائح لتحسين الكود"
+  },
+  {
+    "type": "heading",
+    "level": 3,
+    "text": "Dev Tools"
+  },
+  {
+    "type": "list",
+    "ordered": false,
+    "items": [
+      "من اكتر الادوات اللي ممكن تفيد الديفيلوبرز علشان يقدر يعمل debugging و يتابع الكود بتاعه باستمرار. وتقدر تشوف البرودكت بتاعك بيستهلك قد ايه من Memory ، CPU واداء التطبيق بتاعك.",
+      "اتبع best practices علي حسب اللغة او الـ Framework اللي انت شغال بيه و دي عبارة عن techniques علشان تطلعلك احسن اداء تقدر [تقرأ عنها اكتر من هنا](https://www.indeed.com/career-advice/career-development/what-are-best-practices?ref=eqraatech.com)",
+      "امسح الصور و المكتبات اللي مش بتستخدمها علشان تقلل المساحة",
+      "اتأكد انك عامل error handling and logging في الكود عندك",
+      "استخدم الصور ك SVG علشان تقلل السماحة بتاعة الصور و تكون ب جوجة اعلي",
+      "ممكن تعمل CI/CD Pipelines علشان تتأكد ان اي تعديل او اضافة بيتعملها تيست الاول",
+      "دايما خلي البيانات اللي بتستخدمها بشكل متكرر تكون cache علشان تحسن الاداء",
+      "خلي البيانات تحمل asynchronously يعني انها تحمل في الخلفية علشان اليور يقدر يكمل في بقيت الابلكيشن من غير ما يقف علي ما البيانات تحمل",
+      "دايما اقرا الكود و حسن منه باستمرار",
+      "متنساش تعمل documentation للكود بتاعك و تخليه يعبر عن نفسه",
+      "استخدم version control زي GitHub علشان تقدر تتعاون مع التيم و تعملوا code reviews و تعرفوا اي تغير حصل امتي و بسبب مين",
+      "استخدم Linters دي بتساعد تعمل format للكود و بتعمل check علي syntax errors, style violations و اي bugs محتملة. تقدر تسخدم Linter الخاص بكل لغة او تكتب قواعد خاصة بيك."
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "[في النهاية برشح الكتاب دا تقرؤه بتفاصيل اكتر هيفيدك](https://people.engr.tamu.edu/slupoli/notes/ProgrammingStudio/supplements/Code%20Complete%202nd.pdf?ref=eqraatech.com)"
+  },
+  {
+    "type": "image",
+    "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-27.png",
+    "alt": "",
+    "width": 1024,
+    "height": 1024,
+    "srcset": [
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-27-w600.png",
+        "width": 600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-27-w1000.png",
+        "width": 1000
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-27.png",
+        "width": 1024
+      }
+    ]
+  },
+  {
+    "type": "divider"
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "في الختام"
+  },
+  {
+    "type": "paragraph",
+    "text": "مسؤلية قياس ال Code Quality بتكون مهمة كل فرد في التيم من اول الـ Team Lead ، لحد الـ Developer و الـ Tester . فلازم نعمل code review طول الوقت علشان نتاكد ان الكود قابل للاستخدام و سهل الفهم و القراءة علشان يكون سهل علي developers التانيين انهم يقدروا يقروا الكود بسرعة و يتعاونوا فيه بشكل سلس."
+  },
+  {
+    "type": "paragraph",
+    "text": "انك تعرف مدي جودة الكود بتاعك دا شىء بيجي بالخبرة و التمرن الكتير انك تقرا الكود بتاعك كذا مرة و تعمله test ، ممكن تشوف المشاريع open source تقرأها و تحاول تحسن منها علشان تزود من خبرتك."
+  },
+  {
+    "type": "paragraph",
+    "text": "جرب كمان تتعلم SOLID Principles , OOP ,Clean code هيسهل عليك وقت كبير في التعلم و هتلاقي انك بتكتب الكود بتاعك بشكل بسيط و منظم."
+  },
+  {
+    "type": "paragraph",
+    "text": "وخليك فاكر دايما انك علشان تكون software engineer ناجح مش انك تقدم برودكت كويس في الاخر بل انك تطلع software ليه quality عالية نقدر نعدل و نطور فيه من غير اي مشاكل."
+  },
+  {
+    "type": "paragraph",
+    "text": "دا شيت مجمع اغلب test cases عامة تقدر تستخدمها في اي مشروع:"
+  },
+  {
+    "type": "bookmark",
+    "url": "https://docs.google.com/spreadsheets/d/11nAISjsWE7yVCiL-ihEp4rQ42-7-LeX9TsK03ofO4Z8/edit?usp=sharing&ref=eqraatech.com",
+    "title": "Production_Testing _Templete",
+    "description": "",
+    "author": "Google Docs",
+    "publisher": ""
+  },
+  {
+    "type": "paragraph",
+    "text": "اتمني تكون استفدتوا من الموضوع النهاردة و دي checklist بسيطة مجمعة تقدر ترجعلها في اي وقت:"
+  },
+  {
+    "type": "callout",
+    "emoji": "💡",
+    "text": "**Don’t Forget “ Later Equals Never”**"
+  },
+  {
+    "type": "image",
+    "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-28.png",
+    "alt": "",
+    "width": 1024,
+    "height": 1024,
+    "srcset": [
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-28-w600.png",
+        "width": 600
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-28-w1000.png",
+        "width": 1000
+      },
+      {
+        "src": "assets/insights/deep-dive-into-code-quality-beyond-bugs/image-28.png",
+        "width": 1024
+      }
+    ]
+  }
+]

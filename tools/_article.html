@@ -1,0 +1,537 @@
+<article id="content" class="content">
+			
+
+
+
+<header class="post-header container-wide">
+	<div class="post-header-info">
+		<h1 class="post-title">Deep Dive into Code Quality - Beyond Bugs</h1>
+		<ul class="post-meta">
+				<li>
+	<div class="post-meta-author">
+		<a href="/author/rowanibrahem/" class="post-meta-author-image" tabindex="-1" aria-label="Rowan Ibrahem" data-tooltip-custom="author">
+					
+
+<picture class="avatar avatar-large avatar-image">
+	<source
+		srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w300/format/webp/2024/08/Code-quality-article-logo-1.png 300w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w400/format/webp/2024/08/Code-quality-article-logo-1.png 400w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/format/webp/2024/08/Code-quality-article-logo-1.png 600w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1200/format/webp/2024/08/Code-quality-article-logo-1.png 1200w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1600/format/webp/2024/08/Code-quality-article-logo-1.png 1600w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w2000/format/webp/2024/08/Code-quality-article-logo-1.png 2000w"
+		sizes="(max-width: 991.98px) 90vw, 40vw"
+		type="image/webp"
+	>
+	<img
+		src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/Code-quality-article-logo-1.png"
+		srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w300/2024/08/Code-quality-article-logo-1.png 300w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w400/2024/08/Code-quality-article-logo-1.png 400w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/08/Code-quality-article-logo-1.png 600w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1200/2024/08/Code-quality-article-logo-1.png 1200w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1600/2024/08/Code-quality-article-logo-1.png 1600w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w2000/2024/08/Code-quality-article-logo-1.png 2000w"
+		width="1340"
+		height="530"
+		alt="Rowan Ibrahem"
+		sizes="(max-width: 991.98px) 90vw, 40vw"
+		loading="lazy"
+	>
+</picture>		</a>
+		by <a href="/author/rowanibrahem/" data-tooltip-custom="author">Rowan Ibrahem</a>
+		<div class="tooltip-custom tooltip-custom-author" style="display:none;">
+	<a href="/author/rowanibrahem/" class="tooltip-avatar" aria-label="Rowan Ibrahem" tabindex="-1">
+				
+
+<picture class="avatar avatar-large avatar-image">
+	<source
+		srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w300/format/webp/2024/08/Code-quality-article-logo-1.png 300w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w400/format/webp/2024/08/Code-quality-article-logo-1.png 400w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/format/webp/2024/08/Code-quality-article-logo-1.png 600w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1200/format/webp/2024/08/Code-quality-article-logo-1.png 1200w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1600/format/webp/2024/08/Code-quality-article-logo-1.png 1600w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w2000/format/webp/2024/08/Code-quality-article-logo-1.png 2000w"
+		sizes="(max-width: 991.98px) 90vw, 40vw"
+		type="image/webp"
+	>
+	<img
+		src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/Code-quality-article-logo-1.png"
+		srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w300/2024/08/Code-quality-article-logo-1.png 300w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w400/2024/08/Code-quality-article-logo-1.png 400w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/08/Code-quality-article-logo-1.png 600w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1200/2024/08/Code-quality-article-logo-1.png 1200w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1600/2024/08/Code-quality-article-logo-1.png 1600w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w2000/2024/08/Code-quality-article-logo-1.png 2000w"
+		width="1340"
+		height="530"
+		alt="Rowan Ibrahem"
+		sizes="(max-width: 991.98px) 90vw, 40vw"
+		loading="lazy"
+	>
+</picture>	</a>
+	<a href="/author/rowanibrahem/" class="tooltip-title">Rowan Ibrahem</a>
+	<div>Flutter Developer</div>
+	<ul class="tooltip-icons"><li>
+			<a class="button button-icon button-sm button-background-200" href="https://www.linkedin.com/in/rowanibrahem30227/" target="_blank" rel="noopener noreferrer" >
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.66666 10.0001H18.3333M1.66666 10.0001C1.66666 14.6024 5.39762 18.3334 10 18.3334M1.66666 10.0001C1.66666 5.39771 5.39762 1.66675 10 1.66675M18.3333 10.0001C18.3333 14.6024 14.6023 18.3334 10 18.3334M18.3333 10.0001C18.3333 5.39771 14.6023 1.66675 10 1.66675M10 18.3334C12.0844 16.0514 13.269 13.0901 13.3333 10.0001C13.269 6.91011 12.0844 3.94871 10 1.66675M10 18.3334C7.9156 16.0514 6.73104 13.0901 6.66666 10.0001C6.73104 6.91011 7.9156 3.94871 10 1.66675" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+				<span class="screen-reader-text">Website</span>
+			</a>
+		</li></ul></div>	</div>
+
+</li>
+				<li class="separator">&bull;</li>
+			<li>
+				<time class="post-meta-date" datetime="2024-09-01">1 Sep, 2024</time>
+			</li>
+			<li class="separator">&bull;</li>
+			<li>
+				<span class="post-meta-time">5 min read</span>
+			</li>
+		</ul>
+	</div>
+
+	<div class="post-header-buttons">
+			<button
+		data-popup-toggle="#popup-comments"
+		class="button button-background-200 button-sm post-comments-button"
+	>
+		<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.4997 9.58333C17.4997 13.4953 14.3283 16.6667 10.4163 16.6667C9.519 16.6667 8.66067 16.4998 7.87065 16.1954C7.72621 16.1398 7.65398 16.112 7.59655 16.0988C7.54006 16.0858 7.49917 16.0803 7.44124 16.0781C7.38234 16.0758 7.31772 16.0825 7.18849 16.0958L2.92097 16.537C2.5141 16.579 2.31067 16.6001 2.19067 16.5268C2.08614 16.4631 2.01495 16.3566 1.996 16.2357C1.97424 16.0968 2.07146 15.9168 2.26588 15.557L3.62893 13.034C3.74118 12.8263 3.79731 12.7223 3.82273 12.6224C3.84783 12.5238 3.85391 12.4527 3.84587 12.3512C3.83774 12.2484 3.79266 12.1147 3.7025 11.8472C3.46289 11.1363 3.33302 10.375 3.33302 9.58333C3.33302 5.67132 6.50433 2.5 10.4163 2.5C14.3283 2.5 17.4997 5.67132 17.4997 9.58333Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+		<span class="label">التعليقات</span>
+		<span class="count"><script
+    data-ghost-comment-count="66d3212f7a94980001af638f"
+    data-ghost-comment-count-empty=""
+    data-ghost-comment-count-singular=""
+    data-ghost-comment-count-plural=""
+    data-ghost-comment-count-tag="span"
+    data-ghost-comment-count-class-name=""
+    data-ghost-comment-count-autowrap="true"
+>
+</script></span>
+	</button>
+		<div class="post-button-share navigation">
+	<button class="button button-background-200 button-sm dropdown-toggle" aria-expanded="false">
+		<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.5 10V13.5C17.5 14.9002 17.5 15.6002 17.2275 16.135C16.9878 16.6054 16.6054 16.9878 16.135 17.2275C15.6002 17.5 14.9002 17.5 13.5 17.5H6.5C5.09987 17.5 4.3998 17.5 3.86503 17.2275C3.39462 16.9878 3.01217 16.6054 2.77248 16.135C2.5 15.6002 2.5 14.9002 2.5 13.5V10M13.3333 5.83333L10 2.5M10 2.5L6.66667 5.83333M10 2.5V12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+		<span class="label">مشاركة</span>
+	</button>
+	<div class="dropdown dropdown-share">
+		<ul><li>
+	<a class="nav-link" href="https://x.com/intent/tweet?url=https%3A%2F%2Feqraatech.com%2Fdeep-dive-into-code-quality-beyond-bugs%2F&text=Deep%20Dive%20into%20Code%20Quality%20-%20Beyond%20Bugs" rel="noopener" target="_blank">
+		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path d="M18.2437 2.25H21.5531L14.325 10.5094L22.8281 21.75H16.1719L10.9547 14.9344L4.99216 21.75H1.6781L9.40779 12.9141L1.25623 2.25H8.08123L12.7922 8.47969L18.2437 2.25ZM17.0812 19.7719H18.914L7.08279 4.125H5.11404L17.0812 19.7719Z" fill="currentColor"/>
+</svg>
+		<span class="label">Share on X</span>
+	</a>
+</li>
+
+<li>
+	<a class="nav-link" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Feqraatech.com%2Fdeep-dive-into-code-quality-beyond-bugs%2F&quote=Deep%20Dive%20into%20Code%20Quality%20-%20Beyond%20Bugs" rel="noopener" target="_blank">
+		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path d="M24 12C24 5.37188 18.6281 0 12 0C5.37188 0 0 5.37188 0 12C0 17.625 3.87656 22.35 9.10312 23.6484V15.6656H6.62812V12H9.10312V10.4203C9.10312 6.3375 10.95 4.44375 14.9625 4.44375C15.7219 4.44375 17.0344 4.59375 17.5734 4.74375V8.0625C17.2922 8.03437 16.8 8.01562 16.1859 8.01562C14.2172 8.01562 13.4578 8.76094 13.4578 10.6969V12H17.3766L16.7016 15.6656H13.4531V23.9109C19.3969 23.1938 24 18.1359 24 12Z" fill="currentColor"/>
+</svg>
+		<span class="label">Share on Facebook</span>
+	</a>
+</li>
+
+<li>
+	<a class="nav-link" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Feqraatech.com%2Fdeep-dive-into-code-quality-beyond-bugs%2F&summary=Deep%20Dive%20into%20Code%20Quality%20-%20Beyond%20Bugs" rel="noopener" target="_blank">
+		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 1.5H2.99531C2.17031 1.5 1.5 2.17969 1.5 3.01406V20.9859C1.5 21.8203 2.17031 22.5 2.99531 22.5H21C21.825 22.5 22.5 21.8203 22.5 20.9859V3.01406C22.5 2.17969 21.825 1.5 21 1.5ZM7.84687 19.5H4.73438V9.47812H7.85156V19.5H7.84687ZM6.29062 8.10938C5.29219 8.10938 4.48594 7.29844 4.48594 6.30469C4.48594 5.31094 5.29219 4.5 6.29062 4.5C7.28437 4.5 8.09531 5.31094 8.09531 6.30469C8.09531 7.30312 7.28906 8.10938 6.29062 8.10938ZM19.5141 19.5H16.4016V14.625C16.4016 13.4625 16.3781 11.9672 14.7844 11.9672C13.1625 11.9672 12.9141 13.2328 12.9141 14.5406V19.5H9.80156V9.47812H12.7875V10.8469H12.8297C13.2469 10.0594 14.2641 9.22969 15.7781 9.22969C18.9281 9.22969 19.5141 11.3062 19.5141 14.0062V19.5Z" fill="currentColor"/>
+</svg>		<span class="label">Share on LinkedIn</span>
+	</a>
+</li>
+
+<li>
+	<a class="nav-link" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Feqraatech.com%2Fdeep-dive-into-code-quality-beyond-bugs%2F&description=Deep%20Dive%20into%20Code%20Quality%20-%20Beyond%20Bugs" rel="noopener" target="_blank">
+		<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.75 8C15.75 12.2812 12.2812 15.75 8 15.75C7.2 15.75 6.43125 15.6281 5.70625 15.4031C6.02188 14.8875 6.49375 14.0437 6.66875 13.3719C6.7625 13.0094 7.15 11.5281 7.15 11.5281C7.40313 12.0094 8.14063 12.4187 8.925 12.4187C11.2625 12.4187 12.9469 10.2688 12.9469 7.59688C12.9469 5.0375 10.8562 3.12188 8.16875 3.12188C4.825 3.12188 3.04688 5.36562 3.04688 7.8125C3.04688 8.95 3.65313 10.3656 4.61875 10.8156C4.76563 10.8844 4.84375 10.8531 4.87813 10.7125C4.90313 10.6062 5.03438 10.0781 5.09375 9.83438C5.1125 9.75625 5.10313 9.6875 5.04063 9.6125C4.725 9.22188 4.46875 8.50937 4.46875 7.84375C4.46875 6.13437 5.7625 4.48125 7.96875 4.48125C9.87188 4.48125 11.2063 5.77813 11.2063 7.63438C11.2063 9.73125 10.1469 11.1844 8.76875 11.1844C8.00938 11.1844 7.4375 10.5563 7.62187 9.78438C7.84062 8.8625 8.2625 7.86875 8.2625 7.20312C8.2625 6.60938 7.94375 6.1125 7.28125 6.1125C6.50313 6.1125 5.87813 6.91563 5.87813 7.99375C5.87813 8.68125 6.10938 9.14375 6.10938 9.14375C6.10938 9.14375 5.34375 12.3875 5.20312 12.9937C5.04688 13.6625 5.10938 14.6062 5.175 15.2188C2.29375 14.0906 0.25 11.2844 0.25 8C0.25 3.71875 3.71875 0.25 8 0.25C12.2812 0.25 15.75 3.71875 15.75 8Z" fill="currentColor"/></svg>		<span class="label">Share on Pinterest</span>
+	</a>
+</li>
+
+<li>
+	<a class="nav-link" href="mailto:?subject=Deep%20Dive%20into%20Code%20Quality%20-%20Beyond%20Bugs&body=https%3A%2F%2Feqraatech.com%2Fdeep-dive-into-code-quality-beyond-bugs%2F" rel="noopener" target="_blank">
+		<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.66667 5.83325L8.47075 10.5961C9.02175 10.9818 9.29725 11.1747 9.59692 11.2493C9.86158 11.3153 10.1384 11.3153 10.4031 11.2493C10.7028 11.1747 10.9783 10.9818 11.5293 10.5961L18.3333 5.83325M5.66667 16.6666H14.3333C15.7335 16.6666 16.4335 16.6666 16.9683 16.3941C17.4388 16.1544 17.8212 15.772 18.0608 15.3016C18.3333 14.7668 18.3333 14.0668 18.3333 12.6666V7.33325C18.3333 5.93312 18.3333 5.23305 18.0608 4.69828C17.8212 4.22787 17.4388 3.84542 16.9683 3.60574C16.4335 3.33325 15.7335 3.33325 14.3333 3.33325H5.66667C4.26653 3.33325 3.56647 3.33325 3.03169 3.60574C2.56128 3.84542 2.17883 4.22787 1.93915 4.69828C1.66667 5.23305 1.66667 5.93312 1.66667 7.33325V12.6666C1.66667 14.0668 1.66667 14.7668 1.93915 15.3016C2.17883 15.772 2.56128 16.1544 3.03169 16.3941C3.56647 16.6666 4.26653 16.6666 5.66667 16.6666Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+		<span class="label">Email</span>
+	</a>
+</li>
+
+<li>
+	<button class="nav-link" data-copy-link="https://eqraatech.com/deep-dive-into-code-quality-beyond-bugs/">
+		<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.33332 10.8332C8.69117 11.3117 9.14775 11.7075 9.67208 11.994C10.1964 12.2805 10.7762 12.4508 11.3722 12.4935C11.9682 12.5362 12.5663 12.4502 13.1261 12.2413C13.6859 12.0326 14.1942 11.7057 14.6167 11.2832L17.1167 8.78325C17.8757 7.99737 18.2956 6.94486 18.2862 5.85238C18.2767 4.7599 17.8384 3.71484 17.0659 2.94231C16.2933 2.16977 15.2483 1.73157 14.1558 1.72208C13.0633 1.71258 12.0108 2.13256 11.225 2.89156L9.79167 4.31656M11.6667 9.16658C11.3087 8.68808 10.8522 8.29223 10.3278 8.00577C9.8035 7.71931 9.22375 7.54896 8.62775 7.50627C8.03182 7.46359 7.43367 7.54958 6.87387 7.7584C6.31407 7.96722 5.80572 8.294 5.38332 8.71658L2.88332 11.2166C2.12433 12.0024 1.70435 13.0549 1.71385 14.1474C1.72334 15.2399 2.16154 16.2849 2.93407 17.0575C3.70661 17.83 4.75167 18.2682 5.84415 18.2777C6.93663 18.2872 7.98914 17.8672 8.775 17.1082L10.2 15.6832" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+		<span class="label">Copy Link</span>
+	</button>
+</li></ul>
+	</div>
+</div>	</div>
+</header>
+
+<figure class="post-feature-image">
+	
+
+<picture>
+	<source
+		srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w300/format/webp/2024/12/Eqraatech-Posts-Cover-978x489--69-.png 300w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w400/format/webp/2024/12/Eqraatech-Posts-Cover-978x489--69-.png 400w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/format/webp/2024/12/Eqraatech-Posts-Cover-978x489--69-.png 600w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1200/format/webp/2024/12/Eqraatech-Posts-Cover-978x489--69-.png 1200w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1600/format/webp/2024/12/Eqraatech-Posts-Cover-978x489--69-.png 1600w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w2000/format/webp/2024/12/Eqraatech-Posts-Cover-978x489--69-.png 2000w"
+		sizes="(max-width: 991.98px) 90vw, 40vw"
+		type="image/webp"
+	>
+	<img
+		src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/12/Eqraatech-Posts-Cover-978x489--69-.png"
+		srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w300/2024/12/Eqraatech-Posts-Cover-978x489--69-.png 300w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w400/2024/12/Eqraatech-Posts-Cover-978x489--69-.png 400w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/12/Eqraatech-Posts-Cover-978x489--69-.png 600w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1200/2024/12/Eqraatech-Posts-Cover-978x489--69-.png 1200w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1600/2024/12/Eqraatech-Posts-Cover-978x489--69-.png 1600w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w2000/2024/12/Eqraatech-Posts-Cover-978x489--69-.png 2000w"
+		width="1340"
+		height="530"
+		alt="Deep Dive into Code Quality - Beyond Bugs"
+		sizes="(max-width: 991.98px) 90vw, 40vw"
+		loading="eager"
+	>
+</picture></figure>
+
+	<div class="post-content-grid">
+
+		<nav class="post-tags container" aria-label="Post Tags Navigation">
+	<ul>
+			<li>
+				<a class="post-tag" href="/tag/clean-code/">Clean Code</a>
+			</li>
+			<li>
+				<a class="post-tag" href="/tag/refactoring/">Refactoring</a>
+			</li>
+			<li>
+				<a class="post-tag" href="/tag/design-patterns/">Design Patterns</a>
+			</li>
+			<li>
+				<a class="post-tag" href="/tag/programming-language/">Programming Language</a>
+			</li>
+			<li>
+				<a class="post-tag" href="/tag/java/">Java</a>
+			</li>
+	</ul>
+</nav>
+
+		<div class="post-content-wrapper">
+
+			<div class="post-content">
+				<h2 id="%D8%A7%D9%84%D9%85%D9%82%D8%AF%D9%85%D8%A9">المقدمة</h2><p>احيانا ممكن يقابلنا مشاكل او bugs و احنا بنعدل او بنضيف Feature جديدة للكود علي عكس المتوقع و دا لأن معظمنا ك software engineers بنركز دايما اننا عايزين نطلع منتج كويس و شغال عند العميل ، بس هل فكرنا قبل كدا في quality بتاعته ك code ؟ </p><p>تخيل انك بتبني عمارة علي اساس ضعيف و حبيت تضيف دور جديد للمبني هتلاقي ان المبني كله بدأ ينهار و دا بسبب الاساس الضعيف من الاول ، ف زي ما بنقول الاهم من الشغل تظبيط الشغل ، هنتعرف النهاردة عن ازاي نخلي السوفتوير بتاعنا الكواليتي بتاعته كويسة و ايه هو Code Quality و ازاي بنقيسه.</p><figure class="kg-card kg-image-card"><img src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-4.png" class="kg-image" alt="" loading="lazy" width="750" height="516" srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/08/image-4.png 600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-4.png 750w" sizes="(min-width: 720px) 720px"></figure><hr><h2 id="%D8%A7%D9%8A%D9%87-%D9%87%D9%88-%D8%A7%D9%84%D9%80-code-quality%D8%9F">ايه هو الـ Code Quality؟</h2><p><br>في قاعدة Lehaman’s بتقول:</p><div class="kg-card kg-callout-card kg-callout-card-white"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text">Any system that’s used will need to change</div></div><p><strong>يعني ايه الكلام دا بقي؟</strong></p><p>معناه ان اي سيستم او برودكت بنعمله هنحتاج نعدل فيه سواء اننا نضيف Feature جديدة او نعدل عليها. تخيل كدا لو انت مهتمتش بجودة الكود بتاعك مش هتعرف تغير اي حاجة في السيستم من غير ما تقابل مشاكل فيه و bugs جديدة هتزود من وقت تحسينك ليه.</p><p><strong>يبقي الCode Quality ببساطة هو انك تعمل كود يكون سهل القراءة و الفهم لما ترجعله في اي وقت.</strong></p><p>نقدر نقول انها طريقة علشان تقيس كفاءة و مدي سهولة فهم و التعديل علي كود موجود. ونقدر نقيسه عن طريق قد ايه هو قابل للقراءة و ممكن نعيد استخدامه في اي بروجكت تاني و مدي سهولته لاي developer تاني انه يقدر يقرأه و يعدل عليه في وقت قصير.</p><hr><h2 id="%D8%A3%D9%87%D9%85%D9%8A%D8%A9-%D8%A7%D9%84%D9%80-code-quality">أهمية الـ Code Quality </h2><p><br>طيب بعد ما عرفنا يعني ايه ، ليه هو ممكن يكون مهم او ايه مدي تأثيره ؟ خلينا نشوف ..<br>خليك عارف ان فيه حاجتين مينفعش تثق فيهم : </p><ul><li>انك تكون متاح في المستقبل</li><li>الذاكرة المستقبلية بتاعتك.</li></ul><p>خلينا نفهم اكتر عن طريق السيناريو دا: انت بدات بروجكت كان الكود مش احسن حاجة و قلت انك هتعدله بعدين جالك Offer شغل تاني او انشغلت في بروجكت تاني معرفتش ترجع تعدل عليه و كان في تيم تاني هيشتغل فيه ممكن تسأل نفسك وقتها ، هل التيم هيكون قادر انه يعدل عليه او يفهمه بسهولة ؟ </p><p>ايه اللي هيحصل اما يضيفوا تعديل جديد ؟ و ازاي هيأثر علي ال performance and bugs ؟ من هنا نقدر نستنج اهمية الـ Code Quality.</p><ul><li>أول حاجة بيساعد الdeveloper انه يعيد قراءة الكود ببساطة و بسهولة.</li><li>بنقدر نتاكد ان العميل هياخد experience جيدة ومش هيشتكي من وجود اخطاء غير متوقعة.</li><li>بيقلل الاخطاء المستقبلية و بيحسن الاداء و بيكون سهل التعديل عليه و اكتشاف الاخطاء بدري و كمان بيكون فيه security عالية.</li><li>طول ما السوفتوير بتاعك مبيطلعش اخطاء لمدة طويلة دا هيوفر فلوس للشركة و هيوفر وقت لما يحتاج تعديل او اضافة اي Feature جديدة.</li></ul><figure class="kg-card kg-image-card"><img src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/Screenshot-2024-08-31-at-16.23.29.png" class="kg-image" alt="" loading="lazy" width="932" height="858" srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/08/Screenshot-2024-08-31-at-16.23.29.png 600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/Screenshot-2024-08-31-at-16.23.29.png 932w" sizes="(min-width: 720px) 720px"></figure><hr><h2 id="%D8%A7%D9%8A%D9%87-%D9%87%D9%8A-%D8%A7%D9%84%D9%80-code-quality-standards">ايه هي الـ Code Quality Standards</h2><p>في عوامل كتير بتأثر علي جودة الكود ف عملوا معاير من خلالها بنقدر نشوف الكود بتاعنا كويس قد ايه و ايه الجوانب اللي محتاجة تتحسن فيه. ومن ضمن المعايير دي: readability, clarity, reliability, security, modularity, etc...</p><p>انك تقدم كود جودته عالية دا شىء اساسي لكل developer وعلشان تقدر تعمل دا في قواعد او معايير بنمشي عليها علشان نقدر نحقق اعلي جودة والمعايير دي بتخلي الكود أكثر سهولة ويكون قابل للتعديل واكتشاف الاخطاء بدري فخلونا نكتشف ايه هما:</p><p><strong>العوامل اللي بتأثر علي Code Quality:</strong></p><h3 id="%D8%A7%D9%84%D9%80-complexity">الـ Complexity</h3><p>من اسمها كدا اني بقيس مدي صعوبة الكود بتاعي من حيث هو سهل قد ايه في انه يتفهم اويتعدل عليه بعدين زي ما بنمسميه في الالجورزم Big O. </p><p>من العوامل اللي بتأثر علي قراية الكود : عدد السطور ، استخدام nested IF Conditions ، Loops .<br>في مثال مشهور عندنا و هو Recurrsion function الدالة اللي بتكرر نفسها او بتسدعي نفسها كذا مرة دا ابسط مثال علي انه ازاي الكود بيكون صعب انه يتفهم او يتقري بسهولة . </p><p><strong>طيب ليه مفروض برضو اننا نحسنه ؟</strong></p><p>لأن كل ما الكود كان بسيط و سهل بيخلي اداء البرنامج عالي و يستهلك موارد اقل من Memory , CPU و و بيكون صعب في انه نضيف تعديل جديد من غير ما يكلف الشركة فلوس اكتر.</p><p>عندنا انواع من الـ Complexity:</p><ul><li>Cyclomatic Complexity</li><li>Structural Complexity</li><li>Algorithmic Complexity</li><li>Cognitive Complexity<br></li></ul><p><strong>خلونا نوضح بمثال الـ Cyclomatic Complexity:</strong></p><p>دا معناه زي انه اقدر اعد عدد الطرق المختلفة اللي ممكن اروح ليها في مدينة من نقطة للتانية<br>زيه في الكود انه بيعد عدد الطرق اللي ممكن اروح بيها من قرار للتاني اما بستخدم if - for و هكذا.</p><figure class="kg-card kg-image-card"><img src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-8.png" class="kg-image" alt="" loading="lazy" width="1023" height="894" srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/08/image-8.png 600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1000/2024/08/image-8.png 1000w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-8.png 1023w" sizes="(min-width: 720px) 720px"></figure><p>لو بصينا هنا هنلاقي الComplexity ب 3 يعني عندي 3 قرارات او 3 حالات&nbsp; :&nbsp;&nbsp;</p><ul><li>الاوردر اتدفع&nbsp;</li><li>الاوردر في المخزن&nbsp;</li><li>الاوردر مدفعش</li></ul><p><strong>الـ Cognitive Complexity: </strong>ودا ببساطة انه الشخص يقدر يقرأ الكود بسهولة.</p><figure class="kg-card kg-image-card"><img src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-9.png" class="kg-image" alt="" loading="lazy" width="1480" height="1002" srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/08/image-9.png 600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1000/2024/08/image-9.png 1000w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-9.png 1480w" sizes="(min-width: 720px) 720px"></figure><p>لو بصينا هنا هنلاقي انه الكود صعب انه يتقرأ من اول مرة و ممكن يتعدل كدا :&nbsp;</p><figure class="kg-card kg-image-card"><img src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-10.png" class="kg-image" alt="" loading="lazy" width="1409" height="596" srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/08/image-10.png 600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1000/2024/08/image-10.png 1000w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-10.png 1409w" sizes="(min-width: 720px) 720px"></figure><p>طبعا الفرق واضح ، لسة فيه طرق تانية علشان نقدر نقيس الComplexity تقدر تبص عليها من هنا:</p><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://blog.codacy.com/code-complexity?ref=eqraatech.com"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Code Complexity: An In-Depth Explanation and Metrics</div><div class="kg-bookmark-description">Learn more about code complexity; what increases code complexity, what the main metrics are that need to be measured, and how to reduce it.</div><div class="kg-bookmark-metadata"><img class="kg-bookmark-icon" src="https://blog.codacy.com/hubfs/logo%20codacy-1.png" alt=""><span class="kg-bookmark-author">Qamine Portugal S.A.</span><span class="kg-bookmark-publisher">Codacy</span></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.codacy.com/hubfs/Neutral%20-%20Dark%20-%20A-1.jpg" alt="" onerror="this.style.display = 'none'"></div></a></figure><hr><h3 id="hotspots-and-churns">Hotspots and Churns</h3><p>يا تري الكود بتاعك مخبي ايه ؟<br><strong>الـ Hotspots:</strong> دي بتكون اجزاء من الكود بتتغير بشكل مستمر علشان فيه تعديل او اضافة ميزة جديدة للبرنامج . دي ممكن يكون فيه اجزاء Complex او اجزاء محتاجة انها تتصلح و دا طبعا بيستهلك من الـ Memory وعلشان كدا دايما بنحاول نشوف الاجزاء اللي محتاجة تتصلح علشان نحسن من الاداء بتاعها.</p><p><strong>الـ Churns:</strong> بنعد هنا كام عدد من المرات اللي اتغير فيها فايل معين سواء اضافة جزء او تعديل او تحديث في وقت معين. <strong>طيب ازاي نقدر نعرف الفايلات دي ؟</strong></p><p>عندنا اداة زي Git&amp; Github تقدر تعمل تتبع لكل فايل موجود في الريبو و تدي تاريخ لكل تغير حصل و من مين و امتي و اتغير كام مرة . كل ما الكود بيتغير كتير كل ما كان ال churn عالي و هيبقي فيه hotspots محتاجة تتحسن.</p><p>فمهم اننا نكون مهتمين اننا نتابع تغير الفايل اللي بيتغير كتير بيبقي محتاج تحسين علشان ميسببش مشاكل بعد كدا، و دا شكل التغيرات للفايل اللي بيتعرض علي Github:</p><figure class="kg-card kg-image-card"><img src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-11.png" class="kg-image" alt="" loading="lazy" width="1438" height="802" srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/08/image-11.png 600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1000/2024/08/image-11.png 1000w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-11.png 1438w" sizes="(min-width: 720px) 720px"></figure><hr><h3 id="reliability">Reliability </h3><p>هنا بنتأكد ان كل function في الكود شغاله صح و انه لو حصل اي اخطاء غير متوقعة السيستم هيتعامل معاها من غير مشاكل و من غير ما يقف و علشان كدا بنعمل Error Handling علشان نتاكد ان كل حالة هيظهرله فيها رسالة خطأ من غير ما السيستم يقف.</p><p>علشان نتاكد من دا بنعمل علي كل فانكشن unit test من الاول علشان نتجنب حدوث اخطاء بعد كدا و ان كل حاجة شغاله بشكل سليم وممكن كمان نستخدم Debugging و Profiling هيطلعلنا الاخطاء من الاول<br>و في نهاية البروجكت طبعا التيستر بيعمل test كامل للمشروع علشان يتأكد انه مش هيحصل اخطاء مفاجئى علي قدر الامكان.</p><p>لو قدرنا نعرف السيستم بيصحله failure كام مرة في وقت معين هنقدر نشوف هو قد Reliable.</p><hr><h3 id="code-coverage">Code Coverage</h3><p>يا تري الكود معمولة تيست بنسبة قد ايه ؟&nbsp;</p><p>هو عبارة عن نسبة بيطلعها التيستر بعد ما بيخلص test خالص علشان يقول المنتج دا هينفع نسلمه للعميل و لا&nbsp; لا بناءا علي test cases اللي كتبها و بيقول اي اجزاء من الكود يقدر يحسنها.</p><p>النتيجة النهائية بتطلع بناءا علي كذا نوع من الـ Test :&nbsp;</p><ul><li>Unit Test</li><li>Integration Test</li><li>Acceptance Test</li></ul><p><strong>تقدر تشوف تفاصيل اكتر عنه هنا :&nbsp;</strong></p><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://www.browserstack.com/guide/code-coverage-vs-test-coverage?ref=eqraatech.com"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Code Coverage vs Test Coverage | BrowserStack</div><div class="kg-bookmark-description">Learn the difference between Code Coverage vs Test Coverage and how to perform them to measure the effectiveness of application code.</div><div class="kg-bookmark-metadata"><img class="kg-bookmark-icon" src="https://browserstack.wpenginepowered.com/wp-content/themes/browserstack/img/favicons/apple-touch-icon.png" alt=""><span class="kg-bookmark-author">BrowserStack</span><span class="kg-bookmark-publisher">Shreya Bose</span></div></div><div class="kg-bookmark-thumbnail"><img src="https://browserstack.wpenginepowered.com/wp-content/uploads/2020/03/code-coverage-vs-test-coverage.png" alt="" onerror="this.style.display = 'none'"></div></a></figure><hr><h3 id="maintainability">Maintainability</h3><p>ساعات بنحتاج نعدل او نضيف او نحدث فيتشر موجودة في البرنامج طول الوقت علشان تتناسب مع طلبات العميل علشان كدا السيستم لازم يكون سهل انه يتعدل و يتغير من غير ما يعمل اي مشاكل او اخطاء.</p><p><strong>نقدر نعمل دا عن طريق كذا حاجة :</strong></p><ul><li>نعمل تعديل للكود كل شوية علشان تمنع التكرار و نخليه واضح .</li><li><strong>التوثيق (Documentation):</strong> لازم تكون موثق كل حاجة في الكود عندك بشكل مظبوط الstructure , api و هكذا علشان بيساعد و يوفر وقت علي المطورين انهم يقرؤه و يفهموه بشكل سليم .</li><li><strong>الـ Encapsulation &amp; Abstraction:</strong> و دا بيساعد اخفاء تفاصيل التنفيذ و التركيز علي العمليات نفسها و دا بيقلل من المخاطر الغير مقصودة عند التعديل .</li></ul><p><strong>خلينا ناخد مثال:</strong></p><figure class="kg-card kg-image-card"><img src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-12.png" class="kg-image" alt="" loading="lazy" width="1698" height="1038" srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/08/image-12.png 600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1000/2024/08/image-12.png 1000w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1600/2024/08/image-12.png 1600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-12.png 1698w" sizes="(min-width: 720px) 720px"></figure><p>هنا الـ Function بتعمل اكثر من وظيفة لو حبيت اني اضيف او اعدل حاجة البرنامج ممكن يبوظ او ميشتغشل بشكل سليم ، بينام هنا بقي: </p><figure class="kg-card kg-image-card"><img src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-13.png" class="kg-image" alt="" loading="lazy" width="1697" height="1414" srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/08/image-13.png 600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1000/2024/08/image-13.png 1000w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1600/2024/08/image-13.png 1600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-13.png 1697w" sizes="(min-width: 720px) 720px"></figure><p>قسمناها لاجزاء اكثر لو عايزة اعدل او اضيف حاجة هيكون الموضوع سهل و بيخلي قرايته احسن و سهل التعديل و الـ Developers يقدروا يشتغلوا عليه اسرع .</p><hr><h3 id="testability">Testability</h3><p>زي ما قلنا انه في 3 انواع من التيست: (unit test - integration test - Acceptance test) يبقي ال Testability معناه مدي سهولة انه نتيست جزء من الكود و يستغل بشكل صحيح من غير ما يطلع اي مشاكل او اخطاء.</p><p>لازم نتاكد ان البرنامج شغال بكفاءة و بشكل كويس بدون ما يكون فيه اي اخطاء دلوقت و نحاول نحط في حساباتنا كل السيناريوهات اللي ممكن تتحصل في المستقبل علشان نحاول نتجنبها و نكسب ثقة العميل و نحسن من تجربته .</p><hr><h3 id="readability">Readability</h3><p>زي ما خطنا مفروض يكون انه واضح علشان اي حد يقرأه ويفهمه بسهولة ، الكود برضو لازم كتابته تكون واضحة و قابلة للقراءة من اي ديفيلوبر تاني. طب ازاي نقدر نعمل دا ؟</p><ul><li><strong>التسمية الواضحة (Clear Naming Conventions):</strong> لازم التسمية تكون واضحة و معبرة عن اللي مكتوب سواء class او متغير او فانكشن علشان تعبر عن وظيفتها و متبقاش محتاجة شرح.</li><li><strong>الـ Modularity:</strong> الكود لازم يكون متقسم لاجزاء صغيرية كل جزء بيعمل وظيفة معينة علشان نقدر نعمله تيست و اصلاح بعدين.</li><li><strong>نمط الكود (Coding Style):</strong> خلي بالك من تنسيق الكود المسافات و متنساش تحط تعليقات لو فيه حاجة مش واضحة و محتاجة شرح .</li><li><strong>هيكلة وبنية الكود (Code Structure):</strong> لازم نمشي علي structure واضح للكود علشان اللي هيشتغل معاك يعرف يكمل عليه .</li><li>تجنب انك تكتب اي Hard code و متنساش تعمل Error Handling .</li></ul><p><strong>خلينا ناخد مثال :</strong></p><figure class="kg-card kg-image-card"><img src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-14.png" class="kg-image" alt="" loading="lazy" width="1042" height="744" srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/08/image-14.png 600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1000/2024/08/image-14.png 1000w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-14.png 1042w" sizes="(min-width: 720px) 720px"></figure><p><strong>بص كدا تخيل انك بتقرأ فانكشن بسيطة زي دي يعني ايه " a " و "s" دا ؟ ايه هدف الفانكشن دي ؟&nbsp;</strong></p><figure class="kg-card kg-image-card"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXc5bivKOY_bV8OeDfCDXqUckmINpFhUTW8LonyonkcQMOzYn3Nx-liKRieIBiOCWYbWtkpj63LLBsQC7sQgeCZ3d9wwVWPLoZ2401Jn1WvZpLLWVeL4-TwUFbr4XLYEcAXbf61-WZa2VopP596bctigp1NP?key=IHGoI-EsjpadCLslqCVTvA" class="kg-image" alt="" loading="lazy" width="1496" height="1266"></figure><p><strong>طيب هنا نفس الكود كبر بس بقي معبر اكتر و لا لا&nbsp; ؟&nbsp;</strong></p><p>الاسماء هتلاقيها معبرة و الـ Functions اتقسمت لاجزاء اصغر علشان كل جزء يعمل وظيفة معينة و ضفنا Comments علشان تشرح وظيفة كل فانكشن.&nbsp;</p><p>مهم جدا انك تخلي الكوج بتاعك Self Documented بيعبر عن نفسه من غير شرح و تحسنه طبعا كل شوية.</p><hr><h3 id="reusability">Reusability</h3><p>زي ما عندنا الملح في الاكل نقدر نحطه علي كذا اكله ، الكود بتاعنا لازم يكون سهل انه يتعاد استخدامه في كذا مكان تاني في الكود او في بروجكت تاني اصلا من غير ما يحصل اي اخطاء.&nbsp;</p><p><strong>طيب ازاي نقدر نتاكد من دا ؟&nbsp;</strong></p><ul><li>نخلي الكود متقسم لاجزاء صغيرة علشان نقدر نستعدي الجزء دا في اي مكان تاني وميكنش معتمد علي جزء تاني.&nbsp;</li><li>تجنب التكرار: لو لقيت انك مكرر الكود اكتر من مرة يبقي كدا فيه مشكلة و لازم تعيد كتابته تاني و تخليه يتكتب مرة واحدة بس .</li><li>اتبع مبادىء SOLID هيساعدك بشكل كبير .</li><li><strong>الـ Encapsualtion and Abstraction:</strong> بيخلي قراءة الكود سهلة و المودلز مش معتمدة علي بعض .</li></ul><p><strong>خلونا نشوف مثال برضو: لو انا عايزة اعمل 3 ازرار مختلفة في مشروع واحد بس في صفح مختلفة هنكتبه كدا مثلا: </strong></p><figure class="kg-card kg-image-card"><img src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-15.png" class="kg-image" alt="" loading="lazy" width="1882" height="708" srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/08/image-15.png 600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1000/2024/08/image-15.png 1000w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1600/2024/08/image-15.png 1600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-15.png 1882w" sizes="(min-width: 720px) 720px"></figure><p>هنا انا كررته 3 مرات باختلاف النص و اللون لو انا عايزة بعد كدا اغير padding هضطر اغيره في واحد واحد و دا مش صح طبعا. الصح بقي هنعمل الزرار دا ك component اقدر استخدمه في كذا مكان مختلف و مش هحتاج اعمل ابديت فيه كل شوية.</p><figure class="kg-card kg-image-card"><img src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-16.png" class="kg-image" alt="" loading="lazy" width="1716" height="484" srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/08/image-16.png 600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1000/2024/08/image-16.png 1000w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1600/2024/08/image-16.png 1600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-16.png 1716w" sizes="(min-width: 720px) 720px"></figure><p>هستخدمه في اي مكان بقي:</p><p>&nbsp;</p><figure class="kg-card kg-image-card"><img src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-17.png" class="kg-image" alt="" loading="lazy" width="1682" height="708" srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/08/image-17.png 600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1000/2024/08/image-17.png 1000w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1600/2024/08/image-17.png 1600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-17.png 1682w" sizes="(min-width: 720px) 720px"></figure><p>&nbsp;كدا انا وفرت وقت و مجهود و تجنبت انه يحصل اي اخطاء بعد كدا لو حبيت اعدل.</p><hr><h3 id="portability">Portability</h3><p>دي بقي معناها ان السيستم يقدر يشتغل علي اكثر من Platform او Operating System مختلف من غير ما يعمل مشاكل او يكون شكله مختلف. وانه يشتغل مثلا علي Browsers مختلفين من غير اي bugs او انه يشتغل علي Android &amp; IOS من غير ما يكون فيه فرق كبير في الشكل النهائي للبرنامج.</p><p>لو مقدرتش انك تخليه يشتغل علي اجهزة مختلفة بشكل مناسب هتضطر انك تعمل كود مخصص لكل Platform و دا طبعا هيزود وقت و تكلفة و مجهود بدون داعي .</p><hr><h3 id="performance">Performance</h3><p>اهم عامل لنجاح المنتج هو الاداء بتاعه عامل ازاي ، كل التعديلات اللي بنعملها و بنحسن الكود بتاعنا علشان نخليه يشتغل باداء عالي و بالتالي هنقدر نقدم Product كويس. </p><p>الـ performance هو قياس مدي جودة و كفاءة تنظيم الكود و تحسينه ، ونقدر نقيسه عن طريق الـ Responsive و سرعته و الموارد اللي بيستهلكها من CPU و Memory. وكل ما كان الاداء عالي كل ما كان بيستهلك موارد اقل و بيقدم الخدمة بشكل احسن.</p><p><strong>و دي بعض الامثلة اللي ممكن تقلل من اداء البرنامج:</strong></p><ul><li>الصور الغير مضغوطة و اللي مساحتها بتكون كبيرة لازم نتاكد ان حجم الصورة صغير.</li><li>ممكن يكون فيه مكتبات تعمل مشاكل وقت الانتاج او بتقلل من الاداء.</li><li>مبنستخدمش Cache في الـ Browser</li><li>الصور و المكتبات الغير مستخدمة<br></li></ul><p>كل لغة برمجة ليها طريق معينة في تحسين ال performance كل اللي عليك انك تبحث عن "How to Improve Performance in ..."</p><hr><h3 id="duplication">Duplication</h3><p>كام مرة بتكرر نفسك ؟&nbsp;</p><p>في قاعدة في السوفتوير اسمها DRY بتقول Don't repeat yourself متكررش نفسك معظم الديفيلوبرز بياخدوا الكود كوبي بيست لو لقوا ان فيه جزء في الكود محتاج انه يتكرر مرتين و لكن دا طبعا بيعمل مشاكل كتير منها :&nbsp;</p><ul><li>بيقلل اداء المنتج&nbsp;&nbsp;</li><li>بيعمل مجهود تعديل كبير&nbsp;</li><li>هحتاج اعدل في كل الاجزاء المرتبطة بالفيتشر دي و دا هياخد وقت و مجهود و ممكن يعمل اخطاء و يأثر علي فانكشز تانية شغاله بشكل سليم علشان كدا محتاجين نخلي الحاجات المتكررة shared نستخدمها مرة واحدة علشان نتجنب الاخطاء اللي هتحصل.</li></ul><hr><h3 id="security-and-dependencies">Security and Dependencies</h3><p>اهم جزء و انت بتطلع المنتج بتاعك انك تتأكد انه محمي من الثغرات و الهجوم الامني ،&nbsp; الـ Security هو انك تتتبع مبادىء و ارشادات علشان تحمي الكود بتاعك من اي هجومات او ثغرات امنية.</p><p><strong>Dependencies Management Security:&nbsp;</strong></p><p>لازم تحدث ال dependencies بتاعتك علشان تتاكد من منع الهجمات اللي ممكن تحصل من خلالها.&nbsp;فلو مستخدمتش مكتبة موثوق فيها ممكن البرنامج بتاعك يحصل فيه مشاكل .</p><p><strong>علشان نتاكد من امان التطبيقات ممكن ناخد بالنا من شوية حاجات:&nbsp;</strong></p><ul><li><strong>الـ Input Validation:</strong>&nbsp;لازم تتأكد ان اي input field محمي من الSql injection او cross-site scripting&nbsp;</li><li><strong>الـ Authentication and authorization:</strong>&nbsp;لازم تتبع خطة كويسة علشان تقدر تتحكم في الصلاحيات ، ممكن تسخدم key cloak دا بيوفر سيكيوريتي عالي في عملية تسجيل الدخول .</li><li><strong>الـ Data Protection:</strong>&nbsp;لازم تتأكد انك بتحمي الداتا بتاعتك عن طريق انك بتشفرها او التخزين الامن .&nbsp;</li><li><strong>الـ Security Testing:</strong>&nbsp;بعمل اختبارات امنية بشكل منتظم ، بحلل الكود و penetration testing, and vulnerability scanning علشان اقدر اشوف هيحصل فين اختراق و احله&nbsp;</li></ul><p>الـ Security مهم جدا علشا لو حصل اي اختراق ممكن يخلي الداتا المهمة تضيع و هتخسر ثقة العميل و ممكن يسبب خساير مالية للشركة طبعا.</p><hr><h3 id="code-style">Code Style</h3><p>بشكل بسيط ، الكود بتاعك نضيف قد ايه ؟&nbsp;فهو مجموعة من الارشادات عن ازاي تنظم الكود بتاعك ، مثلا ازاي تسمي المتغيرات ؟ امتي تستخدم المسافات ؟ ازاي تحط تعليقات ؟ بيدي الكود بتاعك شكل ثابت و منظم بيخليه ممتع للقراءة خصوصا لو وقت الشغل مع تيم.</p><p>في ارشادات خاصة طبعا في كل لغة و لكن معظمه بيستخدم formating اللي بتكون مدعومة في الIDES .</p><p><a href="https://guide.esciencecenter.nl/?ref=eqraatech.com#/best_practices/language_guides/languages_overview" rel="noreferrer">تقدر تطلع اكثر من هنا</a>&nbsp;</p><p>هو بيتكون من قرارات صغيرة بناءا علي اللغة:&nbsp;</p><ul><li>ازاي و امتي نستخدم التعليق&nbsp;</li><li>المسافات بتكون قد ايه&nbsp;</li><li>الاسماء تكون واضحة و بتوصف&nbsp;</li><li>تمشي ب pattern محدد</li></ul><p>خلينا نشوف مثال بسيط:</p><figure class="kg-card kg-image-card"><img src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-18.png" class="kg-image" alt="" loading="lazy" width="1513" height="818" srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/08/image-18.png 600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1000/2024/08/image-18.png 1000w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-18.png 1513w" sizes="(min-width: 720px) 720px"></figure><p>خلينا نشوف النسخة الاحسن منه&nbsp;&nbsp;</p><figure class="kg-card kg-image-card"><img src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-19.png" class="kg-image" alt="" loading="lazy" width="1160" height="1115" srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/08/image-19.png 600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1000/2024/08/image-19.png 1000w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-19.png 1160w" sizes="(min-width: 720px) 720px"></figure><p>فرق المسافات و التسمية و التعلقيات مدية الكود شكل منظم وواضح تخليك تحب انك تقرأه ، شايف الفرق مذهل ازاي ؟</p><hr><h2 id="%D8%A7%D8%AF%D9%88%D8%A7%D8%AA-%D9%84%D9%82%D9%8A%D8%A7%D8%B3-%D8%A7%D9%84%D9%80-code-quality">ادوات لقياس الـ Code Quality</h2><p>في العالم بتاعنا الملئ بالداتا الارقام بتتكلم اكتر من الكلمات ، علشان كدا فيه ادوات تقدر تحلل الكود عن طريق techniques خاصة بيها وبتقدم تقرير مفصل و رسم بياني عن مدي جودة الكود بتاعي.</p><p>كمان يقدروا يعملوا integration مع اي version control زي جت هاب او تقدر تشتغل لوكال علي الجهاز عندك عادي خلونا نتعرف عليهم بالتفصيل:</p><h3 id="sonarqube">SonarQube</h3><p>هي open source tool بتقيس مدي جودة الكود عن طريق انها بتكشتف bugs ,vulnerabilities, code smells, and security hotspots وبيبقي فيها quality profile مخصصة لكل لغة برمجة.</p><p>بيكون فيها فيتشر اسمها Sonar Lint اقدر اضيفها ك Extension لل IDE بتاعي و اشتغل Local علشان تحسن من الكود و انا بكتبه.</p><p><strong>ازاي بقي بتشتغل ؟</strong><br>بيكون فيها شوية rules بناءا علي Quality code standards و clean code standards اول ما بعمل Configurations للبروجكت بتاعي مع سيرفر sonarqube.</p><p>بنزل بعدها sonar scanner و بسطبه عندي علي الجهاز بعدين بيبدأ يعمل analyze للكود و ياخد roles من server و يطبقها علي الكود عندي و بيطلعلي احصائية في الاخر علي الـ Dashboard.</p><hr><figure class="kg-card kg-image-card"><img src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-20.png" class="kg-image" alt="" loading="lazy" width="1896" height="721" srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/08/image-20.png 600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1000/2024/08/image-20.png 1000w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1600/2024/08/image-20.png 1600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-20.png 1896w" sizes="(min-width: 720px) 720px"></figure><ul><li>هنا بيقول انه الكود نجح بس لسة فيه isuues محتاجة تتصلح .</li><li>كمان بيطلع كل issue مفصلة موجودة فين و بسبب ايه و ممكن تتحل ازاي.&nbsp;</li></ul><figure class="kg-card kg-image-card"><img src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-21.png" class="kg-image" alt="" loading="lazy" width="1893" height="647" srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/08/image-21.png 600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1000/2024/08/image-21.png 1000w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1600/2024/08/image-21.png 1600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-21.png 1893w" sizes="(min-width: 720px) 720px"></figure><p>تقدر كمان تضيفه في CI/CD Pipeline لو انت مش عارف دا ايه مش مهم دلوقت عادي تقدر تستخدمه لوحده. وخلي بالك مش كل issues مع كل اللغات هتكون دايما مظبوطة انت بتبص عليهم و تشوف ايه اللي محتاج يتعدل و تعدله.</p><p>تقدر تنزله علي winodws , linux , docker , macos الdocumentation كاملة هنا :</p><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://docs.sonarsource.com/sonarqube/latest/?ref=eqraatech.com"><div class="kg-bookmark-content"><div class="kg-bookmark-title">SonarQube 10.6</div><div class="kg-bookmark-description">SonarQube is a self-managed, automatic code review tool that systematically helps you deliver clean code.</div><div class="kg-bookmark-metadata"><img class="kg-bookmark-icon" src="https://static.ghost.org/v5.0.0/images/link-icon.svg" alt=""><span class="kg-bookmark-author">Sonar Docs</span></div></div><div class="kg-bookmark-thumbnail"><img src="https://assets-eu-01.kc-usercontent.com/5e986e54-339c-01a9-7c7c-26cbc5a344d5/905190c3-a37f-4a91-9f2e-3cc3a0798391/SonarQube_logo.svg?w=115&amp;h=40&amp;auto=format&amp;fit=crop" alt="" onerror="this.style.display = 'none'"></div></a></figure><p><strong>دا مصدر كويس ممكن تفهم اكتر منه:</strong></p><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://youtube.com/playlist?list=PLDhScTEBdP8ym3PaMkkTVuaaVHV2ktI0j&si=6Sg8nAukTWyXWbk2&ref=eqraatech.com"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Sonarqube Tutorials</div><div class="kg-bookmark-description">Video’s delen met vrienden, familie en de rest van de wereld</div><div class="kg-bookmark-metadata"><img class="kg-bookmark-icon" src="https://www.youtube.com/s/desktop/4151fd0f/img/favicon_144x144.png" alt=""><span class="kg-bookmark-author">YouTube</span></div></div><div class="kg-bookmark-thumbnail"><img src="https://i.ytimg.com/vi/y8UF7rgtDEo/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&amp;rs=AOn4CLCL33jLIpU7_jnTBd1q-cP8GX9NRQ&amp;days_since_epoch=19966" alt="" onerror="this.style.display = 'none'"></div></a></figure><hr><h3 id="code-climate">Code Climate</h3><p>هو شبه sonarqube بس اقل دقه منه و مش بيدعم كل اللغات بس ممكن تبص عليه برضو و تجربه :</p><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://codeclimate.com/?ref=eqraatech.com"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Software Engineering Intelligence</div><div class="kg-bookmark-description">Code Climate’s industry-leading Software Engineering Intelligence platform helps unlock the full potential of your organization to ship better code,…</div><div class="kg-bookmark-metadata"><img class="kg-bookmark-icon" src="https://codeclimate.com/apple-touch-icon.png" alt=""><span class="kg-bookmark-author">Code Climate</span></div></div><div class="kg-bookmark-thumbnail"><img src="https://du10j5vfk4mbr.cloudfront.net/_1200x630_crop_center-center_82_none/seo-general-ogimage.png?mtime=1684273589" alt="" onerror="this.style.display = 'none'"></div></a></figure><h3 id="code-scene">Code Scene</h3><p>هي Open Source Tool برضو بتعمل Analyze لكل Commit و فايل موجود علي Repo in GitHub و بتقدر تطلع hotspots and churns. وبتطلع metrics بتخلي الموضوع اسهل علشن نعرف انهي جزء محتاج انه يتحسن في الكود.</p><p>وتقدر تنزلها ك extension في IDE ، في الـ Dashboard تقدر تطلع تقرير عن code health و ايه الاجزاء اللي محتاجة تتحسن في الكود.</p><figure class="kg-card kg-image-card"><img src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-22.png" class="kg-image" alt="" loading="lazy" width="1128" height="755" srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/08/image-22.png 600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1000/2024/08/image-22.png 1000w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-22.png 1128w" sizes="(min-width: 720px) 720px"></figure><p>بيعمل تحليل لل Repo بتاعتك ويطلعلك عدد ال commits و authors و غيره</p><figure class="kg-card kg-image-card"><img src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-23.png" class="kg-image" alt="" loading="lazy" width="1914" height="867" srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/08/image-23.png 600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1000/2024/08/image-23.png 1000w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1600/2024/08/image-23.png 1600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-23.png 1914w" sizes="(min-width: 720px) 720px"></figure><p> وهتلاقي تفاصيل اكتر اما تفتح تشوفه مش كل المميزات فيه فري و لكن تقدر تجرب اهم الحاجات.</p><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://codescene.com/?ref=eqraatech.com"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Next generation code analysis | CodeScene</div><div class="kg-bookmark-description">CodeScene is a code analysis and visualization tool. Measure and improve code quality, team dynamics, and delivery. Effectively reduce technical debt, deliver clean code.</div><div class="kg-bookmark-metadata"><img class="kg-bookmark-icon" src="https://codescene.com/hubfs/CS_Favicon_70x70px.png" alt=""><span class="kg-bookmark-author">CS_logo_navy</span></div></div><div class="kg-bookmark-thumbnail"><img src="https://codescene.com/hubfs/Featured%20image%20-%20Product.png" alt="" onerror="this.style.display = 'none'"></div></a></figure><hr><h3 id="snyk">SNYK</h3><p>دي بقي Security Platform بتساعد الديفيلوبر انه يلاقي الاجزاء الضعيفة في الكود اللي ممكن تخليه معرض للاختراق. فهي بتحلل الكود و بتقدر تطلع الاماكن الضعيفة و ازاي تقدر تحلها: </p><figure class="kg-card kg-image-card"><img src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-24.png" class="kg-image" alt="" loading="lazy" width="1041" height="727" srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/08/image-24.png 600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1000/2024/08/image-24.png 1000w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-24.png 1041w" sizes="(min-width: 720px) 720px"></figure><p>وتقدر تدخل علي لوحة التحكم من هنا:</p><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://snyk.io/?ref=eqraatech.com"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Developer security | Snyk</div><div class="kg-bookmark-description">Enable developers to build securely from the start while giving security teams complete visibility and comprehensive controls.</div><div class="kg-bookmark-metadata"><img class="kg-bookmark-icon" src="https://snyk.io/favicon.ico" alt=""><span class="kg-bookmark-author">Snyk</span></div></div><div class="kg-bookmark-thumbnail"><img src="https://snyk.io/_next/static/media/default-snyk.6bb9b598.jpg" alt="" onerror="this.style.display = 'none'"></div></a></figure><figure class="kg-card kg-image-card"><img src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-25.png" class="kg-image" alt="" loading="lazy" width="1580" height="790" srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/08/image-25.png 600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1000/2024/08/image-25.png 1000w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-25.png 1580w" sizes="(min-width: 720px) 720px"></figure><p>لو عملتها run في terminal البروجكت عندك هتطلعلك كدا:</p><figure class="kg-card kg-image-card"><img src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-26.png" class="kg-image" alt="" loading="lazy" width="1329" height="344" srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/08/image-26.png 600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1000/2024/08/image-26.png 1000w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-26.png 1329w" sizes="(min-width: 720px) 720px"></figure><p>هي بتطلعلك عن dependencies و containers اللي ممكن تعرض الكود للاختراق و لكن مش بتعمل فحص للـ Security عموما فلازم نتأكد منه بنفسنا وتقدر تشوف documentation و ازاي تنزلها من هنا:</p><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://docs.snyk.io/?ref=eqraatech.com"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Snyk Documentation | Snyk User Docs</div><div class="kg-bookmark-description"></div><div class="kg-bookmark-metadata"><img class="kg-bookmark-icon" src="https://2533899886-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/spaces%2F-MdwVZ6HOZriajCf5nXH%2Favatar-1631192016346.png?generation=1631192016617759&amp;alt=media" alt=""><span class="kg-bookmark-author">Logo</span></div></div><div class="kg-bookmark-thumbnail"><img src="https://2533899886-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MdwVZ6HOZriajCf5nXH%2Fsocialpreview%2FoBTkxPamYEBso7JhPIeg%2Fgitbook-home.png?alt=media&amp;token=0d25dc13-6cf8-40f4-97b3-389ce331f856" alt="" onerror="this.style.display = 'none'"></div></a></figure><p>طبعا منقدرش نعتمد علي الادوات دي بنسبة 100% هي حاجة بتساعدنا بس لازم نعمل code review كل فترة و نقرأ الكود نشوف ازاي تقدر نحسنه كل شوية.</p><hr><h2 id="%D9%86%D8%B5%D8%A7%D8%A6%D8%AD-%D9%84%D8%AA%D8%AD%D8%B3%D9%8A%D9%86-%D8%A7%D9%84%D9%83%D9%88%D8%AF">نصائح لتحسين الكود</h2><h3 id="dev-tools"><br>Dev Tools</h3><ul><li>من اكتر الادوات اللي ممكن تفيد الديفيلوبرز علشان يقدر يعمل debugging و يتابع الكود بتاعه باستمرار. وتقدر تشوف البرودكت بتاعك بيستهلك قد ايه من Memory ، CPU واداء التطبيق بتاعك.</li><li>اتبع best practices علي حسب اللغة او الـ Framework اللي انت شغال بيه و دي عبارة عن techniques علشان تطلعلك احسن اداء تقدر <a href="https://www.indeed.com/career-advice/career-development/what-are-best-practices?ref=eqraatech.com" rel="noreferrer">تقرأ عنها اكتر من هنا</a></li><li>امسح الصور و المكتبات اللي مش بتستخدمها علشان تقلل المساحة</li><li>اتأكد انك عامل error handling and logging في الكود عندك</li><li>استخدم الصور ك SVG علشان تقلل السماحة بتاعة الصور و تكون ب جوجة اعلي</li><li>ممكن تعمل CI/CD Pipelines علشان تتأكد ان اي تعديل او اضافة بيتعملها تيست الاول</li><li>دايما خلي البيانات اللي بتستخدمها بشكل متكرر تكون cache علشان تحسن الاداء</li><li>خلي البيانات تحمل asynchronously يعني انها تحمل في الخلفية علشان اليور يقدر يكمل في بقيت الابلكيشن من غير ما يقف علي ما البيانات تحمل</li><li>دايما اقرا الكود و حسن منه باستمرار</li><li>متنساش تعمل documentation للكود بتاعك و تخليه يعبر عن نفسه</li><li>استخدم version control زي GitHub علشان تقدر تتعاون مع التيم و تعملوا code reviews و تعرفوا اي تغير حصل امتي و بسبب مين</li><li>استخدم Linters دي بتساعد تعمل format للكود و بتعمل check علي syntax errors, style violations و اي bugs محتملة. تقدر تسخدم Linter الخاص بكل لغة او تكتب قواعد خاصة بيك.</li></ul><p><a href="https://people.engr.tamu.edu/slupoli/notes/ProgrammingStudio/supplements/Code%20Complete%202nd.pdf?ref=eqraatech.com" rel="noreferrer">في النهاية برشح الكتاب دا تقرؤه بتفاصيل اكتر هيفيدك</a></p><figure class="kg-card kg-image-card"><img src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-27.png" class="kg-image" alt="" loading="lazy" width="1024" height="1024" srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/08/image-27.png 600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1000/2024/08/image-27.png 1000w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-27.png 1024w" sizes="(min-width: 720px) 720px"></figure><hr><h2 id="%D9%81%D9%8A-%D8%A7%D9%84%D8%AE%D8%AA%D8%A7%D9%85">في الختام</h2><p>مسؤلية قياس ال Code Quality بتكون مهمة كل فرد في التيم من اول الـ Team Lead ، لحد الـ Developer و الـ Tester . فلازم نعمل code review طول الوقت علشان نتاكد ان الكود قابل للاستخدام و سهل الفهم و القراءة علشان يكون سهل علي developers التانيين انهم يقدروا يقروا الكود بسرعة و يتعاونوا فيه بشكل سلس.</p><p>انك تعرف مدي جودة الكود بتاعك دا شىء بيجي بالخبرة و التمرن الكتير انك تقرا الكود بتاعك كذا مرة و تعمله test ، ممكن تشوف المشاريع open source تقرأها و تحاول تحسن منها علشان تزود من خبرتك.</p><p>جرب كمان تتعلم SOLID Principles , OOP ,Clean code هيسهل عليك وقت كبير في التعلم و هتلاقي انك بتكتب الكود بتاعك بشكل بسيط و منظم.</p><p>وخليك فاكر دايما انك علشان تكون software engineer ناجح مش انك تقدم برودكت كويس في الاخر بل انك تطلع software ليه quality عالية نقدر نعدل و نطور فيه من غير اي مشاكل.</p><p>دا شيت مجمع اغلب test cases عامة تقدر تستخدمها في اي مشروع:</p><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://docs.google.com/spreadsheets/d/11nAISjsWE7yVCiL-ihEp4rQ42-7-LeX9TsK03ofO4Z8/edit?usp=sharing&ref=eqraatech.com"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Production_Testing _Templete</div><div class="kg-bookmark-description"></div><div class="kg-bookmark-metadata"><img class="kg-bookmark-icon" src="https://ssl.gstatic.com/docs/spreadsheets/spreadsheets_2023q4.ico" alt=""><span class="kg-bookmark-author">Google Docs</span></div></div><div class="kg-bookmark-thumbnail"><img src="https://lh7-us.googleusercontent.com/docs/AHkbwyIxc17bq8G-ilOMv3enE38MyNhk-f8xbv1JiCgztkILQXwWfB335b-p1ghbf3X81OgBJs3yoCHQUndF6smmQQ8KWvWOOOTka2eV76E6hgxhNnI1__J3=w1200-h630-p" alt="" onerror="this.style.display = 'none'"></div></a></figure><p>اتمني تكون استفدتوا من الموضوع النهاردة و دي checklist بسيطة مجمعة تقدر ترجعلها في اي وقت:</p><div class="kg-card kg-callout-card kg-callout-card-white"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">Don’t Forget “ Later Equals Never”</strong></b></div></div><figure class="kg-card kg-image-card"><img src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-28.png" class="kg-image" alt="" loading="lazy" width="1024" height="1024" srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/08/image-28.png 600w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1000/2024/08/image-28.png 1000w, https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/08/image-28.png 1024w" sizes="(min-width: 720px) 720px"></figure>
+			</div>
+
+
+					</div>
+
+			<aside class="post-sidebar">
+
+	<div class="post-sidebar-sticky toc-scroll">
+			<div class="toc toc-hidden">
+	<button class="toc-button button button-sm button-icon button-transparent button-rounded" aria-expanded="false" aria-label="إخفاء فهرس المقال">
+		<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="1.25" y1="4.25" x2="10.75" y2="4.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></line><line x1="3.25" y1="8.25" x2="12.75" y2="8.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></line><line x1="5.25" y1="12.25" x2="14.75" y2="12.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></line></svg>
+	</button>
+	<div class="toc-title">
+		<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="1.25" y1="4.25" x2="10.75" y2="4.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></line><line x1="3.25" y1="8.25" x2="12.75" y2="8.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></line><line x1="5.25" y1="12.25" x2="14.75" y2="12.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></line></svg>
+
+		في هذا المقال
+	</div>
+	<div class="toc-unlock-link" style="display: none;">
+		<a href="#post-upgrade-cta">
+			<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 11.3333C8.36819 11.3333 8.66667 11.0349 8.66667 10.6667C8.66667 10.2985 8.36819 10 8 10C7.63181 10 7.33333 10.2985 7.33333 10.6667C7.33333 11.0349 7.63181 11.3333 8 11.3333Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.6667 6.66667H3.33333C2.59695 6.66667 2 7.26362 2 8V13.3333C2 14.0697 2.59695 14.6667 3.33333 14.6667H12.6667C13.403 14.6667 14 14.0697 14 13.3333V8C14 7.26362 13.403 6.66667 12.6667 6.66667Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.66667 6.66667V4.66667C4.6667 3.93291 4.90884 3.21967 5.35553 2.63756C5.80222 2.05544 6.42851 1.63698 7.13726 1.44706C7.84601 1.25715 8.59762 1.3064 9.27553 1.58718C9.95344 1.86796 10.5198 2.36457 10.8867 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+			اشترك الآن واكمل قراءة المقال
+		</a>
+	</div>
+</div>		<a href="/membership" class="post-sidebar-cta button button-animation">
+			<span class="label-wrapper">
+				<span class="label">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+					<span>ابدأ رحلتك الآن</span>
+				</span>
+				<span class="label">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+					<span>ابدأ رحلتك الآن</span>
+				</span>
+			</span>
+		</a>
+		<button 
+			class="post-bookmark-btn" 
+			data-article-id=""
+			data-article-title=""
+			data-article-url=""
+			data-article-excerpt=""
+			data-article-feature-image=""
+			data-article-author-name=""
+			data-article-author-image=""
+			onclick="toggleReadingListFromData(this)"
+			title="إضافة إلى قائمة القراءة"
+			aria-label="إضافة إلى قائمة القراءة"
+		>
+			<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M19 21L12 16L5 21V5C5 3.9 5.9 3 7 3H17C18.1 3 19 3.9 19 5V21Z" 
+					stroke="currentColor" 
+					stroke-width="2" 
+					stroke-linecap="round" 
+					stroke-linejoin="round"
+				/>
+			</svg>
+		</button>
+	</div>
+</aside>
+
+<style>
+	/* Post Bookmark Button Styles */
+	.post-bookmark-btn {
+		width: 36px;
+		height: 36px;
+		background: var(--color-background-200);
+		border: 1px solid var(--color-border);
+		border-radius: 50%;
+		color: var(--color-foreground);
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.2s ease;
+		flex-shrink: 0;
+		pointer-events: auto;
+		position: relative;
+		z-index: 10;
+		user-select: none;
+		margin-top: var(--spacing-4);
+		align-self: flex-start;
+	}
+
+	.post-bookmark-btn:hover {
+		transform: scale(1.05);
+	}
+
+	.post-bookmark-btn--active {
+		color: var(--color-accent-foreground);
+		border-color: var(--ghost-accent-color);
+	}
+
+	.post-bookmark-btn--active:hover {
+		background: var(--color-background-200);
+	}
+
+	.post-bookmark-btn svg {
+		width: 18px;
+		height: 18px;
+	}
+
+	.post-bookmark-btn--active svg path {
+		fill: var(--color-contrast) !important;
+		stroke: var(--color-contrast) !important;
+	}
+
+	@media (max-width: 768px) {
+		.post-bookmark-btn {
+			width: 32px;
+			height: 32px;
+			margin-bottom: var(--spacing-10);
+		}
+		
+		.post-bookmark-btn svg {
+			width: 16px;
+			height: 16px;
+		}
+	}
+</style>
+
+	</div>
+
+		<section class="home-section home-newsletter">
+			<div class="home-container">
+				<div class="home-newsletter-card">
+					<div class="home-newsletter-glow"></div>
+
+					<div class="home-newsletter-content">
+						<span class="home-newsletter-eyebrow">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+							النشرة الأسبوعية
+						</span>
+						<h2 class="home-newsletter-title">اشترك الآن في نشرة اقرأ‍تِك الأسبوعية</h2>
+						<p class="home-newsletter-desc">
+							لا تدع أي شيء يفوتك. احصل على أحدث المقالات والشروحات البصرية ومدونات الشركات العالمية مباشرة إلى بريدك الإلكتروني — وبشكل مجاني تمامًا.
+						</p>
+
+						<ul class="home-newsletter-perks">
+							<li>
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+								مقالات تقنية متعمقة في هندسة البرمجيات
+							</li>
+							<li>
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+								شروحات بصرية لمفاهيم معقدة بطريقة مبسّطة
+							</li>
+							<li>
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+								تجارب عملية من شركات عالمية
+							</li>
+						</ul>
+
+						<a class="home-newsletter-cta" href="https://www.newsletter.eqraatech.com/" target="_blank" rel="noopener noreferrer">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg>
+							<span>انضم لأكثر من 7,000 مشترك</span>
+						</a>
+					</div>
+
+					<div class="home-newsletter-stat">
+						<div class="home-newsletter-stat-number">+7,000</div>
+						<div class="home-newsletter-stat-label">قارئ نشط ومشترك</div>
+						<div class="home-newsletter-stat-divider"></div>
+						<div class="home-newsletter-stat-meta">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+							نشرة أسبوعية كل يوم سبت
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	<section class="section section-read-next">
+		<h2 class="section-head">مقالات ذات صلة</h2>
+
+		<div class="swiper slider-cards slider-posts">
+			<ul class="swiper-wrapper">
+				<li class="swiper-slide">
+					<article class="card card-post card-has-image card-has-author">
+	<a class="card-post-image" href="/introduction-into-logging-and-monitoring-in-dotnet/" aria-label="Introduction Into Logging and Monitoring in .NET" tabindex="-1">
+			
+
+<picture>
+	<source
+		srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w300/format/webp/2024/12/62.png 300w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w400/format/webp/2024/12/62.png 400w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/format/webp/2024/12/62.png 600w
+"
+		sizes="(max-width: 539.98px) 94vw, (max-width: 991.98px) 43vw, (max-width: 1574.98px) 25vw, 21vw"
+		type="image/webp"
+	>
+	<img
+		src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/12/62.png"
+		srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w300/2024/12/62.png 300w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w400/2024/12/62.png 400w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/12/62.png 600w
+"
+		width="370"
+		height="210"
+		alt="Introduction Into Logging and Monitoring in .NET"
+		sizes="(max-width: 539.98px) 94vw, (max-width: 991.98px) 43vw, (max-width: 1574.98px) 25vw, 21vw"
+		loading="lazy"
+	>
+</picture>
+		<span class="card-post-image-badge">
+			<span class="card-post-time">1 min read</span>
+
+
+		</span>
+	</a>
+
+	<div class="card-post-content">
+		<h3 class="card-post-title"><a href="/introduction-into-logging-and-monitoring-in-dotnet/">Introduction Into Logging and Monitoring in .NET</a></h3>
+		<div class="card-post-authors">
+				<div class="card-post-author">
+					<a href="/author/alaa-nassar/" class="card-post-author-image" data-tooltip-custom="author" tabindex="-1">
+								
+
+<picture class="avatar avatar-image">
+	<source
+		srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w36/format/webp/2024/10/Screenshot-2024-10-08-at-00.14.35.png 36w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w72/format/webp/2024/10/Screenshot-2024-10-08-at-00.14.35.png 72w
+"
+		sizes="36px"
+		type="image/webp"
+	>
+	<img
+		src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/10/Screenshot-2024-10-08-at-00.14.35.png"
+		srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w36/2024/10/Screenshot-2024-10-08-at-00.14.35.png 36w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w72/2024/10/Screenshot-2024-10-08-at-00.14.35.png 72w
+"
+		width="36"
+		height="36"
+		alt="Alaa Nassar"
+		sizes="36px"
+		loading="lazy"
+	>
+</picture>					</a>
+					<a href="/author/alaa-nassar/" class="card-post-author-name" data-tooltip-custom="author">
+						Alaa Nassar
+					</a>
+					<span class="card-post-meta-divider">&bull;</span>
+					<time class="card-post-date" datetime="2024-12-04">4 Dec, 2024</time>
+					<div class="tooltip-custom tooltip-custom-author" style="display:none;">
+	<a href="/author/alaa-nassar/" class="tooltip-avatar" aria-label="Alaa Nassar" tabindex="-1">
+				
+
+<picture class="avatar avatar-large avatar-image">
+	<source
+		srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w300/format/webp/2024/10/Screenshot-2024-10-08-at-00.14.35.png 300w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w400/format/webp/2024/10/Screenshot-2024-10-08-at-00.14.35.png 400w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/format/webp/2024/10/Screenshot-2024-10-08-at-00.14.35.png 600w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1200/format/webp/2024/10/Screenshot-2024-10-08-at-00.14.35.png 1200w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1600/format/webp/2024/10/Screenshot-2024-10-08-at-00.14.35.png 1600w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w2000/format/webp/2024/10/Screenshot-2024-10-08-at-00.14.35.png 2000w"
+		sizes="(max-width: 991.98px) 90vw, 40vw"
+		type="image/webp"
+	>
+	<img
+		src="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/10/Screenshot-2024-10-08-at-00.14.35.png"
+		srcset="https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w300/2024/10/Screenshot-2024-10-08-at-00.14.35.png 300w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w400/2024/10/Screenshot-2024-10-08-at-00.14.35.png 400w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w600/2024/10/Screenshot-2024-10-08-at-00.14.35.png 600w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1200/2024/10/Screenshot-2024-10-08-at-00.14.35.png 1200w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w1600/2024/10/Screenshot-2024-10-08-at-00.14.35.png 1600w,
+		https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/size/w2000/2024/10/Screenshot-2024-10-08-at-00.14.35.png 2000w"
+		width="1340"
+		height="530"
+		alt="Alaa Nassar"
+		sizes="(max-width: 991.98px) 90vw, 40vw"
+		loading="lazy"
+	>
+</picture>	</a>
+	<a href="/author/alaa-nassar/" class="tooltip-title">Alaa Nassar</a>
+	<div>DotNet Developer</div>
+	<ul class="tooltip-icons"><li>
+			<a class="button button-icon button-sm button-background-200" href="https://www.linkedin.com/in/alaaynassar7/" target="_blank" rel="noopener noreferrer" >
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.66666 10.0001H18.3333M1.66666 10.0001C1.66666 14.6024 5.39762 18.3334 10 18.3334M1.66666 10.0001C1.66666 5.39771 5.39762 1.66675 10 1.66675M18.3333 10.0001C18.3333 14.6024 14.6023 18.3334 10 18.3334M18.3333 10.0001C18.3333 5.39771 14.6023 1.66675 10 1.66675M10 18.3334C12.0844 16.0514 13.269 13.0901 13.3333 10.0001C13.269 6.91011 12.0844 3.94871 10 1.66675M10 18.3334C7.9156 16.0514 6.73104 13.0901 6.66666 10.0001C6.73104 6.91011 7.9156 3.94871 10 1.66675" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+				<span class="screen-reader-text">Website</span>
+			</a>
+		</li></ul></div>				</div>
+
+
+			<button 
+				class="card-bookmark-btn" 
+				data-article-id="674f7a2a1dd57b0001c64652"
+				onclick="toggleReadingList('674f7a2a1dd57b0001c64652', 'Introduction Into Logging and Monitoring in .NET', '/introduction-into-logging-and-monitoring-in-dotnet/', 'التسجيل والمراقبة من أهم الأدوات التي لازم تكون موجودة في أي تطبيق ويب حديث. ده بيساعدك على تتبع الأخطاء وتحليل أداء التطبيق بشكل مستمر، وبيخليك قادر تلاحظ أي مشاكل أو مناطق محتاجة تحسين في الوقت الحقيقي.', 'https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/12/62.png', 'Alaa Nassar', 'https://storage.ghost.io/c/0e/62/0e62d6a7-ced6-429a-9d3c-7f658dd37978/content/images/2024/10/Screenshot-2024-10-08-at-00.14.35.png')"
+				title="إضافة إلى قائمة القراءة"
+				aria-label="إضافة إلى قائمة القراءة"
+			>
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M19 21L12 16L5 21V5C5 3.9 5.9 3 7 3H17C18.1 3 19 3.9 19 5V21Z" 
+						stroke="currentColor" 
+						stroke-width="2" 
+						stroke-linecap="round" 
+						stroke-linejoin="round"
+					/>
+				</svg>
+			</button>
+		</div>
+
+		<div class="card-post-meta">
+		</div>
+	</div>
+</article>
