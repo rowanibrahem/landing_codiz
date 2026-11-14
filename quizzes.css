@@ -1,0 +1,48 @@
+/* Codiz — "اختبر نفسك" (Self-Assessment Quizzes) page & cards.
+   Reuses base design tokens (:root vars), .btn, .pill, .card, .fl, and .ev-tag/.ev-status from site-base.css & events.css. */
+
+.qz-hero{padding-bottom:72px}
+.qz-hero-txt{padding-top:34px;position:relative;z-index:2;max-width:740px}
+.qz-hero-txt h1{font-size:48px;margin-bottom:14px}
+.qz-hero-txt .hs{max-width:58ch;margin-bottom:0}
+
+nav .lk a[aria-current="page"]{color:#fff;font-weight:800;position:relative}
+nav .lk a[aria-current="page"]:after{content:"";position:absolute;right:0;left:0;bottom:-6px;height:2.5px;border-radius:99px;background:var(--blush)}
+
+.qz-main{padding:72px 0 88px}
+.qz-head{margin-bottom:34px}
+.qz-head h2{margin-bottom:8px}
+.qz-head .lead{margin-bottom:0}
+
+/* Responsive grid: looks great with 1 card now, and automatically scales to 2+ columns as more quizzes are added */
+.qz-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,540px));gap:26px;align-items:stretch}
+
+.qz-card{display:flex;flex-direction:column;padding:32px;border-top:5px solid #7fd4b6}
+.qz-card.soon{border-top-color:var(--orc);opacity:.9}
+.qz-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.qz-card .ic{margin-bottom:0}
+.qz-badges{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.qz-card h3{font-size:23px;font-weight:900;line-height:1.38;margin-bottom:6px;color:var(--plum);unicode-bidi:plaintext;text-align:right}
+.qz-card .sub{font-size:15px;font-weight:700;color:var(--plum2);margin-bottom:12px;unicode-bidi:plaintext;text-align:right}
+.qz-card p.d{color:var(--mut);font-size:16px;line-height:1.8;margin-bottom:16px}
+
+.qz-list{list-style:none;margin:0 0 18px;padding:14px 16px;background:var(--bg);border:1.5px solid var(--line);border-radius:18px;display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;font-size:14.5px;color:#4a3a55;font-weight:700}
+.qz-list li{display:flex;align-items:center;gap:8px}
+.qz-list li:before{content:"✓";flex:none;width:20px;height:20px;border-radius:50%;background:var(--mint);color:#0f4a3a;display:grid;place-items:center;font-size:11.5px;font-weight:900}
+
+.qz-meta{margin-top:0;margin-bottom:22px;gap:8px}
+.qz-meta span{padding:5px 14px;font-size:13.5px}
+
+.qz-foot{margin-top:auto;padding-top:16px;border-top:1.5px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+@media(max-width:900px){
+  .qz-hero-txt h1{font-size:36px}
+  .qz-main{padding:52px 0 68px}
+  .qz-grid{grid-template-columns:1fr}
+  .qz-card{padding:24px 20px}
+  .qz-list{grid-template-columns:1fr}
+  nav .lk a[aria-current="page"]:after{display:none}
+}
+@media(max-width:520px){
+  .qz-foot .btn{width:100%;text-align:center}
+}

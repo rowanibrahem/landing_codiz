@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Codiz AI Readiness Quiz — هل أنت جاهز تشتغل مع AI؟</title>
+<meta name="description" content="اختبر طريقة تعاملك مع الذكاء الاصطناعي، واكتشف نقاط قوتك والمهارات اللي محتاج تطورها. اختبار مجاني من Codiz يستغرق 2–3 دقائق.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Codiz AI Readiness Quiz — Are You Ready to Work with AI?">
+<meta property="og:description" content="اختبار مجاني من 10 أسئلة يكشف نقاط قوتك والمهارات اللي محتاج تطورها عشان تستفيد من AI بذكاء.">
+<meta property="og:locale" content="ar_AR">
+<!-- Served at /ai-readiness: make sure the relative asset paths resolve (needs the trailing slash). -->
+<script>if(/\/ai-readiness$/.test(location.pathname))location.replace(location.pathname+'/'+location.search+location.hash)</script>
+<link rel="icon" href="../logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../site-base.css">
+<link rel="stylesheet" href="quiz.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="aiq">
+
+<header class="aiq-top">
+<div class="w aiq-top-in">
+<a class="aiq-logo" href="../index.html" aria-label="Codiz — الصفحة الرئيسية"><img src="../logo.png" alt="Codiz"></a>
+<a class="aiq-home" href="../quizzes.html"><span aria-hidden="true">→</span> العودة لصفحة اختبر نفسك</a>
+</div>
+</header>
+
+<main id="aiq-main">
+
+<!-- ───────── Page 1: Introduction ───────── -->
+<section id="view-intro" class="aiq-view" aria-labelledby="intro-title">
+<div class="aiq-hero">
+<div class="w aiq-hero-in">
+<span class="pill">CODIZ AI READINESS QUIZ</span>
+<h1 id="intro-title" tabindex="-1">هل أنت جاهز تشتغل مع AI؟</h1>
+<p class="aiq-sub">اختبر طريقة تعاملك مع الذكاء الاصطناعي، واكتشف نقاط قوتك والمهارات اللي محتاج تطورها عشان تستفيد منه بذكاء.</p>
+<p class="aiq-desc">مش مجرد اختبار عن استخدام أدوات AI؛ هتواجه مواقف عملية تساعدك تكتشف إزاي بتفكر، وبتوجّه الأدوات، وبتتعامل مع النتائج اللي بتقدمها.</p>
+<ul class="aiq-facts" aria-label="معلومات عن الاختبار">
+<li><span class="aiq-fi" aria-hidden="true">📝</span><b>10 Questions</b></li>
+<li><span class="aiq-fi" aria-hidden="true">⏱️</span><b>2–3 Minutes</b></li>
+<li><span class="aiq-fi" aria-hidden="true">🎁</span><b>Free Quiz</b></li>
+<li><span class="aiq-fi" aria-hidden="true">⚡</span><b>Instant Results</b></li>
+</ul>
+<button type="button" class="btn l aiq-start" id="btn-start">ابدأ الاختبار</button>
+</div>
+</div>
+
+<div class="w aiq-discover">
+<span class="pill">What You Will Discover</span>
+<h2>هتكتشف إيه في الاختبار؟</h2>
+<ol class="aiq-disc-list">
+<li><span class="aiq-n" aria-hidden="true">1</span><p>قدرتك على فهم المشكلات والتعاون مع AI.</p></li>
+<li><span class="aiq-n" aria-hidden="true">2</span><p>قدرتك على مراجعة المعلومات والتحقق من النتائج.</p></li>
+<li><span class="aiq-n" aria-hidden="true">3</span><p>وعيك بالخصوصية والاستخدام المسؤول.</p></li>
+<li><span class="aiq-n" aria-hidden="true">4</span><p>قدرتك على توظيف AI في حلول عملية.</p></li>
+</ol>
+<p class="aiq-note">الاختبار ده تجربة تعريفية مجانية؛ مش اختبار توظيف، ولا شهادة معتمدة، ولا قياس علمي للكفاءة. مفيش بيانات شخصية بتتطلب، وإجاباتك بتفضل على جهازك.</p>
+<noscript><p class="aiq-note">الاختبار محتاج JavaScript عشان يشتغل.</p></noscript>
+</div>
+</section>
+
+<!-- ───────── Page 2: Quiz ───────── -->
+<section id="view-quiz" class="aiq-view" hidden aria-label="Codiz AI Readiness Quiz">
+<div class="w aiq-qwrap">
+<div class="aiq-qhead">
+<span class="aiq-qtitle">Codiz AI Readiness Quiz</span>
+<span class="aiq-count" id="q-count" dir="ltr">Question 1 of 10</span>
+</div>
+<div class="aiq-progress" id="q-bar" role="progressbar" aria-label="تقدمك في الاختبار" aria-valuemin="0" aria-valuemax="10" aria-valuenow="1"><span></span></div>
+
+<div class="aiq-card" id="q-card">
+<h2 class="aiq-q" id="q-text" tabindex="-1"></h2>
+<div class="aiq-options" id="q-options" role="radiogroup" aria-labelledby="q-text"></div>
+</div>
+
+<div class="aiq-nav">
+<button type="button" class="btn o" id="btn-prev">السابق</button>
+<button type="button" class="btn" id="btn-next" disabled>التالي</button>
+</div>
+<p class="aiq-hint" id="q-hint" role="status" aria-live="polite">اختار إجابة عشان تكمل.</p>
+<button type="button" class="aiq-exit" id="btn-exit">خروج والعودة للمقدمة</button>
+</div>
+</section>
+
+<!-- ───────── Page 3 + 4: Results & final CTA ───────── -->
+<section id="view-result" class="aiq-view" hidden aria-live="polite">
+<div id="result-root"></div>
+</section>
+
+</main>
+
+<div class="aiq-toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<footer class="aiq-foot"><div class="w">
+<img src="../logo.png" alt="Codiz">
+<div class="s">مش مجرد كود.. تجربة شركة حقيقية.</div>
+<p>&copy; 2026 Codiz. All rights reserved.</p>
+</div></footer>
+
+<script src="questions.js"></script>
+<script src="scoring.js"></script>
+<script src="insights.js"></script>
+<script src="report.js"></script>
+<script src="config.js"></script>
+<script src="quiz.js"></script>
+</body>
+</html>

@@ -100,7 +100,7 @@
 .nav-tg:hover{background:rgba(255,255,255,.14)}
 nav .lk a:focus-visible,.nav-tg:focus-visible{outline:3px solid rgba(255,255,255,.6);outline-offset:2px}
 
-@media(max-width:1100px) and (min-width:901px){nav .lk{gap:15px;font-size:14px}}
+@media(max-width:1150px) and (min-width:901px){nav .lk{gap:14px;font-size:14px}.inst-link .il-full{display:none}.inst-link .il-short{display:inline}}
 @media(max-width:900px){
  .ev-grid.s,.ev-grid.w{grid-template-columns:1fr 1fr}
  .ev-feature{grid-template-columns:1fr;padding:30px 22px;gap:26px}
