@@ -51,6 +51,14 @@ window.CODIZ_INSTRUCTORS = [
     photo: "assets/instructors/bavly.jpeg",
     bio:
 " محترف تطوير تطبيقات الموبايل باستخدام Flutter، ومدرب Flutter في معهد تكنولوجيا المعلومات (ITI)، حيث قمت بتدريب أكثر من 400 طالب على تطوير تطبيقات الموبايل باستخدام Flutter وDart و تجهزيهم لسوق العمل"    
- }
+ },
+ {
+    id: "yasmeen-khaled",
+    name: "Yasmeen Khaled",
+    title: "Devops Engineer",
+    photo: "assets/instructors/yasmeen.jpeg",
+    bio:
+"مهندسه ديف اوبس و كلاود خبره سنتين وخريجه NTI ومعتمد بشهادتين AWS" 
+}
 ]
 
