@@ -118,6 +118,26 @@ window.CODIZ_EVENTS = {
       icon: "📈",
       tone: "lav",
       status: "coming-soon"
+    },
+    {
+      id: "frontend",
+      title: "Frontend Workshop",
+      description:
+        "تدريب عملي على بناء واجهات ويب حديثة وتفاعلية من الصفر لحد ربطها بالـ API.",
+      category: "Frontend · Web",
+      icon: "💻",
+      tone: "sand",
+      status: "coming-soon"
+    },
+    {
+      id: "devops",
+      title: "DevOps Workshop",
+      description:
+        "تدريب عملي على أتمتة النشر والـ CI/CD والـ Containers وإدارة البنية التحتية.",
+      category: "DevOps · CI/CD",
+      icon: "🚀",
+      tone: "mint",
+      status: "coming-soon"
     }
   ],
 
