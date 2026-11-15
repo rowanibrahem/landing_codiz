@@ -43,5 +43,14 @@ window.CODIZ_INSTRUCTORS = [
     photo: "assets/instructors/ghada-mahmoud.jpeg",
     bio: 
 "مصممة UI/UX بخبرة أكتر من 3 سنين، تمتلك خبرة في تصميم تطبيقات الويب والموبايل والـ SaaS، وتصميم تجارب مستخدم فعّالة وبناء Design Systems، مع اهتمام بتأهيل المصممين لسوق العمل من خلال التدريب العملي."
-  }
+  },
+  {
+    id: "bavly-hisham",
+    name: "Bavly Hisham",
+    title: "Flutter Developer",
+    photo: "assets/instructors/bavly.jpeg",
+    bio:
+" محترف تطوير تطبيقات الموبايل باستخدام Flutter، ومدرب Flutter في معهد تكنولوجيا المعلومات (ITI)، حيث قمت بتدريب أكثر من 400 طالب على تطوير تطبيقات الموبايل باستخدام Flutter وDart و تجهزيهم لسوق العمل"    
+ }
 ]
+
