@@ -118,6 +118,7 @@ window.CODIZ_EVENTS = {
       description:
         "تدريب عملي على استكشاف البيانات وتنظيفها وتحليلها عشان تاخد قرارات أحسن.",
       category: "Data & Analytics",
+      detailsUrl: "data-analysis.html",
       icon: "📈",
       tone: "lav",
       status: "coming-soon"

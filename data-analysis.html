@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Data Analysis Foundations – Level 01 | Codiz كوديز</title>
+<meta name="description" content="برنامج Codiz التدريبي في Data Analysis Foundations (المستوى الأول): 28 جلسة لايف، 56 ساعة تدريبية، Excel وSQL وPython وPandas وPower BI مع مشاريع تطبيقية.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Data Analysis Foundations – Level 01 | Codiz">
+<meta property="og:description" content="From Raw Data to Meaningful Insights. Learn to Analyze Data. Discover Insights. Make Better Decisions.">
+<meta property="og:locale" content="ar_AR">
+<link rel="icon" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site-base.css">
+<link rel="stylesheet" href="events.css">
+<link rel="stylesheet" href="instructors.css">
+<link rel="stylesheet" href="ba-program.css">
+<link rel="stylesheet" href="da-program.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="ba">
+
+<!-- ───────── 1. HERO ───────── -->
+<header class="hero ba-hero">
+<div class="w">
+<nav>
+  <a href="index.html"><img src="logo.png" alt="Codiz كوديز"></a>
+  <div class="lk" id="site-links">
+    <a href="index.html">الرئيسية</a>
+    <a href="index.html#services">خدماتنا</a>
+    <a class="inst-link" href="index.html#instructors"><span class="il-full">تعرّف على مدربينا</span><span class="il-short">مدربينا</span></a>
+    <a class="ev-link" href="events.html#free-sessions">السيشنز المجانية</a>
+    <a href="events.html#workshops" aria-current="page">برامجنا التدريبية</a>
+    <a class="ins-link" href="insights/index.html">المدونة</a>
+    <a class="qz-link" href="quizzes.html">اختبر نفسك</a>
+  </div>
+  <a class="btn l" href="events.html?workshop=data-analysis#interest">انضم لقائمة الاهتمام</a>
+  <button type="button" class="nav-tg" aria-label="القائمة" aria-expanded="false" aria-controls="site-links">&#9776;</button>
+</nav>
+
+<div class="ba-hero-grid">
+  <div>
+    <span class="pill" dir="ltr">CODIZ TRAINING PROGRAM</span>
+    <h1>Data Analysis <em>Foundations</em></h1>
+    <p class="sub">From Raw Data to Meaningful Insights. · Learn to Analyze Data. Discover Insights. Make Better Decisions.</p>
+    <p class="d1">البيانات لوحدها مش كفاية؛ القيمة الحقيقية بتبدأ لما تعرف تفهمها، تنظفها، تحللها، وتستخرج منها Insights تساعد في اتخاذ قرارات أفضل.</p>
+    <p class="d2">في برنامج Data Analysis Foundations هتتعلم رحلة تحليل البيانات بشكل عملي، بداية من فهم الـ Business Questions والتعامل مع البيانات باستخدام Excel وSQL وPython وPandas، لحد بناء Data Models وInteractive Dashboards باستخدام Power BI.</p>
+    <ul class="ba-info" aria-label="معلومات البرنامج">
+      <li><span aria-hidden="true">🎯</span>Level 01</li>
+      <li><span aria-hidden="true">🎥</span>28 Live Sessions</li>
+      <li><span aria-hidden="true">⏱️</span>56 Training Hours</li>
+      <li><span aria-hidden="true">🛠️</span>Excel | SQL | Python | Power BI</li>
+      <li><span aria-hidden="true">💬</span>Online Interactive Training</li>
+    </ul>
+    <div class="hb">
+      <a class="btn l" href="events.html?workshop=data-analysis#interest">Apply Now</a>
+      <a class="btn g" href="#experience">Explore Program</a>
+    </div>
+  </div>
+
+  <div class="ba-vis" aria-hidden="true">
+    <div class="ba-win">
+      <div class="da-win-top">
+        <div class="ba-win-bar"><i></i><i></i><i></i></div>
+        <span class="da-tag">SQL · Pandas · Power BI</span>
+      </div>
+      <div class="ba-flow">
+        <span class="ba-node">Raw Data</span><span class="ba-arrow"></span>
+        <span class="ba-node d">Clean &amp; Model</span><span class="ba-arrow"></span>
+        <span class="ba-node">Insights</span>
+      </div>
+      <div class="ba-doc">
+        <b>SQL + PANDAS PIPELINE</b>
+        <pre class="da-code"><span class="kw">SELECT</span> region, <span class="fn">SUM</span>(sales) <span class="kw">FROM</span> orders <span class="kw">GROUP BY</span> region;
+df = df.<span class="fn">dropna</span>().<span class="fn">groupby</span>(<span class="st">"region"</span>)[<span class="st">"sales"</span>].<span class="fn">sum</span>()</pre>
+        <div class="da-kpis">
+          <div class="da-kpi">
+            <small>KPI · Clean Dataset</small>
+            <strong>99.4% Valid</strong>
+            <span>Duplicates &amp; nulls handled</span>
+          </div>
+          <div class="da-kpi">
+            <small>Power BI Visual</small>
+            <div class="da-bars">
+              <i style="height:45%"></i><i style="height:82%"></i><i style="height:64%"></i><i style="height:95%"></i><i style="height:72%"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ba-chips">
+        <span class="ba-chip" style="background:var(--mint)">Excel</span>
+        <span class="ba-chip" style="background:var(--lav)">SQL</span>
+        <span class="ba-chip" style="background:var(--sand)">Pandas</span>
+        <span class="ba-chip" style="background:var(--blush)">Power BI</span>
+      </div>
+    </div>
+    <div class="ba-float a">🧹 Clean &amp; Transform</div>
+    <div class="ba-float c">⭐ Star Schema Model</div>
+    <div class="ba-float b">📊 Interactive Dashboard</div>
+  </div>
+</div>
+</div>
+</header>
+
+<main>
+
+<!-- ───────── 2. THE CODIZ EXPERIENCE ───────── -->
+<section id="experience">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">THE CODIZ EXPERIENCE</span>
+    <h2 class="ba-h2-en" dir="ltr">Learn the Tools. Understand the Data. Solve Real Problems.</h2>
+    <p class="lead">مش هتتعلم أدوات تحليل البيانات بشكل منفصل؛ هتتعلم إزاي تستخدم كل أداة في مرحلة من مراحل التحليل، وتربط بينها علشان توصل من البيانات الخام لنتائج واضحة وقابلة للاستخدام.</p>
+  </div>
+  <div class="ba-grid3">
+    <article class="ba-card rv"><div class="ic" style="background:var(--blush)" aria-hidden="true">🎯</div><h3>Think Like a Data Analyst</h3><p>اتعلم تبدأ من Business Questions، وتفهم احتياجات العمل، وتحدد إيه البيانات اللي محتاجها علشان تجاوب على السؤال.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--lav)" aria-hidden="true">🗂️</div><h3>Work with Real Data</h3><p>اتعامل مع Datasets، وافهم تركيب البيانات، واكتشف Missing Values وDuplicates وData Quality Issues.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--mint)" aria-hidden="true">🛠️</div><h3>Master Essential Tools</h3><p>اتعلم استخدام Excel وSQL وPython وPandas وPower BI في مراحل مختلفة من رحلة تحليل البيانات.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--sand)" aria-hidden="true">📊</div><h3>Turn Data into Insights</h3><p>مش مجرد Charts؛ اتعلم تختار طريقة العرض المناسبة وتفسر النتائج وتوصل المعلومات بشكل واضح.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--blush)" aria-hidden="true">🔗</div><h3>Connect the Entire Workflow</h3><p>افهم العلاقة بين استخراج البيانات وتنظيفها وتحليلها وبناء Data Models وعرض النتائج.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--lav)" aria-hidden="true">🚀</div><h3>Build Practical Projects</h3><p>طبق اللي اتعلمته من خلال مشاريع تحليل بيانات وDashboards، واشتغل على أسئلة ومشكلات قريبة من احتياجات الأعمال.</p></article>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 3. THE DATA ANALYSIS WORKFLOW ───────── -->
+<section class="ba-dark" id="workflow">
+<div class="w ba-proj-grid">
+  <div class="rv">
+    <span class="ba-label">THE DATA ANALYSIS WORKFLOW</span>
+    <h2 class="ba-h2-en" dir="ltr">From Business Questions to Better Decisions.</h2>
+    <p class="lead">رحلة تحليل البيانات مش بتبدأ من Excel أو Power BI؛ بتبدأ من سؤال محتاج إجابة، وبعدها بنمر بمراحل مختلفة لحد ما نوصل لنتائج مفيدة.</p>
+    <ol class="da-steps">
+      <li><span class="sn">1</span><div><b>Ask – Understand the Business Question</b><ul class="da-sub"><li>Understand the business problem.</li><li>Identify stakeholders and their needs.</li><li>Define useful business questions.</li><li>Identify the data required.</li></ul></div></li>
+      <li><span class="sn">2</span><div><b>Extract – Collect the Data</b><ul class="da-sub"><li>Understand databases and data sources.</li><li>Use SQL to retrieve data.</li><li>Work with Excel and CSV files.</li><li>Understand basic ETL/ELT concepts.</li></ul></div></li>
+      <li><span class="sn">3</span><div><b>Clean &amp; Transform – Prepare the Data</b><ul class="da-sub"><li>Handle missing values &amp; identify duplicates.</li><li>Fix incorrect data types &amp; transform datasets.</li><li>Validate data quality and consistency.</li></ul></div></li>
+      <li><span class="sn">4</span><div><b>Analyze &amp; Model – Discover Insights</b><ul class="da-sub"><li>Explore datasets &amp; perform aggregations.</li><li>Identify patterns and trends.</li><li>Build basic data models &amp; apply Python and Pandas.</li></ul></div></li>
+      <li><span class="sn">5</span><div><b>Visualize &amp; Communicate – Share Results</b><ul class="da-sub"><li>Create visualizations &amp; interactive Power BI reports.</li><li>Present findings &amp; communicate insights through data storytelling.</li></ul></div></li>
+    </ol>
+  </div>
+  <div class="ba-board rv" aria-hidden="true">
+    <div class="ba-tile"><i>❓</i><b>1. Ask</b><span>Business questions &amp; data needs</span></div>
+    <div class="ba-tile"><i>🗄️</i><b>2. Extract</b><span>SQL queries, Excel &amp; CSV</span></div>
+    <div class="ba-tile"><i>🧹</i><b>3. Clean</b><span>Missing values, types &amp; quality</span></div>
+    <div class="ba-tile"><i>📈</i><b>4. Analyze</b><span>Pandas, aggregations &amp; models</span></div>
+    <div class="ba-tile w"><i>📊</i><div><b>5. Visualize &amp; Communicate</b><span>Interactive Power BI reports &amp; data storytelling</span></div></div>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 4. TOOLS YOU'LL LEARN ───────── -->
+<section class="tint" id="tools">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">TOOLS &amp; TECHNOLOGIES</span>
+    <h2 class="ba-h2-en" dir="ltr">Your Essential Data Analysis Toolkit.</h2>
+    <p class="lead">هتتعلم مجموعة من الأدوات الأساسية المستخدمة في تحليل البيانات، وكل أداة ليها دور واضح في رحلة التعامل مع البيانات.</p>
+  </div>
+  <div class="ba-grid3">
+    <article class="ba-card rv"><div class="ic" style="background:var(--mint)" aria-hidden="true">📗</div><h3>Microsoft Excel</h3><p dir="ltr" style="text-align:left">Data Organization, Formulas, Functions, Pivot Tables, Power Query, and Dashboards.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--lav)" aria-hidden="true">🗄️</div><h3>SQL</h3><p dir="ltr" style="text-align:left">Database Fundamentals, Querying, Filtering, Joins, Aggregations, and Data Extraction.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--sand)" aria-hidden="true">🐍</div><h3>Python</h3><p dir="ltr" style="text-align:left">Programming Fundamentals for Data Analysis, Data Structures, Functions, and Libraries.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--blush)" aria-hidden="true">🐼</div><h3>Pandas</h3><p dir="ltr" style="text-align:left">DataFrames, Data Exploration, Data Cleaning, Transformation, and Aggregation.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--mint)" aria-hidden="true">📉</div><h3>Data Visualization</h3><p dir="ltr" style="text-align:left">Understanding and Selecting Charts to Communicate Data Clearly.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--lav)" aria-hidden="true">📊</div><h3>Power BI</h3><p dir="ltr" style="text-align:left">Data Transformation, Data Modeling, DAX Fundamentals, Interactive Reports, and Dashboards.</p></article>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 5. DETAILED CURRICULUM (8 MODULES · 28 SESSIONS) ───────── -->
+<section id="curriculum">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">WHAT WILL YOU LEARN?</span>
+    <h2 class="ba-h2-en" dir="ltr">Your Data Analysis Learning Journey.</h2>
+    <p class="lead">خلال 28 Session هتبدأ من فهم مجال تحليل البيانات، وتتدرج في التعامل مع البيانات باستخدام الأدوات الأساسية، لحد ما تقدر تبني Dashboard وتعرض النتائج اللي وصلت لها.</p>
+  </div>
+
+  <div class="da-struct rv" aria-label="هيكلة البرنامج">
+    <span>Level: 01</span>
+    <span>Total Sessions: 28</span>
+    <span>Session Duration: 120 Minutes</span>
+    <span>Total Training Hours: 56 Hours</span>
+    <span>Online Interactive Group Training</span>
+  </div>
+
+  <div class="da-mods">
+
+    <!-- Module 01 -->
+    <details class="da-mod rv" open>
+      <summary>
+        <span class="mno">01</span>
+        <div class="mhead"><span class="mrange">SESSION 01</span><h3>Module 01 – Introduction to Data Analysis</h3></div>
+        <span class="mchev" aria-hidden="true">▾</span>
+      </summary>
+      <div class="da-mod-body">
+        <div class="da-ses-grid">
+          <div class="da-sbox"><small>SESSION 01</small><h4>Introduction to Data Analysis</h4><ul class="da-topics"><li>What is Data Analysis?</li><li>Data Analysis vs Data Engineering vs Data Science.</li><li>The Data Analysis Process.</li><li>Introduction to ETL and ELT.</li><li>Understanding Data Pipelines in Real Work.</li><li>How to Think Like a Data Analyst.</li><li>Introduction to Business Questions.</li></ul></div>
+        </div>
+        <div class="da-out"><b>Learning Outcome</b>فهم دور محلل البيانات ومراحل تحليل البيانات والفرق بين التخصصات المختلفة.</div>
+      </div>
+    </details>
+
+    <!-- Module 02 -->
+    <details class="da-mod rv" open>
+      <summary>
+        <span class="mno">02</span>
+        <div class="mhead"><span class="mrange">SESSIONS 02–06</span><h3>Module 02 – Excel for Data Analysis</h3></div>
+        <span class="mchev" aria-hidden="true">▾</span>
+      </summary>
+      <div class="da-mod-body">
+        <div class="da-ses-grid">
+          <div class="da-sbox"><small>SESSION 02</small><h4>Excel Fundamentals</h4><ul class="da-topics"><li>Excel Interface.</li><li>Data Types.</li><li>Tables.</li><li>Sorting and Filtering.</li><li>Formatting.</li></ul></div>
+          <div class="da-sbox"><small>SESSION 03</small><h4>Excel Formulas &amp; Functions</h4><ul class="da-topics"><li>Mathematical Functions.</li><li>Logical Functions.</li><li>Statistical Functions.</li><li>Formula Basics.</li></ul></div>
+          <div class="da-sbox"><small>SESSION 04</small><h4>Advanced Excel Functions</h4><ul class="da-topics"><li>Lookup Functions.</li><li>Text Functions.</li><li>Date and Time Functions.</li><li>Array Functions.</li></ul></div>
+          <div class="da-sbox"><small>SESSION 05</small><h4>Excel Analysis &amp; Reporting</h4><ul class="da-topics"><li>Charts.</li><li>Pivot Tables.</li><li>Pivot Charts.</li><li>Dashboard Basics.</li></ul></div>
+          <div class="da-sbox"><small>SESSION 06</small><h4>Power Query in Excel</h4><ul class="da-topics"><li>Power Query Editor.</li><li>Data Transformations.</li><li>Append and Merge.</li><li>Introduction to M Language.</li><li>Introduction to DAX.</li><li>Excel Data Analysis Dashboard Project.</li></ul></div>
+        </div>
+        <div class="da-out"><b>Learning Outcome</b>القدرة على تنظيم البيانات وتحليلها باستخدام Excel، وتحويلها إلى تقارير وDashboard بسيطة.</div>
+      </div>
+    </details>
+
+    <!-- Module 03 -->
+    <details class="da-mod rv">
+      <summary>
+        <span class="mno">03</span>
+        <div class="mhead"><span class="mrange">SESSIONS 07–12</span><h3>Module 03 – SQL for Data Analysis</h3></div>
+        <span class="mchev" aria-hidden="true">▾</span>
+      </summary>
+      <div class="da-mod-body">
+        <div class="da-ses-grid">
+          <div class="da-sbox"><small>SESSION 07</small><h4>Database &amp; SQL Fundamentals</h4><ul class="da-topics"><li>What is a Database?</li><li>Tables and Relationships.</li><li>Primary Keys vs Foreign Keys.</li><li>What is SQL?</li><li>SQL Commands.</li><li>SELECT.</li></ul></div>
+          <div class="da-sbox"><small>SESSION 08</small><h4>Filtering &amp; Aggregation</h4><ul class="da-topics"><li>WHERE.</li><li>ORDER BY.</li><li>GROUP BY.</li><li>Aggregate Functions.</li><li>WHERE vs HAVING.</li></ul></div>
+          <div class="da-sbox"><small>SESSION 09</small><h4>SQL Joins</h4><ul class="da-topics"><li>INNER JOIN.</li><li>LEFT JOIN.</li><li>RIGHT JOIN.</li><li>FULL OUTER JOIN.</li><li>Working with Multiple Tables.</li></ul></div>
+          <div class="da-sbox"><small>SESSION 10</small><h4>Data Cleaning &amp; Transformation</h4><ul class="da-topics"><li>String Functions.</li><li>CASE Statement.</li><li>Data Cleaning with SQL.</li></ul></div>
+          <div class="da-sbox"><small>SESSION 11</small><h4>Subqueries &amp; CTEs</h4><ul class="da-topics"><li>SQL Subqueries.</li><li>Common Table Expressions.</li><li>Practical Query Building.</li></ul></div>
+          <div class="da-sbox"><small>SESSION 12</small><h4>Analytical SQL</h4><ul class="da-topics"><li>Introduction to SQL Window Functions.</li><li>Practical Analytical Queries.</li><li>Extracting and Preparing Data for Analysis.</li></ul></div>
+        </div>
+        <div class="da-out"><b>Learning Outcome</b>استخراج البيانات من قواعد البيانات، وفلترتها ودمجها وتحضيرها للتحليل باستخدام SQL.</div>
+      </div>
+    </details>
+
+    <!-- Module 04 -->
+    <details class="da-mod rv">
+      <summary>
+        <span class="mno">04</span>
+        <div class="mhead"><span class="mrange">SESSIONS 13–15</span><h3>Module 04 – Python Fundamentals for Data Analysis</h3></div>
+        <span class="mchev" aria-hidden="true">▾</span>
+      </summary>
+      <div class="da-mod-body">
+        <div class="da-ses-grid">
+          <div class="da-sbox"><small>SESSION 13</small><h4>Python Basics</h4><ul class="da-topics"><li>Variables.</li><li>Data Types.</li><li>Strings &amp; String Formatting.</li><li>Operators.</li></ul></div>
+          <div class="da-sbox"><small>SESSION 14</small><h4>Python Data Structures &amp; Control Flow</h4><ul class="da-topics"><li>Conditional Statements.</li><li>Lists, Dictionaries, Sets, Tuples.</li><li>Loops.</li></ul></div>
+          <div class="da-sbox"><small>SESSION 15</small><h4>Functions &amp; Python Concepts</h4><ul class="da-topics"><li>Functions.</li><li>List Comprehensions.</li><li>Lambda.</li><li>Introduction to Libraries.</li><li>Introduction to Classes.</li></ul></div>
+        </div>
+        <div class="da-out"><b>Learning Outcome</b>اكتساب أساسيات Python اللازمة للتعامل مع البيانات واستخدام مكتبات التحليل.</div>
+      </div>
+    </details>
+
+    <!-- Module 05 -->
+    <details class="da-mod rv">
+      <summary>
+        <span class="mno">05</span>
+        <div class="mhead"><span class="mrange">SESSIONS 16–22</span><h3>Module 05 – Pandas for Data Analysis</h3></div>
+        <span class="mchev" aria-hidden="true">▾</span>
+      </summary>
+      <div class="da-mod-body">
+        <div class="da-ses-grid">
+          <div class="da-sbox"><small>SESSION 16</small><h4>Pandas Fundamentals</h4><ul class="da-topics"><li>Pandas Fundamentals.</li><li>Series vs DataFrame.</li><li>Creating DataFrames.</li><li>head(), tail(), sample().</li><li>shape, columns, index, dtypes.</li><li>info() and describe().</li><li>value_counts() and nunique().</li></ul></div>
+          <div class="da-sbox"><small>SESSION 17</small><h4>Loading &amp; Exploring Data</h4><ul class="da-topics"><li>Reading CSV and Other Data Formats.</li><li>sep, encoding, parse_dates.</li><li>Understanding Data Schemas &amp; Exporting Data.</li><li>Handling File-Reading Errors.</li><li>Inspecting Datasets &amp; Initial EDA.</li></ul></div>
+          <div class="da-sbox"><small>SESSION 18</small><h4>Data Selection &amp; Filtering</h4><ul class="da-topics"><li>Selecting Single and Multiple Columns &amp; Rows.</li><li>Filtering Using Comparison Operators.</li><li>Multiple Conditions.</li><li>isin(), between(), query().</li><li>sort_values(), nlargest(), nsmallest().</li></ul></div>
+          <div class="da-sbox"><small>SESSION 19</small><h4>Data Cleaning</h4><ul class="da-topics"><li>fillna() and dropna().</li><li>drop_duplicates(), astype(), to_numeric(), to_datetime().</li><li>Cleaning Text with .str Methods.</li><li>replace(), rename(), drop(), reset_index().</li><li>Identifying and Handling Outliers.</li><li>Data Quality and Consistency Validation.</li></ul></div>
+          <div class="da-sbox"><small>SESSION 20</small><h4>Data Transformation</h4><ul class="da-topics"><li>Creating New Columns.</li><li>Arithmetic Operations Between Columns.</li><li>apply() and map().</li><li>np.where() and np.select().</li><li>assign().</li></ul></div>
+          <div class="da-sbox"><small>SESSION 21</small><h4>Aggregation &amp; Combining Datasets</h4><ul class="da-topics"><li>sum(), mean(), median(), min(), max().</li><li>count(), size(), groupby(), agg(), transform().</li><li>pivot_table() and crosstab().</li><li>concat() and merge().</li><li>Inner, Left, Right, and Outer Joins.</li></ul></div>
+          <div class="da-sbox"><small>SESSION 22</small><h4>Date &amp; Time Analysis</h4><ul class="da-topics"><li>to_datetime() and .dt Accessor.</li><li>Filtering by Date Ranges.</li><li>Grouping Data by Date.</li><li>resample() and rolling().</li></ul></div>
+        </div>
+        <div class="da-out"><b>Learning Outcome</b>القدرة على تحميل البيانات واستكشافها وتنظيفها وتحويلها وتحليلها باستخدام Pandas.</div>
+      </div>
+    </details>
+
+    <!-- Module 06 -->
+    <details class="da-mod rv">
+      <summary>
+        <span class="mno">06</span>
+        <div class="mhead"><span class="mrange">SESSIONS 23–24</span><h3>Module 06 – Data Visualization</h3></div>
+        <span class="mchev" aria-hidden="true">▾</span>
+      </summary>
+      <div class="da-mod-body">
+        <div class="da-ses-grid">
+          <div class="da-sbox"><small>SESSION 23</small><h4>Visualization Fundamentals</h4><ul class="da-topics"><li>Choosing the Right Chart.</li><li>Line Plot &amp; Scatter Plot.</li><li>Bar Chart (Horizontal &amp; Vertical).</li><li>Histogram.</li></ul></div>
+          <div class="da-sbox"><small>SESSION 24</small><h4>Visualization Techniques</h4><ul class="da-topics"><li>Pie Chart &amp; Sunburst Chart.</li><li>Box Plot, Heatmap &amp; Bubble Chart.</li><li>Error Bar.</li><li>Introduction to 3D Visualization.</li></ul></div>
+        </div>
+        <div class="da-out"><b>Learning Outcome</b>اختيار الرسوم البيانية المناسبة وتحويل النتائج إلى Visual Insights واضحة.</div>
+      </div>
+    </details>
+
+    <!-- Module 07 -->
+    <details class="da-mod rv">
+      <summary>
+        <span class="mno">07</span>
+        <div class="mhead"><span class="mrange">SESSION 25</span><h3>Module 07 – Data Modeling Fundamentals</h3></div>
+        <span class="mchev" aria-hidden="true">▾</span>
+      </summary>
+      <div class="da-mod-body">
+        <div class="da-ses-grid">
+          <div class="da-sbox"><small>SESSION 25</small><h4>Data Modeling Fundamentals</h4><ul class="da-topics"><li>What is Data Modeling?</li><li>Fact Tables and Dimension Tables.</li><li>Star Schema, Snowflake Schema &amp; Introduction to Galaxy Schema.</li><li>Model Layer vs Visual Layer.</li><li>Merge vs Relationship.</li><li>Cardinality &amp; Filter Direction.</li><li>Understanding Fact Table Grain.</li></ul></div>
+        </div>
+        <div class="da-out"><b>Learning Outcome</b>فهم أساسيات تنظيم البيانات والعلاقات بين الجداول قبل بناء تقارير Power BI.</div>
+      </div>
+    </details>
+
+    <!-- Module 08 -->
+    <details class="da-mod rv">
+      <summary>
+        <span class="mno">08</span>
+        <div class="mhead"><span class="mrange">SESSIONS 26–28</span><h3>Module 08 – Power BI</h3></div>
+        <span class="mchev" aria-hidden="true">▾</span>
+      </summary>
+      <div class="da-mod-body">
+        <div class="da-ses-grid">
+          <div class="da-sbox"><small>SESSION 26</small><h4>Connecting &amp; Transforming Data</h4><ul class="da-topics"><li>Connecting to Data Sources.</li><li>Power Query in Power BI.</li><li>Data Transformation &amp; Data Cleaning.</li><li>Preparing Data for Modeling.</li></ul></div>
+          <div class="da-sbox"><small>SESSION 27</small><h4>Data Modeling &amp; DAX</h4><ul class="da-topics"><li>Data Modeling in Power BI.</li><li>Relationships, Cardinality &amp; Filter Direction.</li><li>DAX Fundamentals.</li><li>Basic Measures and Calculations.</li></ul></div>
+          <div class="da-sbox"><small>SESSION 28</small><h4>Dashboard &amp; Final Project</h4><ul class="da-topics"><li>Data Visualization in Power BI.</li><li>Report Design &amp; Data Storytelling.</li><li>Building an Interactive Dashboard.</li><li>Final Project Presentation.</li></ul></div>
+        </div>
+        <div class="da-out"><b>Learning Outcome</b>بناء تقرير تفاعلي باستخدام Power BI وتحويل البيانات إلى Dashboard تساعد في فهم النتائج واتخاذ القرارات.</div>
+      </div>
+    </details>
+
+  </div>
+</div>
+</section>
+
+<!-- ───────── 6. PRACTICAL PROJECTS ───────── -->
+<section class="tint" id="projects">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">LEARN BY BUILDING</span>
+    <h2 class="ba-h2-en" dir="ltr">Turn What You Learn into Practical Work.</h2>
+    <p class="lead">التطبيق العملي جزء أساسي من رحلة التعلم. هتستخدم الأدوات اللي اتعلمتها للتعامل مع البيانات في سيناريوهات أعمال واقعية، واستخراج نتائج، وتحويلها إلى تقارير واضحة.</p>
+  </div>
+  <div class="da-proj2">
+    <article class="da-pcard rv">
+      <span class="ev-tag paid" dir="ltr" style="width:fit-content">Project 01</span>
+      <h3>Excel Data Analysis Dashboard</h3>
+      <ul class="da-plist">
+        <li>Work with a dataset.</li>
+        <li>Organize and clean the data.</li>
+        <li>Apply Excel formulas and functions.</li>
+        <li>Use Pivot Tables and Pivot Charts.</li>
+        <li>Transform data using Power Query.</li>
+        <li>Build a basic Excel Dashboard.</li>
+        <li>Answer practical business questions.</li>
+      </ul>
+      <div class="da-pout"><small>Project Output</small>Excel Dashboard presenting meaningful information from the dataset.</div>
+    </article>
+
+    <article class="da-pcard final rv">
+      <span class="ev-tag free" dir="ltr" style="width:fit-content">Final Project</span>
+      <h3>End-to-End Data Analysis with Power BI</h3>
+      <ul class="da-plist num">
+        <li>Understand a business question.</li>
+        <li>Identify the required data.</li>
+        <li>Extract data using SQL.</li>
+        <li>Clean and prepare data using Python and Pandas.</li>
+        <li>Explore and analyze the dataset.</li>
+        <li>Build a basic data model.</li>
+        <li>Create visualizations and an interactive Power BI Dashboard.</li>
+        <li>Present the findings and insights.</li>
+      </ul>
+      <div class="da-pout"><small>Project Output</small>An interactive Power BI report with a clear explanation of the business questions, analysis, and insights.</div>
+    </article>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 7. LEARNING OUTCOMES ───────── -->
+<section id="outcomes">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">WHAT YOU'LL ACHIEVE</span>
+    <h2 class="ba-h2-en" dir="ltr">What Will You Be Able to Do?</h2>
+  </div>
+  <div class="ba-grid3">
+    <article class="ba-card rv"><div class="ic" style="background:var(--blush)" aria-hidden="true">🧭</div><h3>Understand the Data Analysis Process</h3><p>فهم مراحل تحليل البيانات والفرق بين Data Analysis وData Engineering وData Science.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--mint)" aria-hidden="true">📗</div><h3>Work with Excel</h3><p>تنظيم البيانات وتحليلها باستخدام Formulas وFunctions وPivot Tables وPower Query.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--lav)" aria-hidden="true">🗄️</div><h3>Query Databases with SQL</h3><p>استخراج البيانات وفلترتها ودمج الجداول وتجهيز البيانات للتحليل.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--sand)" aria-hidden="true">🐍</div><h3>Use Python for Data Analysis</h3><p>كتابة Python Code أساسي والتعامل مع Data Structures وFunctions.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--blush)" aria-hidden="true">🐼</div><h3>Analyze Data with Pandas</h3><p>تحميل البيانات واستكشافها وتنظيفها وتحويلها وتجميعها باستخدام Pandas.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--mint)" aria-hidden="true">📉</div><h3>Visualize Data</h3><p>اختيار Charts مناسبة وتقديم النتائج بصورة مفهومة.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--lav)" aria-hidden="true">⭐</div><h3>Understand Data Modeling</h3><p>فهم Fact Tables وDimension Tables والعلاقات الأساسية بين الجداول.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--sand)" aria-hidden="true">📊</div><h3>Build Power BI Dashboards</h3><p>إنشاء Interactive Reports وDashboards باستخدام Power BI وDAX Fundamentals.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--blush)" aria-hidden="true">💡</div><h3>Communicate Insights</h3><p>تفسير النتائج وربطها بالـ Business Questions وعرض المعلومات بطريقة واضحة.</p></article>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 8. WHO IS THIS PROGRAM FOR ───────── -->
+<section class="tint" id="audience">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">WHO IS THIS PROGRAM FOR?</span>
+    <h2 class="ba-h2-en" dir="ltr">Is This Program Right for You?</h2>
+  </div>
+  <div class="ba-aud">
+    <article class="ba-card rv"><div class="ic" style="background:var(--blush)" aria-hidden="true">🏫</div><h3>University Students</h3><p>طلاب الجامعات اللي عايزين يكتسبوا مهارات عملية في تحليل البيانات بجانب دراستهم.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--lav)" aria-hidden="true">🎓</div><h3>Fresh Graduates</h3><p>الخريجين اللي عايزين يبدأوا طريقهم في مجال Data Analysis ويبنون أساس تقني واضح.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--sand)" aria-hidden="true">🧭</div><h3>Career Explorers</h3><p>الأشخاص اللي مهتمين بمجال البيانات وعايزين يفهموا الأدوات والخطوات الأساسية قبل التخصص بشكل أعمق.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--mint)" aria-hidden="true">🌱</div><h3>Beginners in Data Analysis</h3><p>اللي عندهم اهتمام بالبيانات وعايزين يتعلموا Excel وSQL وPython وPower BI بشكل تدريجي ومنظم.</p></article>
+  </div>
+  <div class="ba-pre rv">
+    <span class="ic" aria-hidden="true">✅</span>
+    <div>
+      <b>Prerequisites</b>
+      <ul class="da-pre-list">
+        <li>Basic Computer Skills</li>
+        <li>Basic English Reading Skills for Technical Terms</li>
+        <li>Willingness to Practice and Work with Data</li>
+      </ul>
+      <p class="da-pre-note">البرنامج مصمم للمبتدئين في Data Analysis، ولا يشترط خبرة مهنية أو برمجية متقدمة.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 9. PROGRAM DETAILS ───────── -->
+<section id="details">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">PROGRAM DETAILS</span>
+    <h2 class="ba-h2-en" dir="ltr">Program at a Glance</h2>
+  </div>
+  <div class="ba-det da-det">
+    <div class="it rv"><span class="ic" style="background:var(--blush)" aria-hidden="true">📈</span><div><small>Program</small><b>Data Analysis Foundations</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--lav)" aria-hidden="true">🎯</span><div><small>Level</small><b>Level 01</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--sand)" aria-hidden="true">🎥</span><div><small>Sessions</small><b>28 Live Sessions</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--mint)" aria-hidden="true">⏱️</span><div><small>Session Duration</small><b>120 Minutes</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--lav)" aria-hidden="true">⌛</span><div><small>Total Training</small><b>56 Hours</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--blush)" aria-hidden="true">💻</span><div><small>Format</small><b>Online Interactive Group Training</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--sand)" aria-hidden="true">🛠️</span><div><small>Tools</small><b>Excel, SQL, Python, Pandas, Power BI</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--mint)" aria-hidden="true">📊</span><div><small>Projects</small><b>Excel Dashboard and End-to-End Power BI Project</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--blush)" aria-hidden="true">🎓</span><div><small>Target Audience</small><b>Students, Fresh Graduates, and Data Analysis Beginners</b></div></div>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 10. FINAL CTA ───────── -->
+<section class="ba-dark ba-cta" id="apply">
+<div class="w rv">
+  <h2>Start Your Journey in Data Analysis.</h2>
+  <p class="lead">ابدأ رحلتك في عالم البيانات، واتعلم إزاي تحول البيانات الخام إلى Insights تساعدك تفهم المشكلات وتوصل لقرارات أفضل.</p>
+  <span class="st">Explore Data. Discover Insights. Make an Impact.</span>
+  <a class="btn l" href="events.html?workshop=data-analysis#interest">Apply Now</a>
+</div>
+</section>
+
+</main>
+
+<footer><div class="w">
+<img src="logo.png" alt="Codiz">
+<div class="s">مش مجرد كود.. تجربة شركة حقيقية.</div>
+<p><a href="index.html">الرجوع للصفحة الرئيسية</a> · <a href="events.html">كل الفعاليات</a> · &copy; 2026 Codiz. All rights reserved.</p>
+</div></footer>
+
+<script src="ba-program.js"></script>
+</body>
+</html>
