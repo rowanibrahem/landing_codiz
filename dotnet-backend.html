@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>.NET Backend Training Program | Codiz كوديز</title>
+<meta name="description" content="برنامج Codiz التدريبي في .NET Backend: 14 جلسة لايف، 42 ساعة تدريبية على مدار 7 أسابيع، لبناء مشروع Online Course Registration System متكامل مع Code Review ومناقشة تقنية.">
+<meta property="og:type" content="website">
+<meta property="og:title" content=".NET Backend Training Program | Codiz">
+<meta property="og:description" content="Build a Real Backend Project. Not Just Follow Tutorials. From C# Fundamentals to a Working Backend Application.">
+<meta property="og:locale" content="ar_AR">
+<link rel="icon" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site-base.css">
+<link rel="stylesheet" href="events.css">
+<link rel="stylesheet" href="instructors.css">
+<link rel="stylesheet" href="ba-program.css">
+<link rel="stylesheet" href="dn-program.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="ba">
+
+<!-- ───────── 1. HERO ───────── -->
+<header class="hero ba-hero">
+<div class="w">
+<nav>
+  <a href="index.html"><img src="logo.png" alt="Codiz كوديز"></a>
+  <div class="lk" id="site-links">
+    <a href="index.html">الرئيسية</a>
+    <a href="index.html#services">خدماتنا</a>
+    <a class="inst-link" href="index.html#instructors"><span class="il-full">تعرّف على مدربينا</span><span class="il-short">مدربينا</span></a>
+    <a class="ev-link" href="events.html#free-sessions">السيشنز المجانية</a>
+    <a href="events.html#workshops" aria-current="page">برامجنا التدريبية</a>
+    <a class="ins-link" href="insights/index.html">المدونة</a>
+    <a class="qz-link" href="quizzes.html">اختبر نفسك</a>
+  </div>
+  <a class="btn l" href="events.html?workshop=backend#interest">انضم لقائمة الاهتمام</a>
+  <button type="button" class="nav-tg" aria-label="القائمة" aria-expanded="false" aria-controls="site-links">&#9776;</button>
+</nav>
+
+<div class="ba-hero-grid">
+  <div>
+    <span class="pill" dir="ltr">CODIZ TRAINING PROGRAM</span>
+    <h1>.NET Backend <em>Training Program</em></h1>
+    <p class="sub">Build a Real Backend Project. Not Just Follow Tutorials. · From C# Fundamentals to a Working Backend Application.</p>
+    <p class="d1">مش هتتعلم مفاهيم Backend بشكل منفصل؛ هتبني مشروع متكامل خطوة بخطوة باستخدام .NET. من أول فهم الـ Business Requirements وتصميم قاعدة البيانات، لحد بناء APIs، وتنفيذ الـ Features، وتنظيم الكود، واختبار المشروع.</p>
+    <p class="d2">بعد كل Session هتنفذ بنفسك جزء من المشروع، وتستقبل Code Review وFeedback على شغلك، لحد ما تقدر تسلم مشروع Backend شغال وتشرح قراراتك التقنية.</p>
+    <ul class="ba-info" aria-label="معلومات البرنامج">
+      <li><span aria-hidden="true">🎯</span>One-Level Training Program</li>
+      <li><span aria-hidden="true">🎥</span>14 Live Sessions</li>
+      <li><span aria-hidden="true">⏱️</span>42 Training Hours</li>
+      <li><span aria-hidden="true">🗓️</span>7 Weeks</li>
+      <li><span aria-hidden="true">💬</span>Online Interactive Training</li>
+      <li><span aria-hidden="true">🛠️</span>Practical Project-Based Learning</li>
+    </ul>
+    <div class="hb">
+      <a class="btn l" href="events.html?workshop=backend#interest">Apply Now</a>
+      <a class="btn g" href="#experience">Explore Program</a>
+    </div>
+  </div>
+
+  <div class="ba-vis" aria-hidden="true">
+    <div class="ba-win">
+      <div class="dn-win-top">
+        <div class="ba-win-bar"><i></i><i></i><i></i></div>
+        <span class="dn-tag">POST /api/enrollments · C# / .NET</span>
+      </div>
+      <div class="ba-flow">
+        <span class="ba-node">ERD &amp; Rules</span><span class="ba-arrow"></span>
+        <span class="ba-node d">API &amp; Auth</span><span class="ba-arrow"></span>
+        <span class="ba-node">PR Review</span>
+      </div>
+      <div class="ba-doc">
+        <b>COURSE REGISTRATION SYSTEM · BUSINESS RULES</b>
+        <pre class="dn-code"><span class="kw">if</span> (<span class="fn">IsAlreadyEnrolled</span>(studentId, courseId))
+  <span class="kw">return</span> <span class="fn">Conflict</span>(<span class="st">"Duplicate enrollment."</span>);
+<span class="kw">if</span> (course.AvailableSeats &lt;= 0)
+  <span class="kw">return</span> <span class="fn">BadRequest</span>(<span class="st">"Course is full."</span>);</pre>
+      </div>
+      <div class="ba-chips">
+        <span class="ba-chip" style="background:var(--mint)">Student</span>
+        <span class="ba-chip" style="background:var(--lav)">Instructor</span>
+        <span class="ba-chip" style="background:var(--sand)">Admin</span>
+        <span class="ba-chip" style="background:var(--blush)">201 Created</span>
+      </div>
+    </div>
+    <div class="ba-float a">🗄️ Approved ERD · Data Layer</div>
+    <div class="ba-float c">🔀 GitHub PR · Checklist</div>
+    <div class="ba-float b">✓ F1 → F7 Features</div>
+  </div>
+</div>
+</div>
+</header>
+
+<main>
+
+<!-- ───────── 2. THE CODIZ EXPERIENCE ───────── -->
+<section id="experience">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">THE CODIZ EXPERIENCE</span>
+    <h2 class="ba-h2-en" dir="ltr">Learn Backend Development by Building a Complete Project.</h2>
+    <p class="lead">في Codiz، التعلم مش مجرد شرح لمفاهيم وتقنيات منفصلة. كل Session ليها هدف واضح، والمدرب بيبني جزء من المشروع Live، وبعدها بتنفذ نفس الفكرة بنفسك كـ Task، وتستقبل مراجعة وملاحظات تساعدك تطور جودة شغلك.</p>
+  </div>
+  <div class="ba-grid3">
+    <article class="ba-card rv"><div class="ic" style="background:var(--blush)" aria-hidden="true">🧱</div><h3>One Continuous Project</h3><p>مش هتبدأ مشروع جديد في آخر يوم؛ هتبني مشروع واحد من أول Session لآخر Session، وكل جزء هيكمل على اللي قبله.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--lav)" aria-hidden="true">💻</div><h3>Live Coding</h3><p>تابع المدرب وهو بيبني أجزاء المشروع خطوة بخطوة، وافهم القرارات والتطبيقات العملية أثناء التنفيذ.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--mint)" aria-hidden="true">🛠️</div><h3>Individual Tasks</h3><p>بعد كل Session هتنفذ الجزء الخاص بيك بنفسك، وتطبق المفاهيم اللي اتعلمتها على المشروع.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--sand)" aria-hidden="true">🔍</div><h3>Code Review &amp; Feedback</h3><p>شغلك بيتراجع باستخدام Checklist واضحة، وبتستقبل Written Feedback على كل Pull Request.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--blush)" aria-hidden="true">🏗️</div><h3>Structured Project Architecture</h3><p>اتعلم تنظم مشروعك وتفهم Structure الكود، وتبني Features متكاملة بدل ما تكتب أجزاء منفصلة.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--lav)" aria-hidden="true">🎤</div><h3>Technical Defense</h3><p>في نهاية البرنامج هتقدم مشروعك وتناقش قراراتك التقنية وتوضح إزاي نفذت الـ Features المختلفة.</p></article>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 3. HOW THE TRAINING WORKS ───────── -->
+<section class="tint" id="how-it-works">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">HOW IT WORKS</span>
+    <h2 class="ba-h2-en" dir="ltr">A Structured Journey from Learning to Implementation.</h2>
+    <p class="lead">كل Session جزء من رحلة بناء المشروع. بتتعلم مفهوم، تشوف تطبيقه Live، وبعدها تنفذه بنفسك، وتستقبل Feedback قبل الانتقال للخطوة التالية.</p>
+  </div>
+  <div class="dn-steps">
+    <article class="dn-step rv"><span class="sn">1</span><h3>Learn</h3><p>شرح المفهوم التقني وفهم الهدف منه ودوره داخل المشروع.</p></article>
+    <article class="dn-step rv"><span class="sn">2</span><h3>Build Live</h3><p>المدرب بيطبق المفهوم ويبني الجزء الخاص بيه داخل المشروع خطوة بخطوة.</p></article>
+    <article class="dn-step rv"><span class="sn">3</span><h3>Implement Your Task</h3><p>بتنفذ الجزء المطلوب بنفسك على Branch خاص بالـ Feature.</p></article>
+    <article class="dn-step rv"><span class="sn">4</span><h3>Submit &amp; Review</h3><p>بتسلم شغلك على GitHub باستخدام Pull Request، وبيتم مراجعته باستخدام Checklist واضحة.</p></article>
+    <article class="dn-step rv"><span class="sn">5</span><h3>Improve &amp; Move Forward</h3><p>بتستقبل Written Feedback، وتناقش الملاحظات، وبعدها تنتقل للـ Feature التالية.</p></article>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 4. THE FINAL PROJECT ───────── -->
+<section class="ba-dark" id="project">
+<div class="w">
+  <div class="ba-sec-head rv" style="position:relative;z-index:2;max-width:860px">
+    <span class="ba-label">YOUR PRACTICAL PROJECT</span>
+    <h2 class="ba-h2-en" dir="ltr">Build an Online Course Registration System.</h2>
+    <p class="lead">خلال البرنامج هتبني Backend لمنصة Online Course Registration System لإدارة الكورسات وتسجيل الطلبة. المشروع بيحاكي احتياج Business حقيقي، وبيخليك تطبق مفاهيم Backend على Application واحدة متكاملة.</p>
+    <div class="dn-roles" aria-label="User Roles">
+      <span>👤 Student</span>
+      <span>🧑‍🏫 Instructor</span>
+      <span>🛡️ Admin</span>
+    </div>
+  </div>
+
+  <div class="dn-proj-top">
+    <div class="dn-pbox rv">
+      <h3>What the System Supports</h3>
+      <ul class="dn-plist">
+        <li>Course Management.</li>
+        <li>Categories &amp; Instructor Management.</li>
+        <li>Course Enrollment.</li>
+        <li>Account Creation and Login.</li>
+        <li>Roles and Permissions.</li>
+        <li>Search and Filtering.</li>
+        <li>Pagination.</li>
+        <li>Logging.</li>
+        <li>Documentation.</li>
+        <li>Testing.</li>
+      </ul>
+    </div>
+    <div class="dn-pbox rv">
+      <h3>Core Business Rules</h3>
+      <ul class="dn-rules">
+        <li>Prevent duplicate enrollment in the same course.</li>
+        <li>Respect the maximum number of available seats.</li>
+        <li>Apply different permissions according to user roles.</li>
+        <li>Handle invalid operations and business errors appropriately.</li>
+      </ul>
+      <div class="dn-erd-note">
+        Each trainee designs an ERD based on the Business Description. After reviewing the designs, one reference database design is approved for all trainees to continue building upon, following one organized Architecture throughout the program.
+      </div>
+    </div>
+  </div>
+
+  <div class="dn-ftable-wrap rv">
+    <h3>7-Feature Progressive Breakdown</h3>
+    <table class="dn-ftable">
+      <thead><tr><th>Feature</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td><span class="dn-fbadge">F1</span></td><td>Course Management</td></tr>
+        <tr><td><span class="dn-fbadge">F2</span></td><td>Categories &amp; Instructors</td></tr>
+        <tr><td><span class="dn-fbadge">F3</span></td><td>Course Enrollment &amp; Business Rules</td></tr>
+        <tr><td><span class="dn-fbadge">F4</span></td><td>Account Creation &amp; Login</td></tr>
+        <tr><td><span class="dn-fbadge">F5</span></td><td>Roles &amp; Permissions</td></tr>
+        <tr><td><span class="dn-fbadge">F6</span></td><td>Search, Filtering &amp; Pagination</td></tr>
+        <tr><td><span class="dn-fbadge">F7</span></td><td>Logging, Documentation &amp; Testing</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 5. TOOLS & TECHNOLOGIES ───────── -->
+<section class="tint" id="tools">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">TOOLS &amp; TECHNOLOGIES</span>
+    <h2 class="ba-h2-en" dir="ltr">Build Your Backend Development Foundation.</h2>
+  </div>
+  <div class="ba-grid3">
+    <article class="ba-card rv"><div class="ic" style="background:var(--lav)" aria-hidden="true">⚡</div><h3>C#</h3><p dir="ltr" style="text-align:left">The programming language used to build the backend application.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--blush)" aria-hidden="true">⚙️</div><h3>.NET</h3><p dir="ltr" style="text-align:left">The backend development ecosystem used throughout the program.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--mint)" aria-hidden="true">🔌</div><h3>APIs</h3><p dir="ltr" style="text-align:left">Building backend endpoints and connecting the application with its data layer.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--sand)" aria-hidden="true">🗄️</div><h3>Database Design</h3><p dir="ltr" style="text-align:left">Understanding business data, designing ERDs, and building database relationships.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--lav)" aria-hidden="true">🔀</div><h3>GitHub</h3><p dir="ltr" style="text-align:left">Working with branches, Pull Requests, code submission, and review workflows.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--mint)" aria-hidden="true">🧪</div><h3>Testing &amp; Documentation</h3><p dir="ltr" style="text-align:left">Understanding project quality through testing, logging, and documentation.</p></article>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 6. DETAILED CURRICULUM (4 PHASES · 14 SESSIONS) ───────── -->
+<section id="curriculum">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">WHAT WILL YOU LEARN?</span>
+    <h2 class="ba-h2-en" dir="ltr">Your 14-Session Backend Development Journey.</h2>
+    <p class="lead">خلال 7 أسابيع، هتنتقل من فهم المشروع وتحليل الـ Business Requirements إلى تصميم قاعدة البيانات وبناء APIs وتنفيذ Features متكاملة، لحد مراجعة المشروع النهائي والدفاع عن قراراتك التقنية.</p>
+  </div>
+
+  <div class="dn-struct rv" aria-label="هيكلة البرنامج">
+    <span>14 Live Sessions</span>
+    <span>7 Weeks</span>
+    <span>2 Sessions per Week</span>
+    <span>3 Hours per Session</span>
+    <span>42 Total Training Hours</span>
+    <span>One Level for the Entire Cohort</span>
+    <span>Online Interactive Training</span>
+  </div>
+
+  <!-- Phase 01 -->
+  <div class="dn-phase">
+    <div class="dn-phase-head rv"><span class="dn-phase-tag">Phase 01</span><h3>Project Understanding &amp; Database Design</h3></div>
+    <div class="ba-cur">
+      <article class="ba-ses rv"><span class="no">01</span><div><small>SESSION 01</small><h3>Kickoff &amp; Project Setup</h3><ul class="dn-topics"><li>Program Introduction.</li><li>Understanding the Project Brief.</li><li>Introduction to the Online Course Registration System.</li><li>Understanding the Main Project Requirements.</li><li>Preparing the Development Environment.</li><li>Understanding the Project Workflow.</li></ul><div class="dn-mile"><b>Practical Milestone</b>Understand the application, its requirements, and the development environment.</div></div></article>
+
+      <article class="ba-ses rv"><span class="no">02</span><div><small>SESSION 02</small><h3>Business Analysis &amp; Database Design</h3><ul class="dn-topics"><li>Understanding Business Requirements.</li><li>Identifying Main Entities &amp; Relationships.</li><li>Translating Business Requirements into Database Structure.</li><li>Designing the ERD.</li><li>Understanding the Project Data Model.</li></ul><div class="dn-mile"><b>Practical Milestone</b>Create an initial ERD for the Online Course Registration System.</div></div></article>
+
+      <article class="ba-ses rv"><span class="no">03</span><div><small>SESSION 03</small><h3>Database Design Review &amp; Data Layer</h3><ul class="dn-topics"><li>Reviewing Trainee ERD Designs.</li><li>Discussing Database Design Decisions.</li><li>Approving the Reference Database Design.</li><li>Beginning the Data Layer Implementation.</li><li>Understanding How Application Data Is Organized.</li></ul><div class="dn-mile"><b>Practical Milestone</b>Approve the reference database design and start implementing the data layer.</div></div></article>
+    </div>
+  </div>
+
+  <!-- Phase 02 -->
+  <div class="dn-phase">
+    <div class="dn-phase-head rv"><span class="dn-phase-tag">Phase 02</span><h3>APIs &amp; Project Structure</h3></div>
+    <div class="ba-cur">
+      <article class="ba-ses rv"><span class="no">04</span><div><small>SESSION 04</small><h3>Building the First APIs</h3><ul class="dn-topics"><li>Understanding Backend APIs.</li><li>Building the First API Endpoints.</li><li>Understanding Request and Response.</li><li>Connecting API Concepts to the Project.</li><li>Implementing the First Backend Operations.</li></ul><div class="dn-mile"><b>Practical Milestone</b>Build the first APIs in the project.</div></div></article>
+
+      <article class="ba-ses rv"><span class="no">05</span><div><small>SESSION 05</small><h3>API &amp; Database Integration</h3><ul class="dn-topics"><li>Connecting APIs with the Database.</li><li>Working with Application Data.</li><li>Understanding Data Access.</li><li>Reading and Writing Data Through the Backend.</li></ul><div class="dn-mile"><b>Practical Milestone</b>Connect the project's APIs to its database.</div></div></article>
+
+      <article class="ba-ses rv"><span class="no">06</span><div><small>SESSION 06</small><h3>Data Relationships &amp; Access</h3><ul class="dn-topics"><li>Understanding Relationships Between Data.</li><li>Working with Related Entities.</li><li>Reading Related Data.</li><li>Applying Data Relationships in the Project.</li></ul><div class="dn-mile"><b>Practical Milestone</b>Implement and work with the project's data relationships.</div></div></article>
+
+      <article class="ba-ses rv"><span class="no">07</span><div><small>SESSION 07</small><h3>Code Organization &amp; Project Structure</h3><ul class="dn-topics"><li>Understanding Project Structure.</li><li>Organizing Code &amp; Separating Project Responsibilities.</li><li>Understanding Where Each Component Belongs.</li><li>Maintaining a Consistent Project Architecture.</li></ul><div class="dn-mile"><b>Practical Milestone</b>Organize the project structure and improve code maintainability.</div></div></article>
+    </div>
+  </div>
+
+  <!-- Phase 03 -->
+  <div class="dn-phase">
+    <div class="dn-phase-head rv"><span class="dn-phase-tag">Phase 03</span><h3>Feature Development</h3></div>
+    <div class="ba-cur">
+      <article class="ba-ses rv"><span class="no">08</span><div><small>SESSION 08</small><h3>Data Validation &amp; Course Management</h3><ul class="dn-topics"><li>Understanding Data Validation &amp; Controlling Data Input.</li><li>Applying Validation Rules.</li><li>Implementing Course Management.</li><li>Reviewing Course Management Functionality.</li></ul><div class="dn-mile"><b>Feature Milestone</b>Complete F1 – Course Management.</div></div></article>
+
+      <article class="ba-ses rv"><span class="no">09</span><div><small>SESSION 09</small><h3>Business Rules &amp; Error Handling</h3><ul class="dn-topics"><li>Understanding Business Rules &amp; Applying Enrollment Rules.</li><li>Preventing Duplicate Course Enrollment.</li><li>Respecting Course Capacity.</li><li>Handling Invalid Operations &amp; Managing Application Errors.</li></ul><div class="dn-mile"><b>Feature Milestones</b>Complete F2 – Categories &amp; Instructors · Complete F3 – Course Enrollment &amp; Business Rules.</div></div></article>
+
+      <article class="ba-ses rv"><span class="no">10</span><div><small>SESSION 10</small><h3>Authentication</h3><ul class="dn-topics"><li>Account Creation.</li><li>User Login.</li><li>Understanding Authentication.</li><li>Implementing Account-Related Functionality.</li></ul><div class="dn-mile"><b>Feature Milestone</b>Complete F4 – Account Creation &amp; Login.</div></div></article>
+
+      <article class="ba-ses rv"><span class="no">11</span><div><small>SESSION 11</small><h3>Authorization &amp; Roles</h3><ul class="dn-topics"><li>Understanding Authorization.</li><li>Roles and Permissions.</li><li>Separating User Responsibilities.</li><li>Applying Different Permissions to Student, Instructor, and Admin.</li></ul><div class="dn-mile"><b>Feature Milestone</b>Complete F5 – Roles &amp; Permissions.</div></div></article>
+
+      <article class="ba-ses rv"><span class="no">12</span><div><small>SESSION 12</small><h3>Search, Filtering &amp; Pagination</h3><ul class="dn-topics"><li>Search Functionality.</li><li>Filtering Data.</li><li>Pagination.</li><li>Applying Search and Filtering to the Project.</li></ul><div class="dn-mile"><b>Feature Milestone</b>Complete F6 – Search, Filtering &amp; Pagination.</div></div></article>
+
+      <article class="ba-ses rv"><span class="no">13</span><div><small>SESSION 13</small><h3>Project Quality</h3><ul class="dn-topics"><li>Logging &amp; Project Documentation.</li><li>Testing &amp; Reviewing Application Quality.</li><li>Final Feature Completion.</li><li>Preparing the Project for Final Review.</li></ul><div class="dn-mile"><b>Feature Milestone</b>Complete F7 – Logging, Documentation &amp; Testing.</div></div></article>
+    </div>
+  </div>
+
+  <!-- Phase 04 -->
+  <div class="dn-phase">
+    <div class="dn-phase-head rv"><span class="dn-phase-tag">Phase 04</span><h3>Final Review</h3></div>
+    <div class="ba-cur" style="grid-template-columns:1fr">
+      <article class="ba-ses dn-ses-final rv"><span class="no">14</span><div><small>SESSION 14 · FINAL REVIEW &amp; TECHNICAL DEFENSE</small><h3>Final Review &amp; Technical Defense</h3><ul class="dn-topics" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))"><li>Final Project Review.</li><li>Reviewing the Completed Features.</li><li>Reviewing Database Design.</li><li>Reviewing API Implementation.</li><li>Discussing Code Organization.</li><li>Reviewing Business Rules.</li><li>Discussing Security and Permissions.</li><li>Testing and Project Quality.</li><li>Presenting Technical Decisions.</li><li>Technical Defense.</li></ul><div class="dn-mile"><b>Final Milestone</b>Present a working Backend Project and explain the technical decisions behind its implementation.</div></div></article>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- ───────── 7. TASK & CODE REVIEW EXPERIENCE ───────── -->
+<section class="tint" id="task-review">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">BEYOND THE LIVE SESSION</span>
+    <h2 class="ba-h2-en" dir="ltr">Your Code Doesn't Stop at the Session.</h2>
+    <p class="lead">التطبيق العملي مش مجرد إنك تكتب الكود أثناء المحاضرة؛ كل جزء بتنفذه بنفسك، وبتستقبل مراجعة وملاحظات تساعدك تطور طريقة كتابتك وتنظيمك للكود.</p>
+  </div>
+  <div class="dn-steps">
+    <article class="dn-step rv"><span class="sn">1</span><h3>Task Brief</h3><ul><li>المطلوب بالتحديد.</li><li>طريقة التسليم.</li><li>الـ Edge Cases اللي لازم تتختبر.</li></ul></article>
+    <article class="dn-step rv"><span class="sn">2</span><h3>GitHub Implementation</h3><ul><li>تنفيذ الـ Feature على Branch خاص.</li><li>رفع الشغل على GitHub.</li><li>تسليم Pull Request.</li></ul></article>
+    <article class="dn-step rv"><span class="sn">3</span><h3>Code Review</h3><ul><li>مراجعة الشغل باستخدام Checklist ثابت.</li><li>فحص جودة التنفيذ وتنظيم الكود.</li><li>مراجعة الـ Feature قبل الانتقال للمرحلة التالية.</li></ul></article>
+    <article class="dn-step rv"><span class="sn">4</span><h3>Written Feedback</h3><ul><li>ملاحظات مكتوبة على كل Pull Request.</li><li>توضيح نقاط التحسين.</li><li>مناقشة أهم الملاحظات في بداية الـ Session التالية.</li></ul></article>
+    <article class="dn-step rv"><span class="sn">5</span><h3>Feature Completion</h3><p>كل Feature بتتقفل بالكامل بعد التنفيذ والمراجعة والـ Merge قبل الانتقال للـ Feature التالية.</p></article>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 8. ASSESSMENT & EVALUATION ───────── -->
+<section id="evaluation">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">HOW YOU'LL BE EVALUATED</span>
+    <h2 class="ba-h2-en" dir="ltr">Your Progress Is Measured by What You Build.</h2>
+  </div>
+
+  <div class="dn-eval-grid">
+    <article class="dn-eval-card rv">
+      <div class="dn-eval-pct">40%</div>
+      <h3>Tasks – Sessions 1 to 13</h3>
+      <div class="dn-bar" aria-hidden="true"><span style="width:40%"></span></div>
+    </article>
+    <article class="dn-eval-card main rv">
+      <div class="dn-eval-pct">50%</div>
+      <h3>Final Project &amp; Technical Defense</h3>
+      <div class="dn-bar" aria-hidden="true"><span style="width:50%"></span></div>
+    </article>
+    <article class="dn-eval-card rv">
+      <div class="dn-eval-pct">10%</div>
+      <h3>Checkpoint Review</h3>
+      <div class="dn-bar" aria-hidden="true"><span style="width:10%"></span></div>
+    </article>
+  </div>
+
+  <div class="dn-eval-sub">
+    <div class="dn-pass rv">
+      <h3>Passing Requirements</h3>
+      <ul class="dn-pass-list">
+        <li>✓ Minimum Overall Score: 70%</li>
+        <li>✓ Minimum Attendance: 80%</li>
+      </ul>
+    </div>
+    <div class="dn-crit rv">
+      <h3>Final Project Evaluation Criteria</h3>
+      <ol class="dn-crit-list">
+        <li>Database Design</li>
+        <li>API Implementation</li>
+        <li>Code Organization &amp; Quality</li>
+        <li>Business Rules</li>
+        <li>Security &amp; Permissions</li>
+        <li>Testing</li>
+        <li>Presentation &amp; Technical Defense</li>
+      </ol>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 9. WHO IS THIS PROGRAM FOR ───────── -->
+<section class="tint" id="audience">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">WHO IS THIS PROGRAM FOR?</span>
+    <h2 class="ba-h2-en" dir="ltr">Is This Program Right for You?</h2>
+  </div>
+  <div class="ba-aud">
+    <article class="ba-card rv"><div class="ic" style="background:var(--blush)" aria-hidden="true">🎓</div><h3>Computer Science Students</h3><p>طلاب حاسبات ومعلومات اللي عندهم أساسيات البرمجة وعايزين يطبقوا مفاهيم Backend على مشروع متكامل.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--lav)" aria-hidden="true">🏫</div><h3>Fresh Graduates</h3><p>الخريجين الجدد اللي عايزين يبدأوا طريقهم في .NET Backend ويكتسبوا خبرة عملية في بناء APIs.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--sand)" aria-hidden="true">💻</div><h3>Programming Learners</h3><p>الأشخاص اللي عندهم أساسيات C# وOOP وعايزين ينقلوا معرفتهم إلى تطبيق Backend متكامل.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--mint)" aria-hidden="true">⚙️</div><h3>Aspiring .NET Backend Developers</h3><p>اللي مهتمين بمجال .NET Backend ومستعدين يشتغلوا على Tasks ومشروع عملي خلال البرنامج.</p></article>
+  </div>
+  <div class="ba-pre rv">
+    <span class="ic" aria-hidden="true">✅</span>
+    <div>
+      <b>Prerequisites (Minimum Admission Requirements)</b>
+      <ul class="dn-pre-list">
+        <li>Basic Knowledge of C#</li>
+        <li>Understanding of Object-Oriented Programming (OOP)</li>
+        <li>Basic Database Fundamentals</li>
+      </ul>
+      <div class="dn-pre-note">
+        <strong>Important Note: This program does not start from zero.</strong>
+        Prior professional .NET experience is not required. A simple assessment is conducted before the cohort starts to ensure that participants have the required minimum foundation and a consistent learning level.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 10. PROGRAM DETAILS ───────── -->
+<section id="details">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">PROGRAM DETAILS</span>
+    <h2 class="ba-h2-en" dir="ltr">Program at a Glance.</h2>
+  </div>
+  <div class="ba-det dn-det">
+    <div class="it rv"><span class="ic" style="background:var(--blush)" aria-hidden="true">⚙️</span><div><small>Program</small><b>.NET Backend Training Program</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--lav)" aria-hidden="true">🎯</span><div><small>Level</small><b>One Level</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--sand)" aria-hidden="true">🗓️</span><div><small>Duration</small><b>7 Weeks</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--mint)" aria-hidden="true">🎥</span><div><small>Sessions</small><b>14 Live Sessions</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--lav)" aria-hidden="true">📅</span><div><small>Weekly Frequency</small><b>2 Sessions per Week</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--blush)" aria-hidden="true">⏱️</span><div><small>Session Duration</small><b>3 Hours</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--sand)" aria-hidden="true">⌛</span><div><small>Total Training Hours</small><b>42 Hours</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--mint)" aria-hidden="true">💻</span><div><small>Format</small><b>Online Interactive Training</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--blush)" aria-hidden="true">🛠️</span><div><small>Learning Approach</small><b>Live Coding + Individual Tasks + Code Review</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--lav)" aria-hidden="true">🎓</span><div><small>Final Project</small><b>Online Course Registration System</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--mint)" aria-hidden="true">🎤</span><div><small>Final Evaluation</small><b>Project Review &amp; Technical Defense</b></div></div>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 11. FINAL CTA ───────── -->
+<section class="ba-dark ba-cta" id="apply">
+<div class="w rv">
+  <h2>Build Your First Complete Backend Project.</h2>
+  <p class="lead">ابدأ رحلتك في .NET Backend من خلال مشروع عملي متكامل، ونفذ كل Feature بنفسك، وطور جودة كودك من خلال Code Review وFeedback، لحد ما تكون قادر تعرض مشروعك وتشرح قراراتك التقنية.</p>
+  <span class="st">Learn. Build. Review. Defend Your Code.</span>
+  <a class="btn l" href="events.html?workshop=backend#interest">Apply Now</a>
+</div>
+</section>
+
+</main>
+
+<footer><div class="w">
+<img src="logo.png" alt="Codiz">
+<div class="s">مش مجرد كود.. تجربة شركة حقيقية.</div>
+<p><a href="index.html">الرجوع للصفحة الرئيسية</a> · <a href="events.html">كل الفعاليات</a> · &copy; 2026 Codiz. All rights reserved.</p>
+</div></footer>
+
+<script src="ba-program.js"></script>
+</body>
+</html>

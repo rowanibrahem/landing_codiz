@@ -1,0 +1,101 @@
+/* Codiz — .NET Backend Training Program page extensions on top of ba-program.css. */
+
+/* Hero visual: C# API + ERD entities + PR badge */
+.dn-win-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px;direction:ltr}
+.dn-win-top .ba-win-bar{margin-bottom:0}
+.dn-tag{font-size:11.5px;font-weight:800;color:#f6e6fb;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);padding:3px 10px;border-radius:999px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.dn-code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11.5px;line-height:1.6;color:#2b1636;background:#f8f3fb;border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-top:6px;overflow-x:auto;direction:ltr;text-align:left}
+.dn-code .kw{color:#7a3d86;font-weight:700}
+.dn-code .fn{color:#0f6b53;font-weight:700}
+.dn-code .st{color:#b3265a}
+
+/* 5-step connected workflow cards */
+.dn-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.dn-step{background:#fff;border:1.5px solid var(--line);border-radius:24px;padding:22px 18px;display:flex;flex-direction:column;gap:8px;position:relative;transition:transform .25s,box-shadow .25s,border-color .25s}
+.dn-step:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(75,29,94,.11);border-color:var(--orc)}
+.dn-step .sn{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--plum),var(--plum2));color:#fff;display:grid;place-items:center;font-size:16px;font-weight:900;direction:ltr;margin-bottom:4px}
+.dn-step h3{font-size:17.5px;color:var(--plum);line-height:1.35;direction:ltr;text-align:right;unicode-bidi:isolate}
+.dn-step p{font-size:14.5px;color:var(--mut);line-height:1.75}
+.dn-step ul{list-style:none;display:grid;gap:4px;font-size:14px;color:var(--mut);line-height:1.65}
+.dn-step ul li{display:flex;gap:7px;align-items:baseline}
+.dn-step ul li:before{content:"•";color:var(--plum2);font-weight:900;flex:none}
+
+/* Final Project showcase inside .ba-dark */
+.dn-proj-top{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;position:relative;z-index:2;margin-bottom:26px}
+.dn-roles{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px;direction:ltr}
+.dn-roles span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.26);color:#fff;font-size:13.5px;font-weight:800;padding:6px 15px;border-radius:999px}
+.dn-pbox{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:24px;padding:24px}
+.dn-pbox h3{font-size:17px;color:var(--blush);margin-bottom:12px;direction:ltr;text-align:right;unicode-bidi:isolate}
+.dn-plist{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;direction:ltr;text-align:left}
+.dn-plist li{font-size:14px;font-weight:700;color:#fff;display:flex;gap:8px;align-items:baseline;line-height:1.5}
+.dn-plist li:before{content:"✓";color:var(--mint);font-weight:900;flex:none}
+.dn-rules{list-style:none;display:grid;gap:8px;direction:ltr;text-align:left}
+.dn-rules li{font-size:14px;font-weight:700;color:#f3e7f8;display:flex;gap:8px;align-items:baseline;line-height:1.55}
+.dn-rules li:before{content:"⚡";flex:none;font-size:13px}
+.dn-erd-note{margin-top:16px;background:rgba(205,238,225,.14);border:1px solid rgba(205,238,225,.35);border-radius:16px;padding:13px 16px;font-size:14px;color:#eadbf1;line-height:1.7;direction:ltr;text-align:left}
+
+/* Feature breakdown table (F1..F7) */
+.dn-ftable-wrap{position:relative;z-index:2;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:22px 24px}
+.dn-ftable-wrap h3{font-size:18px;color:#fff;margin-bottom:14px;direction:ltr;text-align:right;unicode-bidi:isolate}
+.dn-ftable{width:100%;border-collapse:collapse;direction:ltr;text-align:left}
+.dn-ftable th,.dn-ftable td{padding:11px 14px;border-bottom:1px solid rgba(255,255,255,.14);font-size:14.5px}
+.dn-ftable th{color:var(--blush);font-size:12.5px;text-transform:uppercase;letter-spacing:.8px;font-weight:900}
+.dn-ftable td{color:#fff;font-weight:700}
+.dn-ftable tr:last-child td{border-bottom:0}
+.dn-fbadge{display:inline-block;background:var(--mint);color:#0f4a3a;font-size:12.5px;font-weight:900;padding:3px 11px;border-radius:999px}
+
+/* Curriculum structure pills & 4 phases */
+.dn-struct{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.dn-struct span{background:var(--tint);border:1.5px solid var(--line);color:var(--plum);font-size:14px;font-weight:800;padding:7px 16px;border-radius:999px;direction:ltr}
+.dn-phase{margin-bottom:28px}
+.dn-phase:last-child{margin-bottom:0}
+.dn-phase-head{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.dn-phase-tag{background:var(--plum);color:#fff;font-size:12.5px;font-weight:900;padding:5px 14px;border-radius:999px;direction:ltr}
+.dn-phase-head h3{font-size:21px;color:var(--plum);direction:ltr;unicode-bidi:isolate}
+.dn-topics{list-style:none;margin:0 0 10px;padding:10px 14px;background:var(--bg);border:1px solid var(--line);border-radius:14px;display:grid;gap:3px;direction:ltr;text-align:left}
+.dn-topics li{font-size:13.5px;font-weight:700;color:#3d2a48;line-height:1.5;display:flex;gap:8px;align-items:baseline}
+.dn-topics li:before{content:"•";color:var(--plum2);font-weight:900;flex:none}
+.dn-mile{background:rgba(205,238,225,.3);border:1px solid rgba(15,74,58,.2);border-radius:14px;padding:10px 14px;font-size:14px;color:#1b3b30;font-weight:700;line-height:1.65;direction:ltr;text-align:left}
+.dn-mile b{display:block;font-size:11px;font-weight:900;color:#0f4a3a;letter-spacing:.7px;text-transform:uppercase;margin-bottom:2px}
+.dn-ses-final{border-color:var(--plum2);background:linear-gradient(180deg,#fff,#faf4fd)}
+
+/* Evaluation section */
+.dn-eval-grid{display:grid;grid-template-columns:1fr 1.35fr 1fr;gap:20px;margin-bottom:24px}
+.dn-eval-card{background:#fff;border:1.5px solid var(--line);border-radius:26px;padding:28px;display:flex;flex-direction:column;gap:10px}
+.dn-eval-card.main{background:linear-gradient(150deg,#3a1049,#6a2f78);color:#fff;border-color:transparent;box-shadow:0 20px 46px rgba(75,29,94,.2)}
+.dn-eval-pct{font-size:42px;font-weight:900;color:var(--plum);line-height:1.1;direction:ltr;text-align:right}
+.dn-eval-card.main .dn-eval-pct{color:var(--blush);font-size:46px}
+.dn-eval-card h3{font-size:19px;color:var(--plum);direction:ltr;text-align:right;unicode-bidi:isolate}
+.dn-eval-card.main h3{color:#fff}
+.dn-bar{height:10px;border-radius:999px;background:var(--tint);overflow:hidden;margin-top:auto}
+.dn-bar span{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--plum),var(--plum2))}
+.dn-eval-card.main .dn-bar{background:rgba(255,255,255,.18)}
+.dn-eval-card.main .dn-bar span{background:linear-gradient(90deg,var(--mint),var(--blush))}
+
+.dn-eval-sub{display:grid;grid-template-columns:1fr 1.4fr;gap:20px;align-items:start}
+.dn-pass,.dn-crit{background:#fff;border:1.5px solid var(--line);border-radius:24px;padding:24px}
+.dn-pass h3,.dn-crit h3{font-size:18px;color:var(--plum);margin-bottom:12px;direction:ltr;text-align:right;unicode-bidi:isolate}
+.dn-pass-list{list-style:none;display:grid;gap:10px;direction:ltr;text-align:left}
+.dn-pass-list li{background:var(--mint);color:#0f4a3a;font-weight:900;font-size:15px;padding:11px 16px;border-radius:14px}
+.dn-crit-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;direction:ltr;text-align:left;counter-reset:crit}
+.dn-crit-list li{font-size:14.5px;font-weight:700;color:#3d2a48;display:flex;gap:8px;align-items:baseline}
+.dn-crit-list li:before{counter-increment:crit;content:counter(crit) ".";color:var(--plum2);font-weight:900}
+
+/* Prerequisites & important note */
+.dn-pre-list{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;direction:ltr}
+.dn-pre-list li{background:var(--tint);color:var(--plum);font-size:13.5px;font-weight:800;padding:5px 14px;border-radius:999px}
+.dn-pre-note{margin-top:12px;font-size:14.5px;color:#4a3a55;line-height:1.75;direction:ltr;text-align:left}
+.dn-pre-note strong{color:#8d1d44;display:block;margin-bottom:3px}
+
+/* Program details grid */
+.dn-det{grid-template-columns:repeat(3,1fr)}
+
+@media(max-width:1050px){
+  .dn-steps{grid-template-columns:repeat(2,1fr)}
+  .dn-eval-grid,.dn-eval-sub,.dn-proj-top{grid-template-columns:1fr}
+  .dn-det{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:620px){
+  .dn-steps,.dn-det,.dn-plist,.dn-crit-list{grid-template-columns:1fr}
+  .dn-ftable th,.dn-ftable td{padding:9px 10px;font-size:13.5px}
+}

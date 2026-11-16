@@ -98,6 +98,7 @@ window.CODIZ_EVENTS = {
       description:
         "افهم إزاي الـ Server-side والـ APIs وقواعد البيانات بتشتغل مع بعض عشان تشغّل تطبيقات حقيقية.",
       category: "Backend · APIs",
+      detailsUrl: "dotnet-backend.html",
       icon: "⚙️",
       tone: "mint",
       status: "coming-soon"
