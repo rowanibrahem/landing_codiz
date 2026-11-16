@@ -65,6 +65,7 @@ window.CODIZ_EVENTS = {
       description:
         "اتعلم تقسّم المشاكل وتفكر بالـ Algorithms وتتعامل مع التحديات التقنية بثقة.",
       category: "حل المشكلات · Algorithms",
+      detailsUrl: "problem-solving.html",
       icon: "🧩",
       tone: "lav",
       status: "coming-soon"

@@ -1,0 +1,77 @@
+/* Codiz — Problem Solving with C++17 (Level 01) page extensions on top of ba-program.css. */
+
+/* C++17 hero editor + judge badges */
+.ps-win-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px;direction:ltr}
+.ps-win-top .ba-win-bar{margin-bottom:0}
+.ps-lang{font-size:11.5px;font-weight:800;color:#f6e6fb;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);padding:3px 10px;border-radius:999px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.ps-code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;line-height:1.65;color:#2b1636;background:#f8f3fb;border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-top:8px;overflow-x:auto;direction:ltr;text-align:left}
+.ps-code .kw{color:#7a3d86;font-weight:700}
+.ps-code .tp{color:#0f6b53;font-weight:700}
+.ps-code .cm{color:#6d5a77}
+.ps-io{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;direction:ltr;text-align:left;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11.5px;color:#3d2a48}
+.ps-io div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 10px}
+.ps-io b{display:inline;font-size:11px;color:var(--plum2);margin-right:6px}
+
+/* 5-step method list on dark background */
+.ps-steps{list-style:none;display:grid;gap:10px;margin-top:16px}
+.ps-steps>li{display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:14px 16px;color:#fff}
+.ps-steps .sn{flex:none;width:30px;height:30px;border-radius:10px;background:var(--blush);color:var(--ink);display:grid;place-items:center;font-size:14px;font-weight:900;direction:ltr;margin-top:2px}
+.ps-steps b{display:block;font-size:15.5px;color:var(--blush);direction:ltr;text-align:right;unicode-bidi:isolate;margin-bottom:4px}
+.ps-steps .sub-note{display:block;font-size:14px;color:#eadbf1;margin-bottom:4px}
+.ps-sub{list-style:none;display:grid;gap:3px;font-size:14px;color:#f3e7f8;line-height:1.65}
+.ps-sub li{display:flex;gap:8px;align-items:baseline}
+.ps-sub li:before{content:"•";color:var(--mint);font-weight:900;flex:none}
+
+/* Training Methodology distribution (25% / 60% / 15%) */
+.ps-dist{display:grid;grid-template-columns:1fr 1.35fr 1fr;gap:20px;align-items:stretch}
+.ps-dist-card{background:#fff;border:1.5px solid var(--line);border-radius:26px;padding:28px;display:flex;flex-direction:column;gap:10px;transition:transform .25s,box-shadow .25s,border-color .25s}
+.ps-dist-card:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(75,29,94,.1);border-color:var(--orc)}
+.ps-dist-card.featured{background:linear-gradient(150deg,#3a1049,#6a2f78);color:#fff;border-color:transparent;box-shadow:0 22px 52px rgba(75,29,94,.22)}
+.ps-pct{font-size:40px;font-weight:900;line-height:1.1;color:var(--plum);direction:ltr;text-align:right}
+.ps-dist-card.featured .ps-pct{color:var(--blush);font-size:46px}
+.ps-dist-card h3{font-size:20px;color:var(--plum);direction:ltr;text-align:right;unicode-bidi:isolate}
+.ps-dist-card.featured h3{color:#fff}
+.ps-dist-card p{font-size:15.5px;color:var(--mut);line-height:1.8}
+.ps-dist-card.featured p{color:#eadbf1}
+.ps-bar{height:10px;border-radius:999px;background:var(--tint);overflow:hidden;margin-top:auto}
+.ps-bar span{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--plum),var(--plum2))}
+.ps-dist-card.featured .ps-bar{background:rgba(255,255,255,.18)}
+.ps-dist-card.featured .ps-bar span{background:linear-gradient(90deg,var(--mint),var(--blush))}
+
+/* Curriculum card inner blocks */
+.ps-subt{font-size:13.5px;font-weight:800;color:var(--plum2);margin-bottom:10px;direction:ltr;text-align:right;unicode-bidi:isolate}
+.ps-block{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin-bottom:10px}
+.ps-block-lbl{display:block;font-size:11.5px;font-weight:900;letter-spacing:.7px;color:var(--plum2);margin-bottom:5px;direction:ltr;text-align:left;text-transform:uppercase}
+.ps-topics{list-style:none;display:grid;gap:3px;direction:ltr;text-align:left}
+.ps-topics li{font-size:13.5px;font-weight:700;color:#3d2a48;line-height:1.5;display:flex;gap:8px;align-items:baseline}
+.ps-topics li:before{content:"•";color:var(--plum2);font-weight:900;flex:none}
+.ps-block.prac{background:#fdf9ff}
+.ps-block.prac .ps-block-lbl{color:#7a3d86}
+.ps-block.deliv{background:rgba(205,238,225,.28);border-color:rgba(15,74,58,.18);margin-bottom:0}
+.ps-block.deliv .ps-block-lbl{color:#0f4a3a}
+.ps-block.deliv p{font-size:14.5px;color:#1b3b30;font-weight:700;line-height:1.75}
+
+/* Prerequisites + Important note */
+.ps-pre-list{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;direction:ltr}
+.ps-pre-list li{background:var(--tint);color:var(--plum);font-size:13.5px;font-weight:800;padding:5px 14px;border-radius:999px}
+.ps-prereq-warn{margin-top:14px;display:flex;align-items:center;gap:14px;background:#fdebf1;border:1.5px solid #f2b6cc;color:#8d1d44;border-radius:20px;padding:16px 22px;font-size:16px;font-weight:800}
+.ps-prereq-warn span{font-size:22px;flex:none}
+
+/* Progress tracker note */
+.ps-track-note{margin-top:22px;background:#fff;border:1.5px dashed var(--orc);border-radius:20px;padding:16px 22px;color:#4a3a55;font-size:15.5px;line-height:1.8}
+.ps-track-note b{color:var(--plum);direction:ltr;unicode-bidi:isolate}
+
+/* 10-item Program Details grid */
+.ps-det{grid-template-columns:repeat(2,1fr)}
+
+@media(min-width:980px){
+  .ps-det{grid-template-columns:repeat(5,1fr)}
+}
+@media(max-width:900px){
+  .ps-dist{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .ps-det{grid-template-columns:1fr}
+  .ps-io{grid-template-columns:1fr}
+  .ps-prereq-warn{flex-direction:column;align-items:flex-start;gap:8px;padding:14px 18px}
+}

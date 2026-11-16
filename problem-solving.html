@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Problem Solving with C++17 – Level 01 | Codiz كوديز</title>
+<meta name="description" content="برنامج Codiz التدريبي في Problem Solving with C++17 (المستوى الأول): 10 جلسات لايف، 20 ساعة تدريبية، تطبيق عملي على تحليل المشكلات، Time Complexity، وخوارزميات البحث والترتيب.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Problem Solving with C++17 – Level 01 | Codiz">
+<meta property="og:description" content="Think Better. Solve Smarter. Code with Confidence.">
+<meta property="og:locale" content="ar_AR">
+<link rel="icon" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site-base.css">
+<link rel="stylesheet" href="events.css">
+<link rel="stylesheet" href="instructors.css">
+<link rel="stylesheet" href="ba-program.css">
+<link rel="stylesheet" href="ps-program.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="ba">
+
+<!-- ───────── 1. HERO ───────── -->
+<header class="hero ba-hero">
+<div class="w">
+<nav>
+  <a href="index.html"><img src="logo.png" alt="Codiz كوديز"></a>
+  <div class="lk" id="site-links">
+    <a href="index.html">الرئيسية</a>
+    <a href="index.html#services">خدماتنا</a>
+    <a class="inst-link" href="index.html#instructors"><span class="il-full">تعرّف على مدربينا</span><span class="il-short">مدربينا</span></a>
+    <a class="ev-link" href="events.html#free-sessions">السيشنز المجانية</a>
+    <a href="events.html#workshops" aria-current="page">برامجنا التدريبية</a>
+    <a class="ins-link" href="insights/index.html">المدونة</a>
+    <a class="qz-link" href="quizzes.html">اختبر نفسك</a>
+  </div>
+  <a class="btn l" href="events.html?workshop=problem-solving#interest">انضم لقائمة الاهتمام</a>
+  <button type="button" class="nav-tg" aria-label="القائمة" aria-expanded="false" aria-controls="site-links">&#9776;</button>
+</nav>
+
+<div class="ba-hero-grid">
+  <div>
+    <span class="pill" dir="ltr">CODIZ TRAINING PROGRAM</span>
+    <h1>Problem Solving <em>with C++17</em></h1>
+    <p class="sub">Think Better. Solve Smarter. Code with Confidence.</p>
+    <p class="d1">مش هدفنا تحفظ حلول أكتر؛ هدفنا تعرف تحل مسائل جديدة بنفسك. هتتعلم إزاي تفهم المسألة، تحدد المطلوب والقيود، تختار طريقة الحل المناسبة، وتحول تفكيرك إلى كود باستخدام C++17، مع تطبيق عملي مستمر ومناقشة الأخطاء وتحسين الحلول.</p>
+    <p class="d2">برنامج تدريبي عملي لطلاب Computer Science والمهتمين بالبرمجة اللي عندهم أساسيات C++، وعايزين يطوروا قدرتهم على تحليل المشكلات والتفكير الخوارزمي وحل المسائل البرمجية بشكل مستقل. بدل الاعتماد على حفظ الحلول، هتتعلم خطوات التفكير من أول فهم المسألة لحد اختبار الحل وتحليل كفاءته.</p>
+    <ul class="ba-info" aria-label="معلومات البرنامج">
+      <li><span aria-hidden="true">🎯</span>Level 01</li>
+      <li><span aria-hidden="true">🎥</span>10 Live Sessions</li>
+      <li><span aria-hidden="true">⏱️</span>20 Training Hours</li>
+      <li><span aria-hidden="true">⚡</span>C++17</li>
+      <li><span aria-hidden="true">💬</span>Online Interactive Training</li>
+    </ul>
+    <div class="hb">
+      <a class="btn l" href="events.html?workshop=problem-solving#interest">Apply Now</a>
+      <a class="btn g" href="#experience">Explore Program</a>
+    </div>
+  </div>
+
+  <div class="ba-vis" aria-hidden="true">
+    <div class="ba-win">
+      <div class="ps-win-top">
+        <div class="ba-win-bar"><i></i><i></i><i></i></div>
+        <span class="ps-lang">solution.cpp · C++17</span>
+      </div>
+      <div class="ba-flow">
+        <span class="ba-node">Understand</span><span class="ba-arrow"></span>
+        <span class="ba-node d">Plan</span><span class="ba-arrow"></span>
+        <span class="ba-node">Implement</span>
+      </div>
+      <div class="ba-doc">
+        <b>PROBLEM · TARGET SUM PAIR</b>
+        <pre class="ps-code"><span class="cm">// Sorted array → Two Pointers O(n)</span>
+<span class="kw">int</span> l = 0, r = (<span class="kw">int</span>)a.size() - 1;
+<span class="kw">while</span> (l &lt; r) {
+  <span class="kw">int</span> s = a[l] + a[r];
+  <span class="kw">if</span> (s == target) <span class="kw">return</span> {l, r};
+  (s &lt; target) ? ++l : --r;
+}</pre>
+        <div class="ps-io">
+          <div><b>IN</b>n=5, target=9</div>
+          <div><b>OUT</b>Accepted (0.01s)</div>
+        </div>
+      </div>
+      <div class="ba-chips">
+        <span class="ba-chip" style="background:var(--mint)">Accepted ✓</span>
+        <span class="ba-chip" style="background:var(--lav)">Time: O(n)</span>
+        <span class="ba-chip" style="background:var(--sand)">Edge Cases ✓</span>
+      </div>
+    </div>
+    <div class="ba-float a">🧠 Big O · Constraints</div>
+    <div class="ba-float c">🧪 Dry Run &amp; Trace</div>
+    <div class="ba-float b">✓ Verdict: Accepted</div>
+  </div>
+</div>
+</div>
+</header>
+
+<main>
+
+<!-- ───────── 2. THE CODIZ EXPERIENCE ───────── -->
+<section id="experience">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">THE CODIZ EXPERIENCE</span>
+    <h2 class="ba-h2-en" dir="ltr">More Than Writing Code. Learn How to Think.</h2>
+    <p class="lead">في Codiz، مش هتكتفي بمشاهدة المدرب وهو بيحل المسائل. هتشارك في التفكير، وتحليل الأسئلة، وتجربة الحلول، ومناقشة الأخطاء، ومقارنة أكتر من Approach للوصول لحل صحيح وفعّال.</p>
+  </div>
+  <div class="ba-grid3">
+    <article class="ba-card rv"><div class="ic" style="background:var(--blush)" aria-hidden="true">🎯</div><h3>Think Before You Code</h3><p>اتعلم تفهم المسألة وتحدد المطلوب والـ Constraints قبل ما تبدأ كتابة الكود، وتحوّل المشكلة لخطوات واضحة قابلة للتنفيذ.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--lav)" aria-hidden="true">⚡</div><h3>Practice More, Memorize Less</h3><p>البرنامج بيعتمد على حل المسائل والتطبيق العملي بشكل أساسي، مش شرح نظري طويل أو حفظ حلول جاهزة.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--mint)" aria-hidden="true">🔀</div><h3>More Than One Approach</h3><p>في المسائل المناسبة، هنناقش أكتر من طريقة للحل، ونقارن بينهم من حيث الوقت والذاكرة، ونتعلم إمتى نختار كل Approach.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--sand)" aria-hidden="true">🔍</div><h3>Learn from Your Mistakes</h3><p>هتتعلم تكتشف أخطاء Syntax وRuntime وLogic، وتفهم أسباب Wrong Answer وTime Limit Exceeded، وتختبر حلولك بشكل صحيح.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--blush)" aria-hidden="true">🧭</div><h3>Guided &amp; Independent Practice</h3><p>هتبدأ بحل المسائل مع توجيه من المدرب، وبعدها تنتقل تدريجيًا لحل مسائل بنفسك، علشان تبني ثقتك واستقلاليتك في التفكير.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--lav)" aria-hidden="true">📈</div><h3>Understand Algorithm Efficiency</h3><p>مش كفاية الحل يشتغل؛ لازم تفهم هل هو مناسب للـ Constraints ولا لأ، وتتعلم تقارن بين الحلول باستخدام Time Complexity وBig O.</p></article>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 3. SIGNATURE LEARNING METHODOLOGY ───────── -->
+<section class="ba-dark" id="method">
+<div class="w ba-proj-grid">
+  <div class="rv">
+    <span class="ba-label">OUR PROBLEM-SOLVING METHOD</span>
+    <h2 class="ba-h2-en" dir="ltr">A Better Way to Approach Every Problem.</h2>
+    <p class="lead">كل مسألة هتتعامل معاها من خلال خطوات تفكير واضحة. الهدف إنك تبني طريقة حل تقدر تستخدمها حتى مع مسائل جديدة متقابلتش معاها قبل كده.</p>
+    <ol class="ps-steps">
+      <li><span class="sn">1</span><div><b>Understand</b><span class="sub-note">اقرأ المسألة وحدد:</span><ul class="ps-sub"><li>Problem Requirements.</li><li>Input and Output.</li><li>Constraints.</li><li>Special Cases and Edge Cases.</li></ul></div></li>
+      <li><span class="sn">2</span><div><b>Plan</b><ul class="ps-sub"><li>اكتب خطوات الحل باللغة الطبيعية أو Pseudocode.</li><li>اختبر الفكرة على مثال صغير.</li><li>اختار الـ Algorithm المناسب قبل كتابة الكود.</li></ul></div></li>
+      <li><span class="sn">3</span><div><b>Implement</b><ul class="ps-sub"><li>حوّل خطوات الحل إلى C++17.</li><li>استخدم أسماء متغيرات واضحة.</li><li>قسّم الحل إلى Functions عند الحاجة.</li></ul></div></li>
+      <li><span class="sn">4</span><div><b>Test</b><ul class="ps-sub"><li>جرّب Example عادي.</li><li>اختبر أصغر حالة ممكنة.</li><li>جرّب Edge Cases.</li><li>ابحث عن الحالات التي قد تكشف خطأ منطقيًا.</li></ul></div></li>
+      <li><span class="sn">5</span><div><b>Optimize &amp; Explain</b><ul class="ps-sub"><li>حلّل Time Complexity.</li><li>راجع Space Complexity عند الحاجة.</li><li>تأكد إن الأداء مناسب للـ Constraints.</li><li>اشرح لماذا الحل صحيح.</li></ul></div></li>
+    </ol>
+    <div class="ba-note">
+      <p>مش الهدف إنك توصل لإجابة Accepted بس؛ الهدف إنك تفهم ليه الحل اشتغل، وإزاي تحسّنه، وتقدر تشرح طريقة تفكيرك.</p>
+    </div>
+  </div>
+  <div class="ba-board rv" aria-hidden="true">
+    <div class="ba-tile"><i>📖</i><b>1. Understand</b><span>Requirements, I/O &amp; Constraints</span></div>
+    <div class="ba-tile"><i>📝</i><b>2. Plan</b><span>Pseudocode &amp; dry run first</span></div>
+    <div class="ba-tile"><i>💻</i><b>3. Implement</b><span>Clean C++17 &amp; functions</span></div>
+    <div class="ba-tile"><i>🧪</i><b>4. Test</b><span>Normal, boundary &amp; edge cases</span></div>
+    <div class="ba-tile w"><i>🚀</i><div><b>5. Optimize &amp; Explain</b><span>Big O complexity check &amp; explain why it works</span></div></div>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 4. TRAINING METHODOLOGY ───────── -->
+<section class="tint" id="training-method">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">HOW WE TRAIN</span>
+    <h2 class="ba-h2-en" dir="ltr">Less Lecturing. More Problem Solving.</h2>
+    <p class="lead">كل Session مصممة علشان تديك وقت تفهم الفكرة، تشوف تطبيق عملي، وتجرب تحل بنفسك، مع مراجعة الأخطاء وتحليل الحلول.</p>
+  </div>
+  <div class="ps-dist">
+    <article class="ps-dist-card rv">
+      <div class="ps-pct">25%</div>
+      <h3>Theory &amp; Discussion</h3>
+      <p>شرح المفاهيم الأساسية، ومناقشة الأفكار والـ Algorithms مع أمثلة واضحة.</p>
+      <div class="ps-bar" aria-hidden="true"><span style="width:25%"></span></div>
+    </article>
+    <article class="ps-dist-card featured rv">
+      <div class="ps-pct">60%</div>
+      <h3>Problem Solving</h3>
+      <p>Live Problem Solving، Guided Practice، وIndependent Practice علشان الطالب يشارك ويطبق بنفسه.</p>
+      <div class="ps-bar" aria-hidden="true"><span style="width:60%"></span></div>
+    </article>
+    <article class="ps-dist-card rv">
+      <div class="ps-pct">15%</div>
+      <h3>Review &amp; Error Analysis</h3>
+      <p>مراجعة الحلول، تحليل الأخطاء، مقارنة الـ Approaches، ومناقشة كفاءة الحل.</p>
+      <div class="ps-bar" aria-hidden="true"><span style="width:15%"></span></div>
+    </article>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 5. DETAILED CURRICULUM (10 SESSIONS) ───────── -->
+<section id="curriculum">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">WHAT WILL YOU LEARN?</span>
+    <h2 class="ba-h2-en" dir="ltr">Your Problem-Solving Learning Journey.</h2>
+    <p class="lead">في 10 Sessions هتبدأ من أساسيات تحليل المسائل وطريقة التفكير، وتتدرج في التعامل مع البيانات والخوارزميات، لحد ما تقدر تحل مسائل جديدة وتفهم كفاءة الحلول.</p>
+  </div>
+  <div class="ba-cur">
+
+    <article class="ba-ses rv"><span class="no">01</span><div>
+      <small>SESSION 01</small>
+      <h3>Problem Solving Fundamentals</h3>
+      <div class="ps-subt">Understanding the Problem</div>
+      <div class="ps-block"><span class="ps-block-lbl">Topics</span><ul class="ps-topics"><li>What is Problem Solving?</li><li>Problem Solving vs. Writing Code.</li><li>Understanding Problem Statements.</li><li>Identifying Input, Output, and Constraints.</li><li>Algorithm Design.</li><li>Pseudocode.</li><li>Dry Run and Manual Tracing.</li></ul></div>
+      <div class="ps-block prac"><span class="ps-block-lbl">Practical Problems</span><ul class="ps-topics"><li>Basic Arithmetic Problems.</li><li>Finding the Largest Number.</li><li>Checking Simple Conditions.</li></ul></div>
+      <div class="ps-block deliv"><span class="ps-block-lbl">Deliverable</span><p>الطالب يقدر يحلل المسألة ويحدد المطلوب ويكتب خطوات الحل قبل تنفيذ الكود.</p></div>
+    </div></article>
+
+    <article class="ba-ses rv"><span class="no">02</span><div>
+      <small>SESSION 02</small>
+      <h3>Conditions, Loops &amp; Simulation</h3>
+      <div class="ps-subt">Control Flow</div>
+      <div class="ps-block"><span class="ps-block-lbl">Topics</span><ul class="ps-topics"><li>if, else if, switch.</li><li>for and while loops.</li><li>Counters and Accumulators.</li><li>Nested Loops.</li><li>Trace Tables.</li><li>Off-by-One Errors.</li></ul></div>
+      <div class="ps-block prac"><span class="ps-block-lbl">Practical Problems</span><ul class="ps-topics"><li>Grade Classification.</li><li>Sum of Digits.</li><li>Counting Even Numbers.</li><li>Simple Patterns.</li></ul></div>
+      <div class="ps-block deliv"><span class="ps-block-lbl">Deliverable</span><p>كتابة حلول تعتمد على الشروط والتكرار مع فهم طريقة تنفيذ الكود وتجنب أخطاء الحدود.</p></div>
+    </div></article>
+
+    <article class="ba-ses rv"><span class="no">03</span><div>
+      <small>SESSION 03</small>
+      <h3>Arrays, Vectors &amp; Strings</h3>
+      <div class="ps-subt">Working with Data</div>
+      <div class="ps-block"><span class="ps-block-lbl">Topics</span><ul class="ps-topics"><li>Arrays and Vectors.</li><li>Indexing and Traversal.</li><li>Searching and Counting.</li><li>Basic String Operations.</li><li>Empty Data and Duplicate Values.</li></ul></div>
+      <div class="ps-block prac"><span class="ps-block-lbl">Practical Problems</span><ul class="ps-topics"><li>Finding Maximum and Minimum.</li><li>Second Distinct Largest Value.</li><li>Reversing a String.</li><li>Counting Character Frequencies.</li></ul></div>
+      <div class="ps-block deliv"><span class="ps-block-lbl">Deliverable</span><p>التعامل مع مجموعة بيانات باستخدام Loops وVectors وStrings.</p></div>
+    </div></article>
+
+    <article class="ba-ses rv"><span class="no">04</span><div>
+      <small>SESSION 04</small>
+      <h3>Functions, Decomposition &amp; Edge Cases</h3>
+      <div class="ps-subt">Writing Better Solutions</div>
+      <div class="ps-block"><span class="ps-block-lbl">Topics</span><ul class="ps-topics"><li>Breaking Problems into Functions.</li><li>Parameters and Return Values.</li><li>Scope.</li><li>Pass by Value and Pass by Reference.</li><li>Decomposing Large Problems.</li><li>Thinking About Edge Cases.</li></ul></div>
+      <div class="ps-block prac"><span class="ps-block-lbl">Practical Problems</span><ul class="ps-topics"><li>Prime Number Function.</li><li>GCD Function.</li><li>Reusing Functions Inside Larger Problems.</li></ul></div>
+      <div class="ps-block deliv"><span class="ps-block-lbl">Deliverable</span><p>كتابة حلول منظمة باستخدام Functions صغيرة وقابلة للاختبار.</p></div>
+    </div></article>
+
+    <article class="ba-ses rv"><span class="no">05</span><div>
+      <small>SESSION 05</small>
+      <h3>Complexity &amp; Efficient Thinking</h3>
+      <div class="ps-subt">Time &amp; Space Complexity</div>
+      <div class="ps-block"><span class="ps-block-lbl">Topics</span><ul class="ps-topics"><li>Why Correctness Is Not Enough.</li><li>Big O Notation.</li><li>O(1), O(n), O(n²), and O(log n).</li><li>Analyzing Loops and Nested Loops.</li><li>Choosing Solutions Based on Input Constraints.</li></ul></div>
+      <div class="ps-block prac"><span class="ps-block-lbl">Practical Problems</span><ul class="ps-topics"><li>Comparing Linear Search with More Efficient Approaches.</li><li>Analyzing Nested Loop Solutions.</li><li>Comparing Different Solutions for the Same Problem.</li></ul></div>
+      <div class="ps-block deliv"><span class="ps-block-lbl">Deliverable</span><p>تقدير Time Complexity وتبرير اختيار Algorithm مناسب لحجم المدخلات.</p></div>
+    </div></article>
+
+    <article class="ba-ses rv"><span class="no">06</span><div>
+      <small>SESSION 06</small>
+      <h3>Searching, Sorting &amp; STL</h3>
+      <div class="ps-subt">Algorithms &amp; Standard Library</div>
+      <div class="ps-block"><span class="ps-block-lbl">Topics</span><ul class="ps-topics"><li>Linear Search &amp; Binary Search.</li><li>Sorting Fundamentals.</li><li>sort(), reverse(), find(), min_element(), max_element().</li><li>Basic pair, set, and map.</li><li>When to Use STL vs. Implementing an Algorithm Manually.</li></ul></div>
+      <div class="ps-block prac"><span class="ps-block-lbl">Practical Problems &amp; Practice References</span><ul class="ps-topics"><li>Finding an Element, Sorting Values, Removing Duplicates, Counting Frequencies.</li><li>Codeforces 4A – Watermelon · 71A – Way Too Long Words.</li><li>LeetCode 704 – Binary Search · 35 – Search Insert Position.</li></ul></div>
+      <div class="ps-block deliv"><span class="ps-block-lbl">Deliverable</span><p>اختيار طريقة البحث أو الترتيب المناسبة واستخدام STL بشكل صحيح.</p></div>
+    </div></article>
+
+    <article class="ba-ses rv"><span class="no">07</span><div>
+      <small>SESSION 07</small>
+      <h3>Problem-Solving Patterns</h3>
+      <div class="ps-subt">Recognizing Patterns</div>
+      <div class="ps-block"><span class="ps-block-lbl">Topics</span><ul class="ps-topics"><li>Frequency Counting.</li><li>Two Pointers.</li><li>Prefix Sums.</li><li>Basic Hashing.</li><li>Recognizing Patterns in Problem Statements.</li></ul></div>
+      <div class="ps-block prac"><span class="ps-block-lbl">Practical Problems</span><ul class="ps-topics"><li>Finding a Pair with a Target Sum.</li><li>Range Sum Queries.</li><li>Detecting Duplicate Values.</li></ul></div>
+      <div class="ps-block deliv"><span class="ps-block-lbl">Deliverable</span><p>التعرف على Patterns مناسبة واستخدامها لحل مسائل متشابهة بكفاءة أفضل.</p></div>
+    </div></article>
+
+    <article class="ba-ses rv"><span class="no">08</span><div>
+      <small>SESSION 08</small>
+      <h3>Debugging, Testing &amp; Contest Strategy</h3>
+      <div class="ps-subt">Accuracy Under Constraints</div>
+      <div class="ps-block"><span class="ps-block-lbl">Topics</span><ul class="ps-topics"><li>Syntax Errors &amp; Runtime Errors.</li><li>Wrong Answer &amp; Time Limit Exceeded.</li><li>Building Test Cases &amp; Boundary Cases.</li><li>Basic Stress Testing.</li><li>Reading Compiler Errors.</li><li>Time Management During Contests.</li></ul></div>
+      <div class="ps-block prac"><span class="ps-block-lbl">Practical Problems</span><ul class="ps-topics"><li>Fixing Incorrect Code.</li><li>Finding Failing Test Cases.</li><li>Comparing Expected and Actual Output.</li></ul></div>
+      <div class="ps-block deliv"><span class="ps-block-lbl">Deliverable</span><p>حل صحيح تم اختباره بمجموعة مناسبة من Test Cases مع القدرة على تفسير الأخطاء وإصلاحها.</p></div>
+    </div></article>
+
+    <article class="ba-ses rv"><span class="no">09</span><div>
+      <small>SESSION 09</small>
+      <h3>Selection Sort &amp; Data Structures</h3>
+      <div class="ps-subt">Arrays, Lists &amp; Sorting</div>
+      <div class="ps-block"><span class="ps-block-lbl">Topics</span><ul class="ps-topics"><li>How Selection Sort Works.</li><li>Implementing Selection Sort from Scratch.</li><li>Arrays and Linked Lists – Basic Concepts.</li><li>Accessing and Inserting Elements.</li><li>Time and Space Costs.</li></ul></div>
+      <div class="ps-block prac"><span class="ps-block-lbl">Practical Problems &amp; Suggested Tasks</span><ul class="ps-topics"><li>Implementing Selection Sort in C++17.</li><li>Codeforces 339A – Helpful Maths · 160A – Twins.</li><li>LeetCode 912 – Sort an Array.</li></ul></div>
+      <div class="ps-block deliv"><span class="ps-block-lbl">Deliverable</span><p>فهم فكرة Selection Sort وتنفيذها، ومقارنة أساسيات تخزين البيانات والوصول إليها.</p></div>
+    </div></article>
+
+    <article class="ba-ses rv"><span class="no">10</span><div>
+      <small>SESSION 10</small>
+      <h3>Recursion &amp; Final Practice</h3>
+      <div class="ps-subt">Base Case, Call Stack &amp; Problem Solving</div>
+      <div class="ps-block"><span class="ps-block-lbl">Topics</span><ul class="ps-topics"><li>Base Case and Recursive Case.</li><li>How Function Calls Work &amp; Call Stack.</li><li>Manual Recursion Tracing.</li><li>Recursion vs. Iteration &amp; When Iteration Is Simpler.</li></ul></div>
+      <div class="ps-block prac"><span class="ps-block-lbl">Practical Problems &amp; Suggested Task</span><ul class="ps-topics"><li>LeetCode 509 – Fibonacci Number.</li><li>Factorial Using Recursion and Iteration.</li><li>Recursive Sum of Vector Elements.</li><li>LeetCode 206 – Reverse Linked List (iterative first, recursive as extra exercise).</li></ul></div>
+      <div class="ps-block deliv"><span class="ps-block-lbl">Deliverable</span><p>فهم طريقة عمل Recursion وتتبعها يدويًا، والقدرة على تحديد متى تكون مناسبة ومتى يكون الحل التكراري أبسط.</p></div>
+    </div></article>
+
+  </div>
+</div>
+</section>
+
+<!-- ───────── 6. LEARNING OUTCOMES ───────── -->
+<section class="tint" id="outcomes">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">WHAT YOU'LL ACHIEVE</span>
+    <h2 class="ba-h2-en" dir="ltr">What Will You Be Able to Do?</h2>
+  </div>
+  <div class="ba-grid4">
+    <article class="ba-card rv"><div class="ic" style="background:var(--blush)" aria-hidden="true">🔎</div><h3>Analyze Problems</h3><p>فهم Problem Statements وتحديد Inputs وOutputs والConstraints والحالات الخاصة.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--lav)" aria-hidden="true">📝</div><h3>Plan Before Coding</h3><p>كتابة خطوات الحل أو Pseudocode قبل البدء في تنفيذ الكود.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--sand)" aria-hidden="true">💻</div><h3>Write Better C++ Solutions</h3><p>استخدام Conditions وLoops وFunctions وVectors وStrings بثقة أكبر.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--mint)" aria-hidden="true">🧪</div><h3>Handle Edge Cases</h3><p>اختبار الحالات المختلفة واكتشاف الأخطاء المنطقية وتصحيحها.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--lav)" aria-hidden="true">🧩</div><h3>Choose Suitable Approaches</h3><p>التعرف على طرق البحث والترتيب وبعض Problem-Solving Patterns المناسبة.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--blush)" aria-hidden="true">⏱️</div><h3>Understand Complexity</h3><p>فهم Big O واستخدام Time Complexity لمقارنة الحلول.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--mint)" aria-hidden="true">🚀</div><h3>Solve Independently</h3><p>حل مسائل بسيطة ومتوسطة بشكل مستقل مع توضيح طريقة التفكير.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--sand)" aria-hidden="true">💬</div><h3>Explain the Solution</h3><p>شرح سبب صحة الحل وتحليل كفاءته بدلًا من الاكتفاء بعرض الكود النهائي.</p></article>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 7. PRACTICE & ASSIGNMENTS ───────── -->
+<section id="practice">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">PRACTICE BEYOND THE SESSION</span>
+    <h2 class="ba-h2-en" dir="ltr">Every Session Comes with a Challenge.</h2>
+    <p class="lead">التطور في Problem Solving محتاج ممارسة مستمرة. بعد كل Session، هيكون فيه Tasks قصيرة وتدريجية مرتبطة بالموضوع اللي اتشرح، علشان الطالب يثبت فهمه ويطبق بنفسه.</p>
+  </div>
+  <div class="ba-grid3">
+    <article class="ba-card rv"><div class="ic" style="background:var(--mint)" aria-hidden="true">📋</div><h3>Required Tasks</h3><p>مسألتان أو ثلاث مسائل على الموضوع الذي تم شرحه، بمستوى مناسب للطلاب.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--blush)" aria-hidden="true">🔥</div><h3>Challenge Task</h3><p>مسألة أصعب قليلًا للطلاب الذين أنهوا المطلوب الأساسي وعايزين يتحدوا نفسهم.</p></article>
+    <article class="ba-card rv">
+      <div class="ic" style="background:var(--lav)" aria-hidden="true">🪞</div>
+      <h3>Reflection Task</h3>
+      <p>الطالب يكتب: فكرة الحل، الـ Time Complexity، الأخطاء التي واجهته، وكيف اكتشف الخطأ وأصلحه.</p>
+    </article>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 8. PROGRESS & FEEDBACK ───────── -->
+<section class="tint" id="progress">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">TRACK YOUR PROGRESS</span>
+    <h2 class="ba-h2-en" dir="ltr">See How Your Thinking Improves.</h2>
+    <p class="lead">بنقيس تطور الطالب في التفكير وحل المشكلات من خلال أربعة أبعاد رئيسية على مدار البرنامج:</p>
+  </div>
+  <div class="ba-grid4">
+    <article class="ba-card rv"><div class="ic" style="background:var(--blush)" aria-hidden="true">🧠</div><h3>Problem Analysis</h3><p>هل الطالب قادر يفهم المسألة ويحدد المطلوب والقيود؟</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--lav)" aria-hidden="true">🧭</div><h3>Approach Selection</h3><p>هل قادر يختار طريقة حل مناسبة ويشرح ليه اختارها؟</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--sand)" aria-hidden="true">⚙️</div><h3>Implementation</h3><p>هل قادر يحول خطوات الحل إلى كود C++ صحيح ومنظم؟</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--mint)" aria-hidden="true">✅</div><h3>Testing &amp; Optimization</h3><p>هل بيختبر الحالات المختلفة ويفهم كفاءة الحل؟</p></article>
+  </div>
+  <div class="ps-track-note rv">
+    <b>Problem-Solving Progress Tracker</b> هو إطار التقييم المتبع داخل البرنامج لمتابعة تطور طريقة تفكير كل متدرب عبر هذه الأبعاد الأربعة، وتقديم ملاحظات واضحة تساعده على التحسن التدريجي.
+  </div>
+</div>
+</section>
+
+<!-- ───────── 9. WHO IS THIS PROGRAM FOR ───────── -->
+<section id="audience">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">WHO IS THIS PROGRAM FOR?</span>
+    <h2 class="ba-h2-en" dir="ltr">Is This Program Right for You?</h2>
+  </div>
+  <div class="ba-aud">
+    <article class="ba-card rv"><div class="ic" style="background:var(--blush)" aria-hidden="true">🎓</div><h3>Computer Science Students</h3><p>طلاب Computer Science اللي عايزين يقووا أساس التفكير الخوارزمي وحل المسائل.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--lav)" aria-hidden="true">💻</div><h3>Programming Students</h3><p>الطلاب اللي بيتعلموا البرمجة وعندهم أساسيات C++ وعايزين يطوروا قدرتهم على حل المشكلات.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--sand)" aria-hidden="true">🏆</div><h3>Beginners in Competitive Programming</h3><p>اللي جربوا يحلوا مسائل بسيطة وعايزين يتعلموا طريقة منظمة للتعامل مع مسائل جديدة.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--mint)" aria-hidden="true">🚀</div><h3>Students Preparing for Technical Challenges</h3><p>الطلاب اللي محتاجين يحسنوا مهاراتهم في Problem Solving كجزء من رحلتهم الأكاديمية والتقنية.</p></article>
+  </div>
+  <div class="ba-pre rv">
+    <span class="ic" aria-hidden="true">✅</span>
+    <div>
+      <b>Prerequisites</b>
+      <ul class="ps-pre-list">
+        <li>Basic C++ Knowledge</li>
+        <li>Understanding of Variables and Data Types</li>
+        <li>Ability to Write and Run Simple C++ Programs</li>
+      </ul>
+    </div>
+  </div>
+  <div class="ps-prereq-warn rv" role="note">
+    <span aria-hidden="true">⚠️</span>
+    <p>تنبيه مهم: هذا البرنامج غير مخصص لتعليم البرمجة من الصفر. يُفضل أن يكون لدى المتدرب معرفة أساسية بلغة C++ قبل الانضمام.</p>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 10. PROGRAM DETAILS ───────── -->
+<section class="tint" id="details">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">PROGRAM DETAILS</span>
+    <h2 class="ba-h2-en" dir="ltr">Program at a Glance</h2>
+  </div>
+  <div class="ba-det ps-det">
+    <div class="it rv"><span class="ic" style="background:var(--blush)" aria-hidden="true">🧩</span><div><small>Program</small><b>Problem Solving with C++17</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--lav)" aria-hidden="true">🎯</span><div><small>Level</small><b>Level 01</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--sand)" aria-hidden="true">🎥</span><div><small>Sessions</small><b>10 Live Sessions</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--mint)" aria-hidden="true">⏱️</span><div><small>Session Duration</small><b>120 Minutes</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--lav)" aria-hidden="true">⌛</span><div><small>Total Training</small><b>20 Hours</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--blush)" aria-hidden="true">⚡</span><div><small>Programming Language</small><b>C++17</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--sand)" aria-hidden="true">💻</span><div><small>Format</small><b>Online Interactive Group Training</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--mint)" aria-hidden="true">🎓</span><div><small>Target Audience</small><b>Computer Science and Programming Students</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--lav)" aria-hidden="true">📊</span><div><small>Training Methodology</small><b>25% Theory, 60% Problem Solving, 15% Review &amp; Error Analysis</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--blush)" aria-hidden="true">👥</span><div><small>Minimum Batch Size</small><b>10 Students</b></div></div>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 11. FINAL CTA ───────── -->
+<section class="ba-dark ba-cta" id="apply">
+<div class="w rv">
+  <h2>Start Thinking Like a Problem Solver.</h2>
+  <p class="lead">ابدأ تبني طريقة تفكيرك، وحل مسائل جديدة، وافهم إزاي تختار الحل المناسب وتكتبه بكفاءة باستخدام C++17.</p>
+  <span class="st">Think. Practice. Solve. Improve.</span>
+  <a class="btn l" href="events.html?workshop=problem-solving#interest">Apply Now</a>
+</div>
+</section>
+
+</main>
+
+<footer><div class="w">
+<img src="logo.png" alt="Codiz">
+<div class="s">مش مجرد كود.. تجربة شركة حقيقية.</div>
+<p><a href="index.html">الرجوع للصفحة الرئيسية</a> · <a href="events.html">كل الفعاليات</a> · &copy; 2026 Codiz. All rights reserved.</p>
+</div></footer>
+
+<script src="ba-program.js"></script>
+</body>
+</html>
