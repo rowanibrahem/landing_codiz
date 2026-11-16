@@ -75,6 +75,7 @@ window.CODIZ_EVENTS = {
       description:
         "مقدمة عملية لبناء تطبيقات موبايل Cross-platform باستخدام Flutter.",
       category: "Mobile · Flutter",
+      detailsUrl: "flutter.html",
       icon: "📱",
       tone: "blush",
       status: "coming-soon"

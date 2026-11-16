@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flutter Application Development – Level 01 | Codiz كوديز</title>
+<meta name="description" content="برنامج Codiz التدريبي في تطوير تطبيقات Flutter (المستوى الأول): 22 ساعة تدريب لايف، مشروع جماعي عملي، State Management بـ BLoC &amp; Cubit، ربط APIs، والعمل بـ Git &amp; GitHub.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Flutter Application Development – Level 01 | Codiz">
+<meta property="og:description" content="Build Real Flutter Applications. Work Like a Real Development Team.">
+<meta property="og:locale" content="ar_AR">
+<link rel="icon" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site-base.css">
+<link rel="stylesheet" href="events.css">
+<link rel="stylesheet" href="instructors.css">
+<link rel="stylesheet" href="ba-program.css">
+<link rel="stylesheet" href="flutter-program.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="ba">
+
+<!-- ───────── 1. HERO ───────── -->
+<header class="hero ba-hero">
+<div class="w">
+<nav>
+  <a href="index.html"><img src="logo.png" alt="Codiz كوديز"></a>
+  <div class="lk" id="site-links">
+    <a href="index.html">الرئيسية</a>
+    <a href="index.html#services">خدماتنا</a>
+    <a class="inst-link" href="index.html#instructors"><span class="il-full">تعرّف على مدربينا</span><span class="il-short">مدربينا</span></a>
+    <a class="ev-link" href="events.html#free-sessions">السيشنز المجانية</a>
+    <a href="events.html#workshops" aria-current="page">برامجنا التدريبية</a>
+    <a class="ins-link" href="insights/index.html">المدونة</a>
+    <a class="qz-link" href="quizzes.html">اختبر نفسك</a>
+  </div>
+  <a class="btn l" href="events.html?workshop=flutter#interest">انضم لقائمة الاهتمام</a>
+  <button type="button" class="nav-tg" aria-label="القائمة" aria-expanded="false" aria-controls="site-links">&#9776;</button>
+</nav>
+
+<div class="ba-hero-grid">
+  <div>
+    <span class="pill" dir="ltr">CODIZ TRAINING PROGRAM</span>
+    <h1>Flutter Application <em>Development – Level 01</em></h1>
+    <p class="sub">Build Real Flutter Applications. Work Like a Real Development Team.</p>
+    <p class="d1">مش هتتعلم Flutter علشان تعمل شوية UI Screens بس؛ هتتعلم إزاي تبني تطبيق منظم و تفهم فلاتر نفسها شغاله ازاي علشان نحافظ علي الاداء بتاع التطبيق، تتعامل مع البيانات والـ APIs، تدير حالة التطبيق باستخدام BLoC &amp; Cubit، وتشتغل ضمن فريق تطوير باستخدام Git وGitHub.</p>
+    <p class="d2">برنامج تدريبي عملي يساعدك تنتقل من مجرد بناء واجهات Flutter إلى تطوير تطبيقات منظمة وقابلة للتوسع، من خلال التطبيق المستمر على مشروع جماعي يحاكي احتياج Business حقيقي، والعمل ضمن فريق يحاكي بيئة Software House.</p>
+    <ul class="ba-info" aria-label="معلومات البرنامج">
+      <li><span aria-hidden="true">🎯</span>Level 01 – Flutter Application Development</li>
+      <li><span aria-hidden="true">⏱️</span>12 Sessions</li>
+      <li><span aria-hidden="true">💬</span>Online Interactive Training</li>
+      <li><span aria-hidden="true">🛠️</span>Project-Based Learning</li>
+    </ul>
+    <div class="hb">
+      <a class="btn l" href="events.html?workshop=flutter#interest">Apply Now</a>
+      <a class="btn g" href="#experience">Explore Program</a>
+    </div>
+  </div>
+
+  <div class="ba-vis" aria-hidden="true">
+    <div class="ba-win">
+      <div class="fl-win-top">
+        <div class="ba-win-bar"><i></i><i></i><i></i></div>
+        <span class="fl-branch">git: feat/orders-cubit</span>
+      </div>
+      <div class="ba-flow">
+        <span class="ba-node">Widget</span><span class="ba-arrow"></span>
+        <span class="ba-node d">Element</span><span class="ba-arrow"></span>
+        <span class="ba-node">RenderObject</span>
+      </div>
+      <div class="ba-doc">
+        <b>BLOCBUILDER · ORDERS_CUBIT.DART</b>
+        <pre class="fl-code"><span class="tp">BlocBuilder</span>&lt;<span class="tp">OrdersCubit</span>, <span class="tp">OrdersState</span>&gt;(
+  builder: (context, state) =&gt; <span class="kw">switch</span> (state) {
+    <span class="tp">OrdersLoading</span>() =&gt; <span class="tp">LoadingView</span>(),
+    <span class="tp">OrdersSuccess</span>(:<span class="kw">final</span> items) =&gt; <span class="tp">OrdersList</span>(items),
+    <span class="tp">OrdersError</span>(:<span class="kw">final</span> msg) =&gt; <span class="tp">ErrorView</span>(msg),
+  },
+);</pre>
+      </div>
+      <div class="ba-chips">
+        <span class="ba-chip" style="background:var(--sand)">Loading</span>
+        <span class="ba-chip" style="background:var(--mint)">Success</span>
+        <span class="ba-chip" style="background:var(--blush)">Error</span>
+        <span class="ba-chip" style="background:var(--lav)">Empty</span>
+      </div>
+    </div>
+    <div class="ba-float a">🌳 Widget Tree · MVVM</div>
+    <div class="ba-float c">🔀 GitHub · PR Review</div>
+    <div class="ba-float b">✓ GET /api/orders · 200 OK</div>
+  </div>
+</div>
+</div>
+</header>
+
+<main>
+
+<!-- ───────── 2. THE CODIZ EXPERIENCE ───────── -->
+<section id="experience">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">THE CODIZ EXPERIENCE</span>
+    <h2 class="ba-h2-en" dir="ltr">More Than Training. A Real Software Development Experience.</h2>
+    <p class="lead">في Codiz، مش هتكون مجرد متدرب بيحضر محاضرات ويتابع كود المدرب. هتعيش تجربة أقرب لبيئة العمل داخل Software House، من خلال تنفيذ مشروع جماعي، توزيع المسؤوليات، التعاون مع فريقك، مراجعة الكود، ومناقشة الحلول التقنية.</p>
+  </div>
+  <div class="ba-grid3">
+    <article class="ba-card rv"><div class="ic" style="background:var(--blush)" aria-hidden="true">🧠</div><h3>Think Like a Flutter Developer</h3><p>اتعلم تفهم طريقة عمل Flutter، وتنظم تطبيقك، وتتعامل مع المشاكل التقنية بدل ما تكتفي بنسخ الأكواد وتنفيذ التصميمات.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--lav)" aria-hidden="true">🤝</div><h3>Work Like a Real Development Team</h3><p>هتكون جزء من Team صغير، بتتوزع عليكم Features وTasks واضحة، وكل متدرب بيكون مسؤول عن جزء محدد من المشروع، مع التعاون ومناقشة الحلول ومتابعة التقدم.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--mint)" aria-hidden="true">📱</div><h3>Project-Based Learning</h3><p>مشروع جماعي بنشتغل عليه طوال البرنامج، من فهم الـ Business Requirements وتقسيم الـ Features لحد تنفيذ التطبيق ودمج أجزاء الفريق.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--sand)" aria-hidden="true">🔀</div><h3>Git &amp; GitHub Workflow</h3><p>اتعلم تشتغل باستخدام Git وGitHub، وتتعامل مع Repositories وBranches وCommits، وتشارك في Team Workflow وتفهم أساسيات حل Conflicts.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--blush)" aria-hidden="true">🔍</div><h3>Code Reviews &amp; Individual Feedback</h3><p>مش بس هنراجع النتيجة النهائية؛ هيكون فيه Group Code Reviews ومراجعة لمساهمة كل متدرب، مع تقييم فردي وFeedback واضح على شغله وفهمه للكود اللي نفذه.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--lav)" aria-hidden="true">💼</div><h3>Build Your Professional Profile</h3><p>اشتغل على مشروع عملي، وافهم إزاي تعرض مساهمتك التقنية، وجهز نفسك بشكل أفضل للخطوة المهنية التالية من خلال CV Writing &amp; Building Connections.</p></article>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 3. PROJECT-BASED LEARNING EXPERIENCE ───────── -->
+<section class="ba-dark" id="project">
+<div class="w ba-proj-grid">
+  <div class="rv">
+    <span class="ba-label">PRACTICAL PROJECT EXPERIENCE</span>
+    <h2 class="ba-h2-en" dir="ltr">Build Together. Integrate Together. Learn by Doing.</h2>
+    <p class="lead">طوال البرنامج، هتشتغل مع فريقك على مشروع جماعي بيحاكي احتياج Business حقيقي، وهتتعامل مع طريقة تقسيم المشاريع داخل Software House، بداية من فهم الـ Requirements لحد بناء التطبيق ودمج الـ Features.</p>
+    <ol class="fl-steps">
+      <li><span class="sn">1</span><div><b>Project Brief</b><span>استلام BRD مختصر وفهم الـ Business Requirements واحتياج المشروع.</span></div></li>
+      <li><span class="sn">2</span><div><b>Feature Breakdown</b><span>تقسيم المشروع إلى Features وTasks واضحة، وتحديد مسؤولية كل متدرب عن Feature أو جزء محدد.</span></div></li>
+      <li><span class="sn">3</span><div><b>Team Assignment</b><span>تقسيم المتدربين إلى Teams صغيرة من 3–4 أشخاص، مع مسؤولية واضحة لكل فرد.</span></div></li>
+      <li><span class="sn">4</span><div><b>Continuous Development</b><span>كل Session فيها تطبيق عملي على المشروع، والـ Features بتتطور تدريجيًا مع تقدم البرنامج.</span></div></li>
+      <li><span class="sn">5</span><div><b>GitHub Collaboration</b><span>استخدام Git وGitHub لمتابعة التعديلات، مع Individual Commits لكل متدرب.</span></div></li>
+      <li><span class="sn">6</span><div><b>Code Review &amp; Integration</b><span>مراجعة شغل الفريق، مناقشة القرارات التقنية، دمج الـ Features، ومراجعة API وState Management.</span></div></li>
+      <li><span class="sn">7</span><div><b>Final Demo</b><span>عرض التطبيق النهائي ومناقشة مساهمة كل متدرب والقرارات التقنية الأساسية.</span></div></li>
+    </ol>
+    <div class="fl-eval-note">
+      <strong>تقييم فردي لمساهمتك داخل المشروع الجماعي</strong>
+      المشروع جماعي، لكن تقييم كل متدرب فردي أيضًا. لازم يكون واضح كل شخص ساهم في إيه، وإيه الـ Features اللي كان مسؤول عنها، ومدى فهمه للكود اللي نفذه.
+    </div>
+  </div>
+  <div class="ba-board rv" aria-hidden="true">
+    <div class="ba-tile"><i>📄</i><b>1. BRD</b><span>Understand business requirements</span></div>
+    <div class="ba-tile"><i>🧩</i><b>2. Features</b><span>Break down into clear modules</span></div>
+    <div class="ba-tile"><i>📋</i><b>3. Tasks</b><span>Owned by each team member</span></div>
+    <div class="ba-tile"><i>🔀</i><b>4. GitHub</b><span>Branches &amp; individual commits</span></div>
+    <div class="ba-tile"><i>🔍</i><b>5. Code Review</b><span>Review quality &amp; architecture</span></div>
+    <div class="ba-tile"><i>🔗</i><b>6. Integration</b><span>Connect APIs, Cubit &amp; UI</span></div>
+    <div class="ba-tile w"><i>🚀</i><div><b>7. Final Demo</b><span>Present the app &amp; discuss technical decisions</span></div></div>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 4. SIGNATURE PRACTICAL EXPERIENCE ───────── -->
+<section class="ba-chaos" id="challenges">
+<div class="w">
+  <div class="ba-sec-head rv" style="max-width:860px">
+    <span class="pill" dir="ltr" style="background:rgba(255,255,255,.14);color:#f6e6fb">SIGNATURE PRACTICAL EXPERIENCE</span>
+    <h2>From Writing Code to Solving Real Development Challenges.</h2>
+    <p class="lead">تطوير التطبيقات مش مجرد كتابة كود؛ هتقابل مشاكل في طريقة عمل الـ Widgets، وإدارة الـ State، والتعامل مع الـ APIs، ودمج شغل الفريق. خلال البرنامج هتتعامل مع تحديات عملية مرتبطة بالمشروع وتتعلم تحلل المشكلة وتوصل للحل المناسب.</p>
+  </div>
+
+  <div class="ba-dash rv" aria-hidden="true">
+    <div class="ba-dash-top"><span>FLUTTER TEAM WORKSPACE · Project Diagnostics</span><span class="live">Active Challenges</span></div>
+    <div class="ba-msgs">
+      <div class="ba-msg w"><b>⚡ REBUILD</b>HomeScreen rebuilt 14x on update — check const &amp; widget split.</div>
+      <div class="ba-msg r"><b>🔀 GIT</b>Merge conflict in orders_cubit.dart between two feature branches.</div>
+      <div class="ba-msg c"><b>🧩 CUBIT</b>Manage Loading, Success, Error &amp; Empty states cleanly.</div>
+      <div class="ba-msg i"><b>🌐 API</b>Handle JSON parsing, HTTP status &amp; error states in Cubit.</div>
+    </div>
+  </div>
+
+  <div class="ba-chal">
+    <article class="ba-cc rv"><div class="k" style="background:var(--sand)" aria-hidden="true">⚡</div><h3>1. Unnecessary Rebuilds</h3><p>ليه بعض الـ Widgets بتعمل Rebuild أكتر من اللازم؟ هتتعلم تحلل المشكلة وتحدد أسباب الـ Unnecessary Rebuilds وتطبق أساسيات Optimization.</p></article>
+    <article class="ba-cc rv"><div class="k" style="background:var(--blush)" aria-hidden="true">🔀</div><h3>2. Git &amp; Team Conflicts</h3><p>إزاي تتعامل مع التعديلات المختلفة داخل Team؟ هتتعرف على أساسيات Branches وCommits وConflicts أثناء التعاون على نفس المشروع.</p></article>
+    <article class="ba-cc rv"><div class="k" style="background:var(--lav)" aria-hidden="true">🧩</div><h3>3. State Management Challenges</h3><p>إزاي تدير حالات التطبيق بشكل منظم؟ هتتعامل مع Local State وApplication State وتطبق BLoC &amp; Cubit لإدارة حالات Loading وSuccess وError وEmpty.</p></article>
+    <article class="ba-cc rv"><div class="k" style="background:var(--mint)" aria-hidden="true">🌐</div><h3>4. API &amp; Integration Challenges</h3><p>إزاي تربط التطبيق ببيانات حقيقية؟ هتتعامل مع API Responses وJSON وError Handling، وتربط بيانات الـ API بالـ Cubit States وتدمج أجزاء المشروع.</p></article>
+  </div>
+
+  <div class="ba-note rv">
+    <span class="ba-spread">🛠️ التحديات دي مش مجرد أمثلة منفصلة؛ هتطبق المفاهيم دي تدريجيًا أثناء تطوير المشروع الجماعي ومراجعة شغل الفريق.</span>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 5. DETAILED CURRICULUM ───────── -->
+<section id="curriculum">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">WHAT WILL YOU LEARN?</span>
+    <h2 class="ba-h2-en" dir="ltr">Your Flutter Development Learning Journey</h2>
+    <p class="lead">من فهم طريقة عمل Flutter والـ Widgets، إلى بناء تطبيق منظم، إدارة الحالة، التعامل مع APIs، والعمل ضمن فريق لتطوير مشروع متكامل.</p>
+  </div>
+  <div class="ba-cur">
+    <article class="ba-ses rv"><span class="no">01</span><div><small>TOPIC 01</small><h3>Flutter Fundamentals</h3><ul class="fl-topics"><li>Flutter Architecture.</li><li>Widget Tree.</li><li>Conceptual Understanding of Widget, Element, and RenderObject.</li></ul><p>الوصول لفهم واضح لطريقة عمل Flutter والعلاقة بين الـ Widgets وبنية التطبيق.</p></div></article>
+
+    <article class="ba-ses rv"><span class="no">02</span><div><small>TOPIC 02</small><h3>Flutter Rendering &amp; Widget Lifecycle</h3><ul class="fl-topics"><li>StatefulWidget Lifecycle.</li><li>Why Widgets Rebuild.</li><li>Understanding the Rendering Process.</li></ul><p>فهم دورة حياة الـ Widgets، وإيه اللي بيحصل أثناء تحديث الواجهة وإعادة بنائها.</p></div></article>
+
+    <article class="ba-ses rv"><span class="no">03</span><div><small>TOPIC 03</small><h3>Rebuilds &amp; Optimization</h3><ul class="fl-topics"><li>Why Widgets Rebuild.</li><li>Const Widgets.</li><li>Common Rebuild Problems.</li><li>Basic Optimization.</li><li>Practical Challenge: Analyze Unnecessary Rebuilds.</li></ul><p>التعرف على مشاكل إعادة البناء غير الضرورية، وتحليل أسبابها وتطبيق أساسيات تحسين الأداء.</p></div></article>
+
+    <article class="ba-ses rv"><span class="no">04</span><div><small>TOPIC 04</small><h3>Git &amp; GitHub Workflow</h3><ul class="fl-topics"><li>Git &amp; GitHub Fundamentals.</li><li>Repositories.</li><li>Branches &amp; Commits.</li><li>Uploading Projects and Tracking Changes.</li><li>Team Workflow.</li><li>Basic Conflict Resolution.</li></ul><p>التعامل مع GitHub داخل فريق، ومتابعة التعديلات والمشاركة في تطوير نفس المشروع.</p></div></article>
+
+    <article class="ba-ses rv"><span class="no">05</span><div><small>TOPIC 05</small><h3>Navigation &amp; User Interaction</h3><ul class="fl-topics"><li>Navigation Between Screens.</li><li>Passing Data.</li><li>Forms &amp; Validation.</li><li>User Input.</li><li>Dialogs &amp; Bottom Sheets.</li><li>Handling Different User Interactions.</li></ul><p>بناء User Flows متكاملة داخل التطبيق والتعامل مع تفاعلات المستخدم المختلفة.</p></div></article>
+
+    <article class="ba-ses rv"><span class="no">06</span><div><small>TOPIC 06</small><h3>Architecture &amp; Design Patterns</h3><ul class="fl-topics"><li>Difference Between Architecture and Design Patterns.</li><li>MVVM Architecture.</li></ul><p>فهم الفرق بين Architecture وDesign Patterns والتعرف على MVVM Architecture.</p></div></article>
+
+    <article class="ba-ses rv"><span class="no">07</span><div><small>TOPIC 07</small><h3>Project Structure &amp; Clean Code</h3><ul class="fl-topics"><li>Separation of Files and Responsibilities.</li><li>Separation of Concerns.</li><li>Feature-Based Structure.</li><li>Reusable Components.</li><li>Clean Code Basics.</li><li>Understanding Layers.</li><li>Error Reading &amp; Debugging.</li></ul><p>تنظيم ملفات المشروع وفصل المسؤوليات وكتابة كود أوضح وأسهل في التطوير والصيانة.</p></div></article>
+
+    <article class="ba-ses rv"><span class="no">08</span><div><small>TOPIC 08</small><h3>State Management: BLoC</h3><ul class="fl-topics"><li>State Management Concepts.</li><li>Local State vs Application State.</li><li>BLoC Pattern.</li></ul><p>فهم مفهوم إدارة الحالة والفرق بين Local State وApplication State والتعرف على BLoC Pattern.</p></div></article>
+
+    <article class="ba-ses rv"><span class="no">09</span><div><small>TOPIC 09</small><h3>State Management: Cubit</h3><ul class="fl-topics"><li>Cubit.</li><li>Loading / Success / Error / Empty States.</li><li>Separating Business Logic from UI.</li><li>Practical Task: Manage a Real Feature Using Cubit.</li></ul><p>تطبيق Cubit لإدارة حالة Feature حقيقية وفصل الـ Business Logic عن واجهة المستخدم.</p></div></article>
+
+    <article class="ba-ses rv"><span class="no">10</span><div><small>TOPIC 10</small><h3>API Integration</h3><ul class="fl-topics"><li>REST API Basics.</li><li>HTTP Methods.</li><li>JSON Serialization.</li><li>GET &amp; POST.</li><li>Handling API Responses.</li><li>Loading &amp; Error Handling.</li><li>Displaying Data Inside the Application.</li><li>Connecting API Data with Cubit States.</li></ul><p>التعامل مع APIs وربط البيانات الحقيقية بالتطبيق وإدارة حالات التحميل والأخطاء.</p></div></article>
+
+    <article class="ba-ses rv"><span class="no">11</span><div><small>TOPIC 11</small><h3>Project Development &amp; Integration</h3><ul class="fl-topics"><li>Distributing Features Among Team Members.</li><li>Implementing Required Features.</li><li>Integrating Team Members' Work.</li><li>Reviewing API Integration.</li><li>Reviewing State Management.</li><li>Solving Integration Problems.</li></ul><p>استكمال تطوير المشروع، ودمج شغل أعضاء الفريق، ومراجعة التكامل بين الـ Features المختلفة.</p></div></article>
+
+    <article class="ba-ses rv"><span class="no">★</span><div><small>FINAL MILESTONE</small><h3>Final Project Presentation</h3><ul class="fl-topics"><li>Presenting the Final Application.</li><li>Reviewing Implemented Features.</li><li>Discussing Main Technical Decisions.</li><li>Reviewing Each Trainee's Contribution.</li><li>Technical Discussion &amp; Individual Evaluation.</li></ul><p>عرض المشروع النهائي ومناقشة القرارات التقنية وتقييم مساهمة كل متدرب بشكل فردي.</p></div></article>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 6. CAREER PREPARATION ───────── -->
+<section class="tint ba-career" id="career">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">CAREER PREPARATION</span>
+    <h2 class="ba-h2-en" dir="ltr">Show What You Can Build.</h2>
+    <p class="lead">مش كفاية تتعلم Flutter؛ مهم كمان تعرف تعرض شغلك وتوضح مساهمتك في المشروع والمهارات اللي اكتسبتها خلال التدريب.</p>
+  </div>
+  <div class="ba-grid4">
+    <article class="ba-card rv"><div class="ic" style="background:var(--blush)" aria-hidden="true">💬</div><h3>Individual Evaluation &amp; Feedback</h3><p>كل متدرب بيتم تقييمه بشكل فردي بناءً على مساهمته في المشروع، الـ Assignments، الـ Code Quality، نشاطه على GitHub، وفهمه للكود اللي نفذه.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--lav)" aria-hidden="true">📄</div><h3>CV Writing</h3><p>جزء مخصص لمساعدة المتدربين على كتابة وتطوير الـ CV وعرض مهاراتهم ومشروعاتهم بصورة أفضل.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--sand)" aria-hidden="true">🤝</div><h3>Build Connections</h3><p>التعرف على أهمية بناء العلاقات المهنية والتواصل داخل المجال التقني، والاستفادة من تجربة العمل الجماعي.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--mint)" aria-hidden="true">📱</div><h3>Project Experience</h3><p>وجود مشروع جماعي عملي يتيح للمتدرب توضيح الـ Features اللي نفذها، ومساهمته الفردية، وطريقة تعامله مع GitHub والعمل ضمن فريق.</p></article>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 7. WHO IS THIS PROGRAM FOR ───────── -->
+<section id="audience">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">WHO IS THIS PROGRAM FOR?</span>
+    <h2 class="ba-h2-en" dir="ltr">Is This Program Right for You?</h2>
+  </div>
+  <div class="ba-aud">
+    <article class="ba-card rv"><div class="ic" style="background:var(--blush)" aria-hidden="true">💻</div><h3>Programming Learners</h3><p>عندك أساسيات البرمجة وDart، وعايز تبدأ تطور تطبيقات Flutter بشكل منظم.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--lav)" aria-hidden="true">📱</div><h3>Flutter Beginners</h3><p>بدأت تتعلم Flutter وعملت شاشات بسيطة، لكن محتاج تفهم إزاي تحول الواجهات دي لتطبيق فعلي.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--sand)" aria-hidden="true">🎨</div><h3>UI-Focused Developers</h3><p>عندك خبرة بسيطة في بناء UI، وعايز تنتقل من مجرد تصميم الشاشات إلى التعامل مع البيانات والـ APIs وإدارة الحالة.</p></article>
+    <article class="ba-card rv"><div class="ic" style="background:var(--mint)" aria-hidden="true">🚀</div><h3>Aspiring Flutter Developers</h3><p>عايز تطور مستواك التقني وتتعلم تشتغل ضمن فريق وتبني مشروع عملي تقدر تعرض مساهمتك فيه.</p></article>
+  </div>
+  <div class="ba-pre rv">
+    <span class="ic" aria-hidden="true">✅</span>
+    <div>
+      <b>Prerequisites</b>
+      <ul class="fl-pre-list">
+        <li>Basic Programming Fundamentals</li>
+        <li>Basic Dart Knowledge</li>
+        <li>Basic Flutter Knowledge or Experience Building Simple Screens</li>
+      </ul>
+    </div>
+  </div>
+  <div class="fl-prereq-warn rv" role="note">
+    <span aria-hidden="true">⚠️</span>
+    <p>تنبيه مهم: البرنامج غير مناسب للمبتدئين في البرمجة من الصفر.</p>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 8. PROGRAM DETAILS ───────── -->
+<section class="tint" id="details">
+<div class="w">
+  <div class="ba-sec-head rv">
+    <span class="pill" dir="ltr">PROGRAM DETAILS</span>
+    <h2 class="ba-h2-en" dir="ltr">Program at a Glance</h2>
+  </div>
+  <div class="ba-det fl-det">
+    <div class="it rv"><span class="ic" style="background:var(--blush)" aria-hidden="true">📱</span><div><small>Program</small><b>Flutter Application Development</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--lav)" aria-hidden="true">🎯</span><div><small>Level</small><b>Level 01</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--sand)" aria-hidden="true">⏱️</span><div><small>Training Duration</small><b>22 Live Training Hours</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--mint)" aria-hidden="true">💻</span><div><small>Training Format</small><b>Online Interactive Group Training</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--lav)" aria-hidden="true">🧩</span><div><small>Learning Method</small><b>Project-Based Learning</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--blush)" aria-hidden="true">👥</span><div><small>Team Structure</small><b>Teams of 3–4 Trainees</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--sand)" aria-hidden="true">🛠️</span><div><small>Practical Work</small><b>Group Project, Individual Tasks &amp; Assignments</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--mint)" aria-hidden="true">🔍</span><div><small>Evaluation</small><b>Individual Contribution &amp; Technical Discussion</b></div></div>
+    <div class="it rv"><span class="ic" style="background:var(--blush)" aria-hidden="true">💬</span><div><small>Feedback</small><b>Individual Feedback</b></div></div>
+  </div>
+</div>
+</section>
+
+<!-- ───────── 9. FINAL CTA ───────── -->
+<section class="ba-dark ba-cta" id="apply">
+<div class="w rv">
+  <h2>Your Flutter Development Journey Starts Here.</h2>
+  <p class="lead">اتعلم، طبّق، اشتغل مع فريقك، وابدأ في بناء تطبيقات Flutter بشكل منظم من خلال تجربة عملية تحاكي طريقة العمل داخل شركات البرمجيات.</p>
+  <span class="st">Learn by Doing. Build by Collaborating.</span>
+  <a class="btn l" href="events.html?workshop=flutter#interest">Apply Now</a>
+</div>
+</section>
+
+</main>
+
+<footer><div class="w">
+<img src="logo.png" alt="Codiz">
+<div class="s">مش مجرد كود.. تجربة شركة حقيقية.</div>
+<p><a href="index.html">الرجوع للصفحة الرئيسية</a> · <a href="events.html">كل الفعاليات</a> · &copy; 2026 Codiz. All rights reserved.</p>
+</div></footer>
+
+<script src="ba-program.js"></script>
+</body>
+</html>
