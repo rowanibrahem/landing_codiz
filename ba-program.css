@@ -62,7 +62,7 @@ html{scroll-padding-top:20px}
 .ba-proj-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;position:relative;z-index:2}
 .ba-label{display:inline-block;font-size:12.5px;font-weight:900;letter-spacing:1.4px;color:var(--ink);background:var(--blush);padding:6px 16px;border-radius:999px;margin-bottom:16px;direction:ltr}
 .ba-points{list-style:none;display:grid;gap:12px;margin-top:6px}
-.ba-points li{display:flex;gap:12px;align-items:flex-start;font-size:16.5px;font-weight:700;color:#fff;direction:ltr;text-align:left}
+.ba-points li{display:flex;gap:12px;align-items:flex-start;font-size:16.5px;font-weight:700;color:#fff;text-align:right}
 .ba-points li:before{content:"✓";flex:none;width:26px;height:26px;border-radius:50%;background:var(--mint);color:#0f4a3a;display:grid;place-items:center;font-size:13px;font-weight:900;margin-top:2px}
 .ba-board{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);border-radius:28px;padding:22px;display:grid;grid-template-columns:1fr 1fr;gap:14px;backdrop-filter:blur(6px)}
 .ba-tile{background:#fff;color:var(--ink);border-radius:18px;padding:14px 16px;box-shadow:0 10px 22px rgba(20,0,30,.22);direction:ltr;text-align:left}
