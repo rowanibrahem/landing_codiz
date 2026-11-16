@@ -99,8 +99,10 @@
       "<h3>" + esc(w.title) + "</h3>" +
       (compact ? "" : '<p class="d">' + esc(w.description) + "</p>") +
       '<div class="ev-foot"><span class="ev-status">' + esc(status) + "</span>" +
-      '<a class="btn' + (compact ? " o" : "") + ' sm" href="' + EVENTS_PAGE + "?workshop=" + encodeURIComponent(w.id) +
-      '#interest" data-workshop-cta="' + esc(w.id) + '">' + esc(E.workshopCta) + "</a></div></article>";
+      '<div class="ev-actions">' +
+      (w.detailsUrl ? '<a class="btn sm" href="' + esc(w.detailsUrl) + '">تفاصيل البرنامج</a>' : "") +
+      '<a class="btn' + (compact || w.detailsUrl ? " o" : "") + ' sm" href="' + EVENTS_PAGE + "?workshop=" + encodeURIComponent(w.id) +
+      '#interest" data-workshop-cta="' + esc(w.id) + '">' + esc(E.workshopCta) + "</a></div></div></article>";
   }
 
   /* ───────────── mounting ───────────── */
@@ -133,7 +135,7 @@
     email: function (v) {
       return !v.trim() || /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) ? "" : "اكتب إيميل صحيح.";
     },
-    workshop: function (v) { return v ? "" : "من فضلك اختار الـ Workshop."; },
+    workshop: function (v) { return v ? "" : "من فضلك اختار البرنامج التدريبي."; },
     session: function (v) { return v ? "" : "من فضلك اختار السيشن."; }
   };
 

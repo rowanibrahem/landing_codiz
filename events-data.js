@@ -85,6 +85,7 @@ window.CODIZ_EVENTS = {
       description:
         "اعرف إزاي التفكير والتحليل البزنس بيحوّلوا الأفكار لمنتجات برمجية واضحة وقيّمة.",
       category: "Business Analysis",
+      detailsUrl: "business-analysis.html",
       icon: "📊",
       tone: "sand",
       status: "coming-soon"
