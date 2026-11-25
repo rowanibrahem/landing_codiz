@@ -147,6 +147,7 @@ window.CODIZ_EVENTS = {
       description:
         "تدريب عملي على بناء واجهات ويب حديثة وتفاعلية من الصفر لحد ربطها بالـ API.",
       category: "Frontend · Web",
+      detailsUrl: "frontend-ai.html",
       icon: "💻",
       tone: "sand",
       status: "coming-soon"

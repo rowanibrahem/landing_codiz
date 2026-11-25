@@ -1,0 +1,45 @@
+/* Codiz — Frontend Development + AI Training Program page extensions on top of ba-program.css. */
+
+/* Hero visual: Prompt -> React/JS Code -> Review & Debug -> App */
+.fe-win-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px;direction:ltr}
+.fe-win-top .ba-win-bar{margin-bottom:0}
+.fe-tag{font-size:11.5px;font-weight:800;color:#f6e6fb;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);padding:3px 10px;border-radius:999px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.fe-code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11.5px;line-height:1.6;color:#2b1636;background:#f8f3fb;border:1px solid var(--line);border-radius:12px;padding:9px 12px;margin-top:6px;overflow-x:auto;direction:ltr;text-align:left}
+.fe-code .kw{color:#7a3d86;font-weight:700}
+.fe-code .fn{color:#0f6b53;font-weight:700}
+.fe-code .st{color:#b3265a}
+.fe-pipe{display:flex;align-items:center;gap:5px;margin-top:10px;direction:ltr;flex-wrap:wrap}
+.fe-pipe span{font-size:11px;font-weight:800;background:#fff;color:var(--ink);border-radius:999px;padding:4px 9px;border:1px solid var(--line)}
+.fe-pipe i{font-style:normal;color:var(--plum2);font-weight:900;font-size:11px}
+
+/* Two Learning Paths inside Hero */
+.fe-paths{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px;position:relative;z-index:2}
+.fe-path{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.26);border-radius:24px;padding:22px 24px;backdrop-filter:blur(6px)}
+.fe-path-tag{display:inline-block;font-size:12px;font-weight:900;letter-spacing:.9px;background:var(--blush);color:var(--ink);padding:4px 12px;border-radius:999px;margin-bottom:8px;direction:ltr}
+.fe-path.vibe .fe-path-tag{background:var(--mint);color:#0f4a3a}
+.fe-path h2{font-size:21px;color:#fff;margin-bottom:8px;direction:ltr;text-align:right;unicode-bidi:isolate}
+.fe-path p{font-size:15px;color:#eadbf1;line-height:1.8}
+
+/* What You'll Gain 5-item highlight grid */
+.fe-gain{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.fe-gain li{background:#fff;border:1.5px solid var(--line);border-radius:22px;padding:20px 22px;display:flex;gap:14px;align-items:flex-start;font-size:16px;font-weight:800;color:var(--plum);line-height:1.7;transition:transform .2s,border-color .2s}
+.fe-gain li:hover{transform:translateY(-4px);border-color:var(--orc)}
+.fe-gain li:before{content:"✓";flex:none;width:28px;height:28px;border-radius:50%;background:var(--mint);color:#0f4a3a;display:grid;place-items:center;font-size:14px;font-weight:900;margin-top:2px}
+
+/* Program at a Glance: Row 1 (4 cards) + Row 2 (3 cards) on desktop */
+.fe-det-r1{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:16px}
+.fe-det-r2{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.fe-det-r1 .it,.fe-det-r2 .it{background:#fff;border:1.5px solid var(--line);border-radius:22px;padding:20px;display:flex;gap:14px;align-items:flex-start}
+.fe-det-r1 .it .ic,.fe-det-r2 .it .ic{flex:none;width:44px;height:44px;border-radius:14px;display:grid;place-items:center;font-size:21px}
+.fe-det-r1 small,.fe-det-r2 small{display:block;font-size:12.5px;font-weight:800;color:var(--orc);margin-bottom:2px;direction:ltr;text-align:right}
+.fe-det-r1 b,.fe-det-r2 b{display:block;font-size:15.5px;color:var(--plum);line-height:1.5;direction:ltr;text-align:right;unicode-bidi:isolate}
+
+@media(max-width:1000px){
+  .fe-det-r1,.fe-det-r2{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:900px){
+  .fe-paths{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .fe-det-r1,.fe-det-r2{grid-template-columns:1fr}
+}

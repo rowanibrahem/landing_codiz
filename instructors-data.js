@@ -59,6 +59,14 @@ window.CODIZ_INSTRUCTORS = [
     photo: "assets/instructors/yasmeen.jpeg",
     bio:
 "مهندسه ديف اوبس و كلاود خبره سنتين وخريجه NTI ومعتمد بشهادتين AWS" 
+},
+{
+    id: "ahmed-adel",
+    name: "Ahmed Adel",
+    title: "Backend Developer",
+    photo: "assets/instructors/ahmed.jpeg",
+    bio:
+"مهندس برمجيات متخصص في تطوير (Backend Development)، شغوف بالتكنولوجيا والذكاء الاصطناعي (AI)، وأسعى باستمرار إلى تطوير مهاراتي ومواكبة أحدث التقنيات، مع اهتمام بتوظيف الذكاء الاصطناعي في بناء حلول ذكية وعملية تساهم في صناعة المستقبل." 
 }
 ]
 
