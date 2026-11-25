@@ -126,6 +126,7 @@ window.CODIZ_EVENTS = {
       description:
         "اتعلم أساسيات تصميم تجربة المستخدم وواجهات الاستخدام، وإزاي تحوّل الفكرة لتصميم واضح وسهل الاستخدام.",
       category: "UI/UX Design",
+      detailsUrl: "ui-ux.html",
       icon: "🎨",
       tone: "blush",
       status: "coming-soon"
