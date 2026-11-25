@@ -17,11 +17,45 @@ window.CODIZ_EVENTS = {
   formEndpoint: "https://script.google.com/macros/s/AKfycby4t4PPWwvWOpfIb93uoEArFiC0uewfl0lpC5eZv-Kjige_vW0sr-Lmoms0twpLNWiz/exec",
 
   // Session shown in the homepage "featured" block.
-  featuredSessionId: "ai-explore-whats-possible",
+  featuredSessionId: "life-after-graduation",
 
   experienceLevels: ["مبتدئ", "متوسط", "متقدم"],
 
   sessions: [
+    {
+      id: "life-after-graduation",
+      title: "الحياة بعد التخرج وسوق العمل",
+      subtitle: null,
+      description:
+        "سيشن مجانية نتكلم فيها عن الحياة بعد التخرج، وإزاي تجهز نفسك لسوق العمل وتاخد أول خطوة صح في مسارك المهني.",
+      icon: "🎓",
+      tone: "blush",
+      format: "سيشن مجانية",
+      status: "upcoming",
+      statusLabel: "قادمة – سيشن مجانية",
+      registrationOpen: true,
+      date: "2026-11-28",                 // Saturday 28 Nov 2026
+      time: null,                         // unpublished until confirmed
+      agenda: [],                         // unpublished until confirmed
+      recordingUrl: null
+    },
+    {
+      id: "ai-explore-whats-possible",
+      title: "AI: Explore What's Possible",
+      subtitle: null,
+      description:
+        "سيشن مجانية تعريفية عن الـ AI وتطبيقاته العملية، وإزاي تفهم أدوات الـ AI وتستفيد منها بشكل أفضل.",
+      icon: "✨",
+      tone: "lav",
+      format: "سيشن مجانية",
+      status: "completed",
+      statusLabel: "انتهت",
+      registrationOpen: false,
+      date: "2026-11-19",                 // 19 Nov 2026
+      time: null,                         // unpublished until confirmed
+      agenda: [],                         // unpublished until confirmed
+      recordingUrl: "https://www.facebook.com/share/v/19rf57gEXR/"
+    },
     {
       id: "build-smarter-with-ai",
       title: "Build Smarter with AI",
@@ -38,23 +72,6 @@ window.CODIZ_EVENTS = {
       time: null,                         // e.g. "7:00 م (بتوقيت القاهرة)"
       agenda: [],                         // hidden until set
       recordingUrl: "https://www.facebook.com/share/v/18U6uebB2h/" // رابط تسجيل السيشن
-    },
-    {
-      id: "ai-explore-whats-possible",
-      title: "AI: Explore What's Possible",
-      subtitle: null,
-      description:
-        "سيشن مجانية تعريفية عن الـ AI وتطبيقاته العملية، وإزاي تفهم أدوات الـ AI وتستفيد منها بشكل أفضل.",
-      icon: "✨",
-      tone: "lav",
-      format: "سيشن مجانية",
-      status: "upcoming",
-      statusLabel: "قادمة – سيشن مجانية",
-      registrationOpen: true,
-      date: "2026-11-19",                 // 19 Nov 2026
-      time: null,                         // unpublished until confirmed
-      agenda: [],                         // unpublished until confirmed
-      recordingUrl: null
     }
   ],
 
