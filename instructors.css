@@ -12,9 +12,14 @@
 .inst-name:after{content:"";display:none}
 .inst-bio{color:#4a3a55;font-size:15.5px;line-height:1.85;unicode-bidi:plaintext;text-align:center}
 
-/* nav: same plain look as the other links (no background); short label on small screens */
+/* nav: same plain look as the other links (no background); short label keeps desktop nav single-line */
 nav .lk a.inst-link{background:none;border:0;box-shadow:none;color:inherit}
-.inst-link .il-short{display:none}
+.inst-link .il-full{display:none}
+.inst-link .il-short{display:inline}
+@media(max-width:1040px){
+ .inst-link .il-full{display:inline}
+ .inst-link .il-short{display:none}
+}
 @media(max-width:900px){
  .inst-card{padding:28px 22px 26px}
 }
