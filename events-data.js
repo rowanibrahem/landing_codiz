@@ -140,6 +140,7 @@ window.CODIZ_EVENTS = {
       description:
         "تدريب عملي على أتمتة النشر والـ CI/CD والـ Containers وإدارة البنية التحتية.",
       category: "DevOps · CI/CD",
+      detailsUrl: "devops.html",
       icon: "🚀",
       tone: "mint",
       status: "coming-soon"
