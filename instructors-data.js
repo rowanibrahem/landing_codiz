@@ -67,6 +67,13 @@ window.CODIZ_INSTRUCTORS = [
     photo: "assets/instructors/ahmed.jpeg",
     bio:
 "مهندس برمجيات متخصص في تطوير (Backend Development)، شغوف بالتكنولوجيا والذكاء الاصطناعي (AI)، وأسعى باستمرار إلى تطوير مهاراتي ومواكبة أحدث التقنيات، مع اهتمام بتوظيف الذكاء الاصطناعي في بناء حلول ذكية وعملية تساهم في صناعة المستقبل." 
+},
+{
+    id: "habiba-ibrahim",
+    name: "Habiba Ibrahim",
+    title: "DataEngineer",
+    photo: "assets/instructors/habiba-ibrahim.jpeg",
+    bio: "خبرة اكثر من سنتين في مجال Data Analysis"
 }
 ]
 
