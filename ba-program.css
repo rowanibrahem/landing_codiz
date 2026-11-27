@@ -183,3 +183,35 @@ html{scroll-padding-top:20px}
   .ba-card:hover,.ba-ses:hover,.ba-cc:hover{transform:none}
   .ba-float,.ba-dash-top .live:before{animation:none}
 }
+
+/* ───────── Hero: prevent clipping / horizontal overflow on phones & tablets (shared by all program pages) ───────── */
+.ba-hero-grid>*{min-width:0}
+.ba-hero h1,.ba-hero .sub{overflow-wrap:anywhere}
+.ba-hero{max-width:100vw}
+@media(max-width:900px){
+  .ba-hero{padding-bottom:64px}
+  .ba-hero-grid{gap:34px;padding-top:24px}
+  .ba-hero h1{font-size:32px;line-height:1.28}
+  .ba-hero .sub{font-size:16.5px;line-height:1.7}
+  .ba-hero p.d1{font-size:16.5px;max-width:100%}
+  .ba-hero p.d2{font-size:15px;max-width:100%}
+  .ba-info{gap:8px}
+  .ba-info li{white-space:normal;font-size:13px;padding:6px 12px;max-width:100%}
+  .ba-vis{min-height:0;max-width:100%;padding:0 4px 22px}
+  .ba-win{padding:14px;border-radius:22px;min-width:0}
+  .ba-flow{flex-wrap:wrap;gap:6px}
+  .ba-node{white-space:normal;font-size:11.5px;padding:6px 10px}
+  .ba-arrow{min-width:8px}
+  .ba-doc{min-width:0;overflow:hidden}
+  .ba-doc pre{max-width:100%;overflow-x:auto;white-space:pre}
+  .ba-chips{gap:6px}
+  .ba-float{font-size:11.5px;padding:7px 10px;max-width:86%}
+  .ba-float.a{left:2px;top:-12px}
+  .ba-float.b{right:2px;bottom:-14px}
+}
+@media(max-width:480px){
+  .ba-hero h1{font-size:28px}
+  .ba-hero .hb{flex-direction:column;align-items:stretch}
+  .ba-hero .hb .btn{width:100%;text-align:center}
+  .ba-float.a{display:none}
+}
