@@ -147,6 +147,7 @@ nav .lk{display:none}.box{padding:26px 20px}form{grid-template-columns:1fr}secti
 <link rel="stylesheet" href="events.css">
 <link rel="stylesheet" href="instructors.css">
 <link rel="stylesheet" href="partners.css">
+<link rel="stylesheet" href="wheel.css">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -390,6 +391,8 @@ nav .lk{display:none}.box{padding:26px 20px}form{grid-template-columns:1fr}secti
 <script src="instructors.js"></script>
 <script src="partners-data.js"></script>
 <script src="partners.js"></script>
+<script src="wheel-config.js"></script>
+<script src="wheel.js"></script>
 <script>
 const SCRIPT_URL="https://script.google.com/macros/s/AKfycby4t4PPWwvWOpfIb93uoEArFiC0uewfl0lpC5eZv-Kjige_vW0sr-Lmoms0twpLNWiz/exec";
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);e.target.querySelectorAll&&e.target.querySelectorAll('[data-n]').forEach(count)}}),{threshold:.15});
